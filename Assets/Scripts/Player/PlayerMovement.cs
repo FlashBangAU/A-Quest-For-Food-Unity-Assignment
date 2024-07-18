@@ -18,6 +18,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator sprintAnimation;
     float jumpWait = 0;
 
+    public JumpBottom jumpBottom;
+    public JumpLeft jumpLeft;
+    public JumpRight jumpRight;
+
     Rigidbody2D rb;
 
     //start is called before the first frame update
@@ -58,11 +62,11 @@ public class PlayerMovement : MonoBehaviour
         // Slow control of character when airborne
         else
         {
-            if (Input.GetKey(KeyCode.A) && horizontalInput < moveSpeed)
+            if (Input.GetKey(KeyCode.A) && horizontalInput < moveSpeed && rb.velocity.x < -6)
             {
                 horizontalInput = horizontalInput - moveSpeedInAir;
             }
-            if (Input.GetKey(KeyCode.D) && horizontalInput < moveSpeed)
+            if (Input.GetKey(KeyCode.D) && horizontalInput < moveSpeed && rb.velocity.x < 6)
             {
                 horizontalInput = horizontalInput + moveSpeedInAir;
             }
@@ -73,6 +77,14 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpAnimation.Play("JumpAnimation");
         }
+
+        //ensures all colliders are false for jump animation
+        if(jumpBottom.canJump == false && jumpLeft.canJump == false && jumpRight.canJump == false)
+        {
+            isJumping = true;
+        }
+
+        Debug.Log("Velocity X: " + rb.velocity.x);
 
         FlipSprite();
     }
@@ -92,16 +104,45 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Logging rb.velocity.y
-        Debug.Log("Velocity Y: " + rb.velocity.y);
+        //Debug.Log("Velocity Y: " + rb.velocity.y);
 
-        // Player jumps
-        if (Input.GetKey(KeyCode.W) && !isJumping)
+        // Player Bottom Jump
+        if (!isJumping && Input.GetKey(KeyCode.W) && jumpBottom.canJump == true)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             isJumping = true;
         }
-    }
 
+        // Player Left Jump
+        if (!isJumping && Input.GetKey(KeyCode.W) && jumpLeft.canJump == true)
+        {
+            if (Input.GetKey(KeyCode.A))
+            { 
+                rb.velocity = new Vector2(0, jumpPower);
+                isJumping = true;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                rb.velocity = new Vector2(4, jumpPower);
+                isJumping = true;
+            }
+        }
+
+        // Player Right Jump
+        if (!isJumping && Input.GetKey(KeyCode.W) && jumpRight.canJump == true)
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb.velocity = new Vector2(-4, jumpPower);
+                isJumping = true;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                rb.velocity = new Vector2(0, jumpPower);
+                isJumping = true;
+            }
+        }
+    }
 
     //flip character
     void FlipSprite()
@@ -131,7 +172,6 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Left ground");
         }
     }
-
 
 
     // Method to change various attributes
