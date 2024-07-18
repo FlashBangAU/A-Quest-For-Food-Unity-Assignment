@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         // Slow control of character when airborne
         else
         {
-            if (Input.GetKey(KeyCode.A) && horizontalInput < moveSpeed && rb.velocity.x < -6)
+            if (Input.GetKey(KeyCode.A) && horizontalInput < moveSpeed && rb.velocity.x > -6)
             {
                 horizontalInput = horizontalInput - moveSpeedInAir;
             }
@@ -78,13 +78,19 @@ public class PlayerMovement : MonoBehaviour
             jumpAnimation.Play("JumpAnimation");
         }
 
+
+        Debug.Log("Can Jump: "+jumpLeft.canJump+"  "+jumpBottom.canJump+"  "+jumpRight.canJump);
         //ensures all colliders are false for jump animation
         if(jumpBottom.canJump == false && jumpLeft.canJump == false && jumpRight.canJump == false)
         {
             isJumping = true;
         }
+        else
+        {
+            isJumping = false;
+        }
 
-        Debug.Log("Velocity X: " + rb.velocity.x);
+        //Debug.Log("Velocity X: " + rb.velocity.x);
 
         FlipSprite();
     }
@@ -157,20 +163,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // When player collides with ground, jump animation stops and player can jump again
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        isJumping = false;
-        Debug.Log("Collision with ground");
-    }
+    //public void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    isJumping = false;
+    //    Debug.Log("Collision with ground");
+    //}
 
     // Prevents player from walking off platform and jumping
     public void OnCollisionExit2D(Collision2D collision)
     {
-        if (jumpWait > 0.2)
-        {
-            isJumping = true;
-            Debug.Log("Left ground");
-        }
+        isJumping = true;
     }
 
 
