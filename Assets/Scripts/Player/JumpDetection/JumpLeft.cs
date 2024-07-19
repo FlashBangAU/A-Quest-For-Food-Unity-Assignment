@@ -6,9 +6,9 @@ public class JumpLeft : MonoBehaviour
 {
     public bool canJump = true;
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (other.gameObject.CompareTag("Ground"))
         {
             canJump = true;
             Debug.Log("Collision with ground left");
@@ -16,9 +16,9 @@ public class JumpLeft : MonoBehaviour
     }
 
     // Prevents player from walking off platform and jumping
-    public void OnCollisionExit2D(Collision2D collision)
+    public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = false;
             Debug.Log("Left ground");

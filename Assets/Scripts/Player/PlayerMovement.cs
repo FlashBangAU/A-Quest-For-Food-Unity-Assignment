@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Animator jumpAnimation;
     [SerializeField] private Animator sprintAnimation;
+    
     float jumpWait = 0;
 
     public JumpBottom jumpBottom;
@@ -79,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        Debug.Log("Can Jump: "+jumpLeft.canJump+"  "+jumpBottom.canJump+"  "+jumpRight.canJump);
+        //Debug.Log("Can Jump: "+jumpLeft.canJump+"  "+jumpBottom.canJump+"  "+jumpRight.canJump);
         //ensures all colliders are false for jump animation
         if(jumpBottom.canJump == false && jumpLeft.canJump == false && jumpRight.canJump == false)
         {
