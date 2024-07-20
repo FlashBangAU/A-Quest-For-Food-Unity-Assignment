@@ -114,14 +114,14 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log("Velocity Y: " + rb.velocity.y);
 
         // Player Bottom Jump
-        if (!isJumping && Input.GetKey(KeyCode.W) && jumpBottom.canJump == true)
+        if (Input.GetKey(KeyCode.W) && jumpBottom.canJump == true)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             isJumping = true;
         }
 
         // Player Left Jump
-        if (!isJumping && Input.GetKey(KeyCode.W) && jumpLeft.canJump == true)
+        if (Input.GetKey(KeyCode.W) && jumpLeft.canJump == true)
         {
             if (Input.GetKey(KeyCode.A))
             { 
@@ -136,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Player Right Jump
-        if (!isJumping && Input.GetKey(KeyCode.W) && jumpRight.canJump == true)
+        if (Input.GetKey(KeyCode.W) && jumpRight.canJump == true)
         {
             if (Input.GetKey(KeyCode.A))
             {
