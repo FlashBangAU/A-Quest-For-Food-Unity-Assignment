@@ -11,7 +11,7 @@ public class JumpLeft : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             canJump = true;
-            Debug.Log("Collision with ground left");
+            //Debug.Log("Collision with ground left");
         }
     }
 
@@ -21,7 +21,7 @@ public class JumpLeft : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = false;
-            Debug.Log("Left ground");
+            //Debug.Log("Left ground");
         }
     }
 }
