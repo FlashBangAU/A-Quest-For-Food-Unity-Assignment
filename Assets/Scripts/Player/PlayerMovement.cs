@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     public JumpLeft jumpLeft;
     public JumpRight jumpRight;
 
+    bool jumpedLeft = false;
+    bool jumpedRight = false;
+
     Rigidbody2D rb;
 
     //start is called before the first frame update
@@ -121,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Player Left Jump
-        if (Input.GetKey(KeyCode.W) && jumpLeft.canJump == true)
+        if (Input.GetKey(KeyCode.W) && jumpLeft.canJump == true && jumpedLeft == false)
         {
             if (Input.GetKey(KeyCode.A))
             { 
@@ -136,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Player Right Jump
-        if (Input.GetKey(KeyCode.W) && jumpRight.canJump == true)
+        if (Input.GetKey(KeyCode.W) && jumpRight.canJump == true && jumpedRight == false)
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -148,6 +151,22 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(0, jumpPower);
                 isJumping = true;
             }
+            jumpedRight = true;
+        }
+
+        //prevents player jumping off same side wall twice in a row
+        if(jumpBottom.canJump == true)
+        {
+            jumpedRight = false;
+            jumpedLeft = false;
+        }
+        if (jumpedRight == true)
+        {
+            jumpedLeft = false; 
+        }
+        if(jumpedLeft == true)
+        {
+            jumpedRight = false;
         }
     }
 
