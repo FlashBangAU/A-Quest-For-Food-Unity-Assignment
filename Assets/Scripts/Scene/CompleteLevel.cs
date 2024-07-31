@@ -11,9 +11,10 @@ public class CompleteLevel : MonoBehaviour
     public CoinScript cs;
     public TextMeshProUGUI showScoreTitleUI;
     public TextMeshProUGUI showScoreUI;
+    public TextMeshProUGUI TimeUI;
 
     public float maxTime;
-    [SerializeField]  float timer = 0f;
+    [SerializeField]  float theTimeInSec;
     float score;
 
     [SerializeField] public int showScore = 0;
@@ -29,7 +30,6 @@ public class CompleteLevel : MonoBehaviour
 
     private void Start()
     {
-        timer = Time.time;
         showScoreTitleUI.text = "";
         showScoreUI.text = "";
 
@@ -39,7 +39,16 @@ public class CompleteLevel : MonoBehaviour
     {
         if (!hasFinished)
         {
-            timer = Time.time;
+            theTimeInSec = Time.timeSinceLevelLoad;
+            int HH = Mathf.FloorToInt(theTimeInSec / 3600.0f);
+            theTimeInSec %= 3600.0f;
+            int MM = Mathf.FloorToInt(theTimeInSec / 60.0f);
+            theTimeInSec %= 60.0f;
+            int SS = Mathf.FloorToInt(theTimeInSec / 1.0f);
+            theTimeInSec %= 1.0f;
+            int MILLISECONDS = Mathf.FloorToInt(theTimeInSec * 1000.0f);
+            //Debug.Log(MM.ToString("00") + ":" + SS.ToString("00") + ":" + MILLISECONDS.ToString("000"));
+            TimeUI.text = MM.ToString("00") + ":" + SS.ToString("00") + ":" + MILLISECONDS.ToString("000");
         }
         else if (hasFinished)
         {
@@ -55,13 +64,13 @@ public class CompleteLevel : MonoBehaviour
     {
         if (other.CompareTag("Player") && !hasFinished)
         {
-            timer = maxTime - timer;
+            theTimeInSec = maxTime - theTimeInSec;
 
-            if (timer < 0f)
-                timer = 0f;
+            if (theTimeInSec < 0f)
+                theTimeInSec = 0f;
 
             //all variables are 0
-            if (timer == 0f && cs.coinCount == 0f && ph.enemiesDefeated == 0f)
+            if (theTimeInSec == 0f && cs.coinCount == 0f && ph.enemiesDefeated == 0f)
             {
                 score = 0f;
             }
@@ -70,15 +79,15 @@ public class CompleteLevel : MonoBehaviour
             //only time left
             else if (cs.coinCount == 0f && ph.enemiesDefeated == 0f)
             {
-                score = timer * timerMultiplier;
+                score = theTimeInSec * timerMultiplier;
             }
             //only enemies killed
-            else if (timer == 0f && cs.coinCount == 0f)
+            else if (theTimeInSec == 0f && cs.coinCount == 0f)
             {
                 score = ph.enemiesDefeated * enemiesMultiplier;
             }
             //only coins collected
-            else if (timer == 0f && ph.enemiesDefeated == 0f)
+            else if (theTimeInSec == 0f && ph.enemiesDefeated == 0f)
             {
                 score = cs.coinCount * coinMultiplier;
             }
@@ -87,15 +96,15 @@ public class CompleteLevel : MonoBehaviour
             //no enemies killed
             else if (ph.enemiesDefeated == 0f)
             {
-                score = (timer * timerMultiplier) * (cs.coinCount * coinMultiplier);
+                score = (theTimeInSec * timerMultiplier) * (cs.coinCount * coinMultiplier);
             }
             //no coins collected
             else if (cs.coinCount == 0f)
             {
-                score = (timer * timerMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
+                score = (theTimeInSec * timerMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
             }
             //no time left for point (took too long)
-            else if (timer == 0f)
+            else if (theTimeInSec == 0f)
             {
                 score = (cs.coinCount * coinMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
             }
@@ -103,7 +112,7 @@ public class CompleteLevel : MonoBehaviour
             //all variables filled
             else
             {
-                score = (timer * timerMultiplier) * (cs.coinCount * coinMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
+                score = (theTimeInSec * timerMultiplier) * (cs.coinCount * coinMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
             }
 
             score *= 1000;

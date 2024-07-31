@@ -382,6 +382,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac2176e35d9a134caedea407894eba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &635488484 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3882965663234129477, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+  m_PrefabInstance: {fileID: 8716632691733995982}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &664833855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5116118816222236539, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
@@ -470,7 +481,7 @@ GameObject:
   - component: {fileID: 847660578}
   m_Layer: 8
   m_Name: Ground TileMap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5651,6 +5662,10 @@ PrefabInstance:
       propertyPath: ph
       value: 
       objectReference: {fileID: 1604793509}
+    - target: {fileID: 3114644860412009811, guid: 2f5c4ca061f1c624694fb10f3f83cadd, type: 3}
+      propertyPath: TimeUI
+      value: 
+      objectReference: {fileID: 635488484}
     - target: {fileID: 3114644860412009811, guid: 2f5c4ca061f1c624694fb10f3f83cadd, type: 3}
       propertyPath: showScoreUI
       value: 

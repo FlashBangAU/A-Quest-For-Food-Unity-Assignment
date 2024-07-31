@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890e4de433fdea54396a4a37c7ea7825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canJump: 0
+  canJump: 1
 --- !u!1 &3794918074216593617
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,9 +306,9 @@ MonoBehaviour:
   startTimeBtwSprint: 0.82
   jumpAnimation: {fileID: 6091915266309559014}
   sprintAnimation: {fileID: 6091915266309559014}
-  jumpBottom: {fileID: 0}
-  jumpLeft: {fileID: 0}
-  jumpRight: {fileID: 0}
+  jumpBottom: {fileID: 9210301150765024066}
+  jumpLeft: {fileID: 966874282374390796}
+  jumpRight: {fileID: 4637234683969545052}
 --- !u!114 &6662360791085800618
 MonoBehaviour:
   m_ObjectHideFlags: 0
