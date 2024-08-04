@@ -12,9 +12,15 @@ public class CompleteLevel : MonoBehaviour
     public TextMeshProUGUI showScoreTitleUI;
     public TextMeshProUGUI showScoreUI;
     public TextMeshProUGUI TimeUI;
+    public TextMeshProUGUI showHighScoreTitleUI;
+    public TextMeshProUGUI showHighScoreUI;
+
+    public DataManager dm;
+    public int level;
+    float[] highScores;
 
     public float maxTime;
-    [SerializeField]  float theTimeInSec;
+    [SerializeField] float theTimeInSec;
     float score;
 
     [SerializeField] public int showScore = 0;
@@ -28,11 +34,26 @@ public class CompleteLevel : MonoBehaviour
 
     public SceneController sceneController;
 
+    float curHighScore;
+
+    public bool removeAllSaveData = false;
+
     private void Start()
     {
+        // Check for DataManager instance
+        if (DataManager.Instance == null)
+        {
+            Debug.LogWarning("No DataManager instance found in the scene. Ensure DataManager is correctly initialized.");
+        }
+        else
+        {
+            dm = DataManager.Instance; // Assign the DataManager instance to dm
+        }
+
         showScoreTitleUI.text = "";
         showScoreUI.text = "";
-
+        showHighScoreTitleUI.text = "";
+        showHighScoreUI.text = "";
     }
 
     private void Update()
@@ -69,56 +90,52 @@ public class CompleteLevel : MonoBehaviour
             if (theTimeInSec < 0f)
                 theTimeInSec = 0f;
 
-            //all variables are 0
-            if (theTimeInSec == 0f && cs.coinCount == 0f && ph.enemiesDefeated == 0f)
-            {
-                score = 0f;
-            }
-
-
-            //only time left
-            else if (cs.coinCount == 0f && ph.enemiesDefeated == 0f)
-            {
-                score = theTimeInSec * timerMultiplier;
-            }
-            //only enemies killed
-            else if (theTimeInSec == 0f && cs.coinCount == 0f)
-            {
-                score = ph.enemiesDefeated * enemiesMultiplier;
-            }
-            //only coins collected
-            else if (theTimeInSec == 0f && ph.enemiesDefeated == 0f)
-            {
-                score = cs.coinCount * coinMultiplier;
-            }
-
-
-            //no enemies killed
-            else if (ph.enemiesDefeated == 0f)
-            {
-                score = (theTimeInSec * timerMultiplier) * (cs.coinCount * coinMultiplier);
-            }
-            //no coins collected
-            else if (cs.coinCount == 0f)
-            {
-                score = (theTimeInSec * timerMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
-            }
-            //no time left for point (took too long)
-            else if (theTimeInSec == 0f)
-            {
-                score = (cs.coinCount * coinMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
-            }
-            
-            //all variables filled
-            else
-            {
-                score = (theTimeInSec * timerMultiplier) * (cs.coinCount * coinMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
-            }
+            // Calculate score based on game state
+            score = CalculateScore();
 
             score *= 1000;
             showScore = (int)score;
             hasFinished = true;
+
+            CheckHighScore();
+
             DisplayScoreUI();
+        }
+    }
+
+    float CalculateScore()
+    {
+        if (theTimeInSec == 0f && cs.coinCount == 0f && ph.enemiesDefeated == 0f)
+        {
+            return 0f;
+        }
+        else if (cs.coinCount == 0f && ph.enemiesDefeated == 0f)
+        {
+            return theTimeInSec * timerMultiplier;
+        }
+        else if (theTimeInSec == 0f && cs.coinCount == 0f)
+        {
+            return ph.enemiesDefeated * enemiesMultiplier;
+        }
+        else if (theTimeInSec == 0f && ph.enemiesDefeated == 0f)
+        {
+            return cs.coinCount * coinMultiplier;
+        }
+        else if (ph.enemiesDefeated == 0f)
+        {
+            return (theTimeInSec * timerMultiplier) * (cs.coinCount * coinMultiplier);
+        }
+        else if (cs.coinCount == 0f)
+        {
+            return (theTimeInSec * timerMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
+        }
+        else if (theTimeInSec == 0f)
+        {
+            return (cs.coinCount * coinMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
+        }
+        else
+        {
+            return (theTimeInSec * timerMultiplier) * (cs.coinCount * coinMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
         }
     }
 
@@ -126,5 +143,42 @@ public class CompleteLevel : MonoBehaviour
     {
         showScoreTitleUI.text = "SCORE";
         showScoreUI.text = showScore.ToString("N0");
+    }
+
+    public void CheckHighScore()
+    {
+        if (dm == null) return; // Check if DataManager is not initialized
+
+        curHighScore = dm.GetHighScoreForLevel(level);
+        if (curHighScore <= showScore)
+        {
+            DisplayNewHighScore();
+            // Save new highscore
+            dm.highScore = showScore;
+            dm.level = level;
+            dm.WriteData();
+        }
+        else
+        {
+            DisplayCurrentHighScore();
+        }
+        if (removeAllSaveData)
+        {
+            dm.highScore = 0f;
+            dm.level = level;
+            dm.highScores = highScores;
+            dm.WriteData();
+        }
+    }
+
+    public void DisplayNewHighScore()
+    {
+        showHighScoreUI.text = "NEW HIGHSCORE!!!";
+    }
+
+    public void DisplayCurrentHighScore()
+    {
+        showHighScoreUI.text = curHighScore.ToString("N0");
+        showHighScoreTitleUI.text = "HIGHSCORE";
     }
 }

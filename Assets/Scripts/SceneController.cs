@@ -9,12 +9,12 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    public void startTutorial()
+    public void startLevelSelector()
     {
         SceneManager.LoadScene(1);
     }
-    public void startLvl1()
+    public void startLevel(int level)
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(level+2);
     }
 }

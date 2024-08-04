@@ -8,6 +8,7 @@ TagManager:
   - DeathPlain
   - CheckPoint
   - Ground
+  - DataManager
   layers:
   - Default
   - TransparentFX
