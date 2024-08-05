@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI promptUI;
     public string[] dialogue;
     private int index = 0;
 
@@ -24,6 +25,7 @@ public class NPC : MonoBehaviour
         RemoveText();
         npcNameUI.text = npcName;
         dialogueText.text = "";
+        promptUI.text = "";
     }
 
     // Update is called once per frame
@@ -88,6 +90,7 @@ public class NPC : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsClose = true;
+            promptUI.text = "[E]";
         }
     }
 
@@ -97,6 +100,7 @@ public class NPC : MonoBehaviour
         {
             playerIsClose = false;
             RemoveText();
+            promptUI.text = "";
         }
     }
 }
