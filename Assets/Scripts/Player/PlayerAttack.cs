@@ -18,9 +18,8 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timeBtwAttack < 0)
+        if(timeBtwAttack <= 0)
         {
-            timer.StopTimer();
             if (Input.GetKeyDown(KeyCode.P))
             {
                 timeBtwAttack = startTimeBtwAttack;
@@ -32,8 +31,10 @@ public class PlayerAttack : MonoBehaviour
                     eniemiesToDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
                 }
             }
-            
-        }else
+            if(Input.GetKeyDown(KeyCode.P) == false)
+                timer.StopTimer();
+        }
+        else
         {
             timeBtwAttack -= Time.deltaTime;
         }
