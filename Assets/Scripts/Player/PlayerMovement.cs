@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     float horizontalInput;
+    float verticalInput;
     [SerializeField] float moveSpeed = 5f;
     bool isFacingRight = true;
     [SerializeField]  float jumpPower = 8f;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     float jumpWait = 0;
 
     Rigidbody2D rb;
+    private bool onLadder = false;
 
     //start is called before the first frame update
     void Start()
@@ -38,8 +40,13 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
 
-        // Horizontal movement when touching ground
-        if (!isJumping)
+        // Movement when on ladder
+        if (onLadder == true)
+        {
+            verticalInput = Input.GetAxis("Vertical");
+            horizontalInput = Input.GetAxis("Horizontal");
+        }
+        else if (!isJumping)// Horizontal movement when touching ground
         {
             horizontalInput = Input.GetAxis("Horizontal");
             if (timeBtwSprint < 0)
@@ -80,25 +87,35 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Player falls faster on descent
-        if (rb.velocity.y < 0 && rb.velocity.y >= -5)
+        if (!onLadder)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-        // Player can control how high they jump with key hold
-        else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W))
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMulitplier - 1) * Time.deltaTime;
-        }
+            // Player falls faster on descent
+            if (rb.velocity.y < 0 && rb.velocity.y >= -5)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            }
+            // Player can control how high they jump with key hold
+            else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W))
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMulitplier - 1) * Time.deltaTime;
+            }
 
-        // Logging rb.velocity.y
-        Debug.Log("Velocity Y: " + rb.velocity.y);
+            // Logging rb.velocity.y
+            //Debug.Log("Velocity Y: " + rb.velocity.y);
 
-        // Player jumps
-        if (Input.GetKey(KeyCode.W) && !isJumping)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-            isJumping = true;
+            // Player jumps
+            if (Input.GetKey(KeyCode.W) && !isJumping)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+                isJumping = true;
+            }
+        }
+        else
+        {//on ladder
+            if (Input.GetKey(KeyCode.W))
+            {
+                rb.velocity = new Vector2(rb.velocity.x, verticalInput * moveSpeed);
+            }
         }
     }
 
@@ -119,7 +136,13 @@ public class PlayerMovement : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         isJumping = false;
-        Debug.Log("Collision with ground");
+        //Debug.Log("Collision with ground");
+
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            onLadder = true;
+            //Debug.Log("On Ladder");
+        }
     }
 
     // Prevents player from walking off platform and jumping
@@ -128,11 +151,32 @@ public class PlayerMovement : MonoBehaviour
         if (jumpWait > 0.2)
         {
             isJumping = true;
-            Debug.Log("Left ground");
+            //Debug.Log("Left ground");
+        }
+
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            onLadder = false;
+            //Debug.Log("Off Ladder");
         }
     }
 
-
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            onLadder = true;
+            Debug.Log("On Ladder");
+        }
+    }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            onLadder = false;
+            Debug.Log("Off Ladder");
+        }
+    }
 
     // Method to change various attributes
     public void ChangeAttribute(string attributeName, float newValue)
