@@ -13,15 +13,17 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] int damage;
 
     [SerializeField] private Animator attackAnimation;
+    public Timer timer;
 
     // Update is called once per frame
     void Update()
     {
-        if(timeBtwAttack <-0)
+        if(timeBtwAttack <= 0)
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
                 timeBtwAttack = startTimeBtwAttack;
+                timer.StartTimer();
                 attackAnimation.Play("AttackAnimation");
                 Collider2D[] eniemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < eniemiesToDamage.Length; i++)
@@ -29,7 +31,10 @@ public class PlayerAttack : MonoBehaviour
                     eniemiesToDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
                 }
             }
-        } else
+            if(Input.GetKeyDown(KeyCode.P) == false)
+                timer.StopTimer();
+        }
+        else
         {
             timeBtwAttack -= Time.deltaTime;
         }

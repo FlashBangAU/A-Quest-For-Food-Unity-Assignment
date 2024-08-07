@@ -351,6 +351,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+--- !u!114 &939516622 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1708528001445450652, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+  m_PrefabInstance: {fileID: 722369603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae392df589f1e8439316f88b61b2776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1145778246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -359,6 +370,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 939516622}
     - target: {fileID: 3794918074216593617, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -403,17 +418,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4502792092363890364, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: m_Name
+      value: AttackTimerCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 5091223987076070708, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5091223987076070708, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8055890992938735171, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

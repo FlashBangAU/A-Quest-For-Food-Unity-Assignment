@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5043017538368640902}
   - component: {fileID: 6986634123077412651}
   - component: {fileID: 9210301150765024066}
+  - component: {fileID: 9084124064919459167}
   m_Layer: 3
   m_Name: Bottom Square
   m_TagString: Untagged
@@ -144,6 +145,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canJump: 1
+--- !u!114 &9084124064919459167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859194162322951852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df03f5a34b191847bb7cd87c88375a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounce: 8
+  rb2D: {fileID: 5387960745285683124}
 --- !u!1 &3794918074216593617
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +301,7 @@ MonoBehaviour:
   attackRange: 0.92
   damage: 1
   attackAnimation: {fileID: 6091915266309559014}
+  timer: {fileID: 0}
 --- !u!114 &5220876486473601534
 MonoBehaviour:
   m_ObjectHideFlags: 0

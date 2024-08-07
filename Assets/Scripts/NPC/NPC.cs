@@ -19,6 +19,8 @@ public class NPC : MonoBehaviour
 
     public Upgrades upgrades;
 
+    private Coroutine typingCoroutine;
+
     void Start()
     {
         RemoveText();
@@ -29,19 +31,18 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) && playerIsClose)
+        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
             npcNameUI.text = npcName;
             if (!dialoguePanel.activeInHierarchy)
             {
                 dialoguePanel.SetActive(true);
-                StartCoroutine(Typing());
+                StartTyping();
             }
             else if (dialogueText.text == dialogue[index])
             {
                 NextLine();
             }
-
         }
         if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
         {
@@ -51,18 +52,34 @@ public class NPC : MonoBehaviour
 
     public void RemoveText()
     {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
     }
 
+    void StartTyping()
+    {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+        typingCoroutine = StartCoroutine(Typing());
+    }
+
     IEnumerator Typing()
     {
+        dialogueText.text = "";
         foreach (char letter in dialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
+        typingCoroutine = null;
     }
 
     public void NextLine()
@@ -70,8 +87,7 @@ public class NPC : MonoBehaviour
         if (index < dialogue.Length - 1)
         {
             index++;
-            dialogueText.text = "";
-            StartCoroutine(Typing());
+            StartTyping();
         }
         else
         {
