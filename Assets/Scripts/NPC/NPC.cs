@@ -8,7 +8,6 @@ public class NPC : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
-    public TextMeshProUGUI promptUI;
     public string[] dialogue;
     private int index = 0;
 
@@ -20,12 +19,13 @@ public class NPC : MonoBehaviour
 
     public Upgrades upgrades;
 
+    private Coroutine typingCoroutine;
+
     void Start()
     {
         RemoveText();
         npcNameUI.text = npcName;
         dialogueText.text = "";
-        promptUI.text = "";
     }
 
     // Update is called once per frame
@@ -37,13 +37,12 @@ public class NPC : MonoBehaviour
             if (!dialoguePanel.activeInHierarchy)
             {
                 dialoguePanel.SetActive(true);
-                StartCoroutine(Typing());
+                StartTyping();
             }
             else if (dialogueText.text == dialogue[index])
             {
                 NextLine();
             }
-
         }
         if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
         {
@@ -53,18 +52,34 @@ public class NPC : MonoBehaviour
 
     public void RemoveText()
     {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
     }
 
+    void StartTyping()
+    {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+        typingCoroutine = StartCoroutine(Typing());
+    }
+
     IEnumerator Typing()
     {
+        dialogueText.text = "";
         foreach (char letter in dialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
+        typingCoroutine = null;
     }
 
     public void NextLine()
@@ -72,8 +87,7 @@ public class NPC : MonoBehaviour
         if (index < dialogue.Length - 1)
         {
             index++;
-            dialogueText.text = "";
-            StartCoroutine(Typing());
+            StartTyping();
         }
         else
         {
@@ -90,7 +104,6 @@ public class NPC : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsClose = true;
-            promptUI.text = "[E]";
         }
     }
 
@@ -100,7 +113,6 @@ public class NPC : MonoBehaviour
         {
             playerIsClose = false;
             RemoveText();
-            promptUI.text = "";
         }
     }
 }
