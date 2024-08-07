@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     float verticalInput;
     [SerializeField] float moveSpeed = 5f;
     bool isFacingRight = true;
-    [SerializeField]  float jumpPower = 8f;
+    [SerializeField] float jumpPower = 8f;
     bool isJumping = false;
     [SerializeField] float moveSpeedInAir = 0.0007f;
     [SerializeField] float fallMultiplier = 2f;
@@ -17,16 +17,27 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Animator jumpAnimation;
     [SerializeField] private Animator sprintAnimation;
+
     float jumpWait = 0;
 
+    public JumpBottom jumpBottom;
+    public JumpLeft jumpLeft;
+    public JumpRight jumpRight;
+
+    bool jumpedLeft = false;
+    bool jumpedRight = false;
+
+    bool onLadder = false;
+
     Rigidbody2D rb;
-    private bool onLadder = false;
 
     //start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -39,8 +50,6 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
-
-        // Movement when on ladder
         if (onLadder == true)
         {
             verticalInput = Input.GetAxis("Vertical");
@@ -81,9 +90,22 @@ public class PlayerMovement : MonoBehaviour
             jumpAnimation.Play("JumpAnimation");
         }
 
+
+        //Debug.Log("Can Jump: "+jumpLeft.canJump+"  "+jumpBottom.canJump+"  "+jumpRight.canJump);
+        //ensures all colliders are false for jump animation
+        if (jumpBottom.canJump == false && jumpLeft.canJump == false && jumpRight.canJump == false)
+        {
+            isJumping = true;
+        }
+        else
+        {
+            isJumping = false;
+        }
+
+        //Debug.Log("Velocity X: " + rb.velocity.x);
+
         FlipSprite();
     }
-
 
     private void FixedUpdate()
     {
@@ -103,11 +125,58 @@ public class PlayerMovement : MonoBehaviour
             // Logging rb.velocity.y
             //Debug.Log("Velocity Y: " + rb.velocity.y);
 
-            // Player jumps
-            if (Input.GetKey(KeyCode.W) && !isJumping)
+            // Player Bottom Jump
+            if (Input.GetKey(KeyCode.W) && jumpBottom.canJump == true)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpPower);
                 isJumping = true;
+            }
+
+            // Player Left Jump
+            if (Input.GetKey(KeyCode.W) && jumpLeft.canJump == true && jumpedLeft == false)
+            {
+                if (Input.GetKey(KeyCode.A))
+                {
+                    rb.velocity = new Vector2(0, jumpPower);
+                    isJumping = true;
+                }
+                if (Input.GetKey(KeyCode.D))
+                {
+                    rb.velocity = new Vector2(4, jumpPower);
+                    isJumping = true;
+                }
+            }
+
+            // Player Right Jump
+            if (Input.GetKey(KeyCode.W) && jumpRight.canJump == true && jumpedRight == false)
+            {
+                if (Input.GetKey(KeyCode.A))
+                {
+                    rb.velocity = new Vector2(-4, jumpPower);
+                    isJumping = true;
+                }
+                if (Input.GetKey(KeyCode.D))
+                {
+                    rb.velocity = new Vector2(0, jumpPower);
+                    isJumping = true;
+                }
+                jumpedRight = true;
+            }
+
+
+            //prevents player jumping off same side wall twice in a row
+            if (jumpBottom.canJump == true)
+            {
+                jumpedRight = false;
+                jumpedLeft = false;
+            }
+            if (jumpedRight == true)
+            {
+                jumpedLeft = false;
+            }
+            if (jumpedLeft == true)
+            {
+                jumpedRight = false;
             }
         }
         else
@@ -119,11 +188,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     //flip character
     void FlipSprite()
     {
-        if(isFacingRight && Input.GetKey(KeyCode.A) || !isFacingRight && Input.GetKey(KeyCode.D))
+        if (isFacingRight && Input.GetKey(KeyCode.A) || !isFacingRight && Input.GetKey(KeyCode.D))
         {
             isFacingRight = !isFacingRight;
             Vector2 ls = transform.localScale;
@@ -133,32 +201,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // When player collides with ground, jump animation stops and player can jump again
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        isJumping = false;
-        //Debug.Log("Collision with ground");
-
-        if (collision.gameObject.CompareTag("Ladder"))
-        {
-            onLadder = true;
-            //Debug.Log("On Ladder");
-        }
-    }
+    //public void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    isJumping = false;
+    //    Debug.Log("Collision with ground");
+    //}
 
     // Prevents player from walking off platform and jumping
     public void OnCollisionExit2D(Collision2D collision)
     {
-        if (jumpWait > 0.2)
-        {
-            isJumping = true;
-            //Debug.Log("Left ground");
-        }
-
-        if (collision.gameObject.CompareTag("Ladder"))
-        {
-            onLadder = false;
-            //Debug.Log("Off Ladder");
-        }
+        isJumping = true;
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -189,7 +241,7 @@ public class PlayerMovement : MonoBehaviour
             case "jumpPower":
                 jumpPower = newValue;
                 //lowJumpMulitplier = jumpPower - 6f;
-               // fallMultiplier = 2.5f;
+                // fallMultiplier = 2.5f;
                 break;
             default:
                 Debug.LogWarning("Unknown attribute: " + attributeName);

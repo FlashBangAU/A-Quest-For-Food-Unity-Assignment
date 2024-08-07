@@ -9,6 +9,9 @@ TagManager:
   - CheckPoint
   - Ground
   - DataManager
+  - Enemy
+  - Weak Point
+  - Ladder
   layers:
   - Default
   - TransparentFX
