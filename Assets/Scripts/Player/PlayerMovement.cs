@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     float horizontalInput;
+    float verticalInput;
     [SerializeField] float moveSpeed = 5f;
     bool isFacingRight = true;
     [SerializeField]  float jumpPower = 8f;
@@ -16,17 +17,10 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Animator jumpAnimation;
     [SerializeField] private Animator sprintAnimation;
-    
     float jumpWait = 0;
 
-    public JumpBottom jumpBottom;
-    public JumpLeft jumpLeft;
-    public JumpRight jumpRight;
-
-    bool jumpedLeft = false;
-    bool jumpedRight = false;
-
     Rigidbody2D rb;
+    private bool onLadder = false;
 
     //start is called before the first frame update
     void Start()
@@ -46,8 +40,13 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
 
-        // Horizontal movement when touching ground
-        if (!isJumping)
+        // Movement when on ladder
+        if (onLadder == true)
+        {
+            verticalInput = Input.GetAxis("Vertical");
+            horizontalInput = Input.GetAxis("Horizontal");
+        }
+        else if (!isJumping)// Horizontal movement when touching ground
         {
             horizontalInput = Input.GetAxis("Horizontal");
             if (timeBtwSprint < 0)
@@ -66,11 +65,11 @@ public class PlayerMovement : MonoBehaviour
         // Slow control of character when airborne
         else
         {
-            if (Input.GetKey(KeyCode.A) && horizontalInput < moveSpeed && rb.velocity.x > -6)
+            if (Input.GetKey(KeyCode.A) && horizontalInput < moveSpeed)
             {
                 horizontalInput = horizontalInput - moveSpeedInAir;
             }
-            if (Input.GetKey(KeyCode.D) && horizontalInput < moveSpeed && rb.velocity.x < 6)
+            if (Input.GetKey(KeyCode.D) && horizontalInput < moveSpeed)
             {
                 horizontalInput = horizontalInput + moveSpeedInAir;
             }
@@ -82,93 +81,44 @@ public class PlayerMovement : MonoBehaviour
             jumpAnimation.Play("JumpAnimation");
         }
 
-
-        //Debug.Log("Can Jump: "+jumpLeft.canJump+"  "+jumpBottom.canJump+"  "+jumpRight.canJump);
-        //ensures all colliders are false for jump animation
-        if(jumpBottom.canJump == false && jumpLeft.canJump == false && jumpRight.canJump == false)
-        {
-            isJumping = true;
-        }
-        else
-        {
-            isJumping = false;
-        }
-
-        //Debug.Log("Velocity X: " + rb.velocity.x);
-
         FlipSprite();
     }
 
 
     private void FixedUpdate()
     {
-        // Player falls faster on descent
-        if (rb.velocity.y < 0 && rb.velocity.y >= -5)
+        if (!onLadder)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-        // Player can control how high they jump with key hold
-        else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W))
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMulitplier - 1) * Time.deltaTime;
-        }
-
-        // Logging rb.velocity.y
-        //Debug.Log("Velocity Y: " + rb.velocity.y);
-
-        // Player Bottom Jump
-        if (Input.GetKey(KeyCode.W) && jumpBottom.canJump == true)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-            isJumping = true;
-        }
-
-        // Player Left Jump
-        if (Input.GetKey(KeyCode.W) && jumpLeft.canJump == true && jumpedLeft == false)
-        {
-            if (Input.GetKey(KeyCode.A))
-            { 
-                rb.velocity = new Vector2(0, jumpPower);
-                isJumping = true;
-            }
-            if (Input.GetKey(KeyCode.D))
+            // Player falls faster on descent
+            if (rb.velocity.y < 0 && rb.velocity.y >= -5)
             {
-                rb.velocity = new Vector2(4, jumpPower);
-                isJumping = true;
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
             }
-        }
-
-        // Player Right Jump
-        if (Input.GetKey(KeyCode.W) && jumpRight.canJump == true && jumpedRight == false)
-        {
-            if (Input.GetKey(KeyCode.A))
+            // Player can control how high they jump with key hold
+            else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W))
             {
-                rb.velocity = new Vector2(-4, jumpPower);
-                isJumping = true;
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMulitplier - 1) * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.D))
-            {
-                rb.velocity = new Vector2(0, jumpPower);
-                isJumping = true;
-            }
-            jumpedRight = true;
-        }
 
-        //prevents player jumping off same side wall twice in a row
-        if(jumpBottom.canJump == true)
-        {
-            jumpedRight = false;
-            jumpedLeft = false;
+            // Logging rb.velocity.y
+            //Debug.Log("Velocity Y: " + rb.velocity.y);
+
+            // Player jumps
+            if (Input.GetKey(KeyCode.W) && !isJumping)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+                isJumping = true;
+            }
         }
-        if (jumpedRight == true)
-        {
-            jumpedLeft = false; 
-        }
-        if(jumpedLeft == true)
-        {
-            jumpedRight = false;
+        else
+        {//on ladder
+            if (Input.GetKey(KeyCode.W))
+            {
+                rb.velocity = new Vector2(rb.velocity.x, verticalInput * moveSpeed);
+            }
         }
     }
+
 
     //flip character
     void FlipSprite()
@@ -183,18 +133,50 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // When player collides with ground, jump animation stops and player can jump again
-    //public void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    isJumping = false;
-    //    Debug.Log("Collision with ground");
-    //}
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        isJumping = false;
+        //Debug.Log("Collision with ground");
+
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            onLadder = true;
+            //Debug.Log("On Ladder");
+        }
+    }
 
     // Prevents player from walking off platform and jumping
     public void OnCollisionExit2D(Collision2D collision)
     {
-        isJumping = true;
+        if (jumpWait > 0.2)
+        {
+            isJumping = true;
+            //Debug.Log("Left ground");
+        }
+
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            onLadder = false;
+            //Debug.Log("Off Ladder");
+        }
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            onLadder = true;
+            Debug.Log("On Ladder");
+        }
+    }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            onLadder = false;
+            Debug.Log("Off Ladder");
+        }
+    }
 
     // Method to change various attributes
     public void ChangeAttribute(string attributeName, float newValue)
