@@ -132,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
                 isJumping = true;
             }
 
-            // Player Left Jump
+            // Player Left Contact Jump
             if (Input.GetKey(KeyCode.W) && jumpLeft.canJump == true && jumpedLeft == false)
             {
                 if (Input.GetKey(KeyCode.A))
@@ -145,9 +145,10 @@ public class PlayerMovement : MonoBehaviour
                     rb.velocity = new Vector2(4, jumpPower);
                     isJumping = true;
                 }
+                jumpedLeft = true;
             }
 
-            // Player Right Jump
+            // Player Right Contact Jump
             if (Input.GetKey(KeyCode.W) && jumpRight.canJump == true && jumpedRight == false)
             {
                 if (Input.GetKey(KeyCode.A))
