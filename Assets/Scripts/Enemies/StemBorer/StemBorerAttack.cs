@@ -44,3 +44,4 @@ public class StemBorerAttack : MonoBehaviour
             Instantiate(projectile, projPos.position, Quaternion.identity);
         }
     }
+}
