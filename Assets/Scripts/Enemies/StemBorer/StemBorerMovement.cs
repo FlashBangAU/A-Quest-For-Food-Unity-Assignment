@@ -1,45 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StemBorerMovement : MonoBehaviour
 {
-    [SerializeField] float speed;
-    [SerializeField] float chaseHeight;
-    [SerializeField] float chaseDistance;
+    [SerializeField] private float speed;
+    [SerializeField] private float chaseHeight;
+    [SerializeField] private float chaseDistance;
+
+    [SerializeField] private Transform detectPos;
+    [SerializeField] private float detectRange;
+    [SerializeField] private LayerMask whatIsPlayer;
 
     private GameObject player;
-    Vector2 tempPos;
+    private Vector2 checkPoint;
 
-    bool isFacingRight = true;
-    bool flyOnRight;
-    bool currentXNotNeg;
-
-    [SerializeField] Transform detectPos;
-    [SerializeField] float detectRange;
-    [SerializeField] LayerMask whatIsPlayer;
-
-    //public HealthBarOrientation2D hBO2;
-
-    Vector2 checkPoint;
+    private bool isFacingRight = true;
+    private bool flyOnRight;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("Player GameObject not found. Please make sure it has the 'Player' tag.");
+            return;
+        }
+
         checkPoint = transform.position;
-        if (player.transform.position.x < transform.position.x)
-        {
-            FlipSprite();
-            //hBO2.FlipSprite();
-            isFacingRight = true;
-            currentXNotNeg = true;
-        }
-        else
-        {
-            isFacingRight = false;
-            currentXNotNeg = false;
-        }
+        UpdateFacingDirection();
     }
 
     // Update is called once per frame
@@ -50,20 +38,16 @@ public class StemBorerMovement : MonoBehaviour
             return;
         }
 
-        if (player.transform.position.x <= transform.position.x)
-        {
-            flyOnRight = true;
-        }
-        else
-        {
-            flyOnRight = false;
-        }
+        // Determine the direction to move based on player's position
+        flyOnRight = player.transform.position.x > transform.position.x;
 
-        Collider2D[] playerTofight = Physics2D.OverlapCircleAll(detectPos.position, detectRange, whatIsPlayer);
-        if (playerTofight.Length != 0)
+        // Check for nearby players
+        Collider2D[] playerToFight = Physics2D.OverlapCircleAll(detectPos.position, detectRange, whatIsPlayer);
+        if (playerToFight.Length > 0)
         {
             Chase();
-        } else if (playerTofight.Length == 0)
+        }
+        else
         {
             Neutral();
         }
@@ -71,30 +55,20 @@ public class StemBorerMovement : MonoBehaviour
 
     private void Chase()
     {
-        tempPos = player.transform.position;
+        Vector2 targetPos = player.transform.position;
 
-        if (flyOnRight)
-        {
-            tempPos.x += chaseDistance;
-        } else if (!flyOnRight)
-        {
-            tempPos.x += (chaseDistance * -1);
-        }
+        // Adjust target position based on direction
+        targetPos.x += (flyOnRight ? chaseDistance : -chaseDistance);
+        targetPos.y += chaseHeight;
 
-        if (currentXNotNeg && !flyOnRight)
-        {
-            FlipSprite();
-            currentXNotNeg = false;
-        }
-        else if (!currentXNotNeg && flyOnRight)
+        // Move towards the target position
+        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+
+        // Flip sprite if necessary
+        if (isFacingRight != flyOnRight)
         {
             FlipSprite();
-            currentXNotNeg = true;
         }
-
-        tempPos.y += chaseHeight;
-
-        transform.position = Vector2.MoveTowards(transform.position, tempPos, speed * Time.deltaTime);
     }
 
     private void Neutral()
@@ -104,18 +78,27 @@ public class StemBorerMovement : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(detectPos.position, detectRange);
+        if (detectPos != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(detectPos.position, detectRange);
+        }
     }
 
-    void FlipSprite()
+    private void FlipSprite()
     {
-        if (isFacingRight && !flyOnRight || !isFacingRight && flyOnRight)
+        isFacingRight = !isFacingRight;
+        Vector2 localScale = transform.localScale;
+        localScale.x *= -1f;
+        transform.localScale = localScale;
+    }
+
+    private void UpdateFacingDirection()
+    {
+        isFacingRight = player.transform.position.x >= transform.position.x;
+        if (!isFacingRight)
         {
-            isFacingRight = !isFacingRight;
-            Vector2 ls = transform.localScale;
-            ls.x *= -1f;
-            transform.localScale = ls;
+            FlipSprite();
         }
     }
 }
