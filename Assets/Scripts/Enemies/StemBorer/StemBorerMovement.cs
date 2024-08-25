@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StemBorerMovement : MonoBehaviour
@@ -13,7 +11,6 @@ public class StemBorerMovement : MonoBehaviour
 
     bool isFacingRight = true;
     bool flyOnRight;
-    bool currentXNotNeg;
 
     [SerializeField] Transform detectPos;
     [SerializeField] float detectRange;
@@ -31,14 +28,11 @@ public class StemBorerMovement : MonoBehaviour
         if (player.transform.position.x < transform.position.x)
         {
             FlipSprite();
-            //hBO2.FlipSprite();
             isFacingRight = true;
-            currentXNotNeg = true;
         }
         else
         {
             isFacingRight = false;
-            currentXNotNeg = false;
         }
     }
 
@@ -63,9 +57,15 @@ public class StemBorerMovement : MonoBehaviour
         if (playerTofight.Length != 0)
         {
             Chase();
-        } else if (playerTofight.Length == 0)
+        }
+        else if (playerTofight.Length == 0)
         {
             Neutral();
+        }
+
+        if (isFacingRight && !flyOnRight || !isFacingRight && flyOnRight)
+        {
+            FlipSprite();
         }
     }
 
@@ -76,20 +76,10 @@ public class StemBorerMovement : MonoBehaviour
         if (flyOnRight)
         {
             tempPos.x += chaseDistance;
-        } else if (!flyOnRight)
+        }
+        else if (!flyOnRight)
         {
             tempPos.x += (chaseDistance * -1);
-        }
-
-        if (currentXNotNeg && !flyOnRight)
-        {
-            FlipSprite();
-            currentXNotNeg = false;
-        }
-        else if (!currentXNotNeg && flyOnRight)
-        {
-            FlipSprite();
-            currentXNotNeg = true;
         }
 
         tempPos.y += chaseHeight;
@@ -110,12 +100,9 @@ public class StemBorerMovement : MonoBehaviour
 
     void FlipSprite()
     {
-        if (isFacingRight && !flyOnRight || !isFacingRight && flyOnRight)
-        {
             isFacingRight = !isFacingRight;
             Vector2 ls = transform.localScale;
             ls.x *= -1f;
             transform.localScale = ls;
-        }
     }
 }
