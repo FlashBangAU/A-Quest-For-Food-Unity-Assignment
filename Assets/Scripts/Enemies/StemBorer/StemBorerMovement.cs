@@ -2,32 +2,38 @@ using UnityEngine;
 
 public class StemBorerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    [SerializeField] private float chaseHeight;
-    [SerializeField] private float chaseDistance;
-
-    [SerializeField] private Transform detectPos;
-    [SerializeField] private float detectRange;
-    [SerializeField] private LayerMask whatIsPlayer;
+    [SerializeField] float speed;
+    [SerializeField] float chaseHeight;
+    [SerializeField] float chaseDistance;
 
     private GameObject player;
-    private Vector2 checkPoint;
+    Vector2 tempPos;
 
-    private bool isFacingRight = true;
-    private bool flyOnRight;
+    bool isFacingRight = true;
+    bool flyOnRight;
+
+    [SerializeField] Transform detectPos;
+    [SerializeField] float detectRange;
+    [SerializeField] LayerMask whatIsPlayer;
+
+    //public HealthBarOrientation2D hBO2;
+
+    Vector2 checkPoint;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null)
-        {
-            Debug.LogError("Player GameObject not found. Please make sure it has the 'Player' tag.");
-            return;
-        }
-
         checkPoint = transform.position;
-        UpdateFacingDirection();
+        if (player.transform.position.x < transform.position.x)
+        {
+            FlipSprite();
+            isFacingRight = true;
+        }
+        else
+        {
+            isFacingRight = false;
+        }
     }
 
     // Update is called once per frame
@@ -38,37 +44,47 @@ public class StemBorerMovement : MonoBehaviour
             return;
         }
 
-        // Determine the direction to move based on player's position
-        flyOnRight = player.transform.position.x > transform.position.x;
-
-        // Check for nearby players
-        Collider2D[] playerToFight = Physics2D.OverlapCircleAll(detectPos.position, detectRange, whatIsPlayer);
-        if (playerToFight.Length > 0)
+        if (player.transform.position.x <= transform.position.x)
         {
-            Chase();
+            flyOnRight = true;
         }
         else
         {
+            flyOnRight = false;
+        }
+
+        Collider2D[] playerTofight = Physics2D.OverlapCircleAll(detectPos.position, detectRange, whatIsPlayer);
+        if (playerTofight.Length != 0)
+        {
+            Chase();
+        }
+        else if (playerTofight.Length == 0)
+        {
             Neutral();
+        }
+
+        if (isFacingRight && !flyOnRight || !isFacingRight && flyOnRight)
+        {
+            FlipSprite();
         }
     }
 
     private void Chase()
     {
-        Vector2 targetPos = player.transform.position;
+        tempPos = player.transform.position;
 
-        // Adjust target position based on direction
-        targetPos.x += (flyOnRight ? chaseDistance : -chaseDistance);
-        targetPos.y += chaseHeight;
-
-        // Move towards the target position
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-
-        // Flip sprite if necessary
-        if (isFacingRight != flyOnRight)
+        if (flyOnRight)
         {
-            FlipSprite();
+            tempPos.x += chaseDistance;
         }
+        else if (!flyOnRight)
+        {
+            tempPos.x += (chaseDistance * -1);
+        }
+
+        tempPos.y += chaseHeight;
+
+        transform.position = Vector2.MoveTowards(transform.position, tempPos, speed * Time.deltaTime);
     }
 
     private void Neutral()
@@ -78,27 +94,15 @@ public class StemBorerMovement : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        if (detectPos != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawSphere(detectPos.position, detectRange);
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(detectPos.position, detectRange);
     }
 
-    private void FlipSprite()
+    void FlipSprite()
     {
-        isFacingRight = !isFacingRight;
-        Vector2 localScale = transform.localScale;
-        localScale.x *= -1f;
-        transform.localScale = localScale;
-    }
-
-    private void UpdateFacingDirection()
-    {
-        isFacingRight = player.transform.position.x >= transform.position.x;
-        if (!isFacingRight)
-        {
-            FlipSprite();
-        }
+            isFacingRight = !isFacingRight;
+            Vector2 ls = transform.localScale;
+            ls.x *= -1f;
+            transform.localScale = ls;
     }
 }
