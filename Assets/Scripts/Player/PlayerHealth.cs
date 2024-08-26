@@ -18,34 +18,29 @@ public class PlayerHealth : MonoBehaviour
     Vector2 checkPoint;
     [SerializeField] BackGroundMovement bgm;
 
-    // Start is called before the first frame update
     void Start()
     {
-        checkPoint = transform.position;
-        if (healthBar != null) {
-            healthBar.SetMaxHealth(maxHealth);
-            healthBar.UpdateHealth(health);
-        }
-        currentHealth = health;
+        checkPoint = transform.position; // Initialize checkpoint to start position
+        currentHealth = health; // Initialize current health
+        UpdateHealthBar(); // Initialize health bar with current health
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //heal
+        // Healing logic
         if (Input.GetKeyDown(KeyCode.O) && cs.coinCount >= eatCoinReq && health != maxHealth)
         {
             Heal();
         }
 
-        //player is damaged
+        // Update health bar when health changes
         if (currentHealth != health)
         {
-            healthBar.UpdateHealth(health);
             currentHealth = health;
+            UpdateHealthBar();
         }
 
-        //player dies
+        // Handle player death
         if (health <= 0)
         {
             Die();
@@ -54,55 +49,72 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
-        //add death animation
         Respawn();
     }
 
     void Respawn()
     {
-        health = maxHealth;
+        health = maxHealth; // Reset health to max
+        currentHealth = health; // Update currentHealth to maxHealth
+
+        // Deduct coins upon respawn
         if (cs.coinCount >= coinLostDeath)
         {
-            cs.coinCount = cs.coinCount - coinLostDeath;
-        } else
-        {
-            cs.coinCount = 0;
+            cs.coinCount -= coinLostDeath;
         }
-        transform.position = checkPoint;
+        else
+        {
+            cs.coinCount = 0; // Ensure coin count does not go negative
+        }
+
+        transform.position = checkPoint; // Move player to last checkpoint
+
+        // Handle background movement respawn if necessary
         if (bgm != null)
         {
             bgm.Respawn();
         }
-        
+
+        // Update health bar to reflect reset health
+        UpdateHealthBar();
     }
 
     void Heal()
     {
-        cs.coinCount -= eatCoinReq;
-        if ((heal + health) >= maxHealth)
+        if (cs.coinCount >= eatCoinReq)
         {
-            health = maxHealth;
+            cs.coinCount -= eatCoinReq; // Deduct coins used for healing
+            health = Mathf.Min(health + heal, maxHealth); // Heal player, but cap health at maxHealth
+            currentHealth = health; // Sync currentHealth with health
+            UpdateHealthBar(); // Update the health bar
         }
-        else
+    }
+
+    void UpdateHealthBar()
+    {
+        if (healthBar != null)
         {
-            health += heal;
+            healthBar.SetMaxHealth(maxHealth); // Set the max health in the health bar
+            healthBar.UpdateHealth(currentHealth); // Update the health bar with current health
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        // Detect when player collects a coin
         if (other.gameObject.CompareTag("Coin"))
         {
             Destroy(other.gameObject);
-            cs.coinCount += Random.Range(2, 4);
+            cs.coinCount += Random.Range(2, 4); // Add random number of coins to player count
         }
 
+        // Detect when player reaches a checkpoint
         if (other.gameObject.CompareTag("CheckPoint"))
         {
-            checkPoint = transform.position;
+            checkPoint = transform.position; // Update checkpoint position to current player position
             if (bgm != null)
             {
-                bgm.NewRespawn();
+                bgm.NewRespawn(); // Trigger background respawn logic if applicable
             }
         }
     }
