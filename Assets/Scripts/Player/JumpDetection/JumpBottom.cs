@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class JumpBottom : MonoBehaviour
@@ -8,19 +6,22 @@ public class JumpBottom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        // Check if the object we collided with has the "Ground" tag
+        if (other.CompareTag("Ground"))
         {
             canJump = true;
+            // Optionally, log to the console for debugging
             //Debug.Log("Collision with ground bottom");
         }
     }
 
-    // Prevents player from walking off platform and jumping
-    public void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        // Check if the object we exited has the "Ground" tag
+        if (other.CompareTag("Ground"))
         {
             canJump = false;
+            // Optionally, log to the console for debugging
             //Debug.Log("Left ground");
         }
     }
