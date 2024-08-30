@@ -4,6 +4,7 @@ public class EnemyProjectile : MonoBehaviour
 {
     private GameObject player;
     private Rigidbody2D rb;
+    private PolygonCollider2D pc;
 
     [SerializeField] public float speed;
     private float timer;
@@ -18,18 +19,59 @@ public class EnemyProjectile : MonoBehaviour
 
         float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);
+
+        pc = GetComponent<PolygonCollider2D>();
+        
+
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        bool isfullycovered = CheckIfFullyCovered();
+
         timer += Time.deltaTime;
 
         if (timer > 15)
         {
             Destroy(gameObject);
         }
+        
+        if (isfullycovered == true)
+        {
+            Debug.Log("fullycovered");
+            Destroy(gameObject);
+        }
     }
+
+    private bool CheckIfFullyCovered()
+    {
+        LayerMask Ground = LayerMask.NameToLayer("Ground");
+        foreach (var Point in pc.points)
+        {
+            Vector3 testpoint = new Vector3(Point.x, Point.y);
+            Vector3 pointtocheck = transform.position + testpoint;
+
+            Collider2D pathCollider = Physics2D.OverlapPoint(pointtocheck, 1 << Ground);
+
+            if(pathCollider == null)
+            {
+                return false;
+            }
+        }
+        
+        return true;
+        
+
+    }
+
+
+
+
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
