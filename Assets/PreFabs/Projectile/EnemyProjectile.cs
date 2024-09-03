@@ -5,6 +5,8 @@ public class EnemyProjectile : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
 
+    AudioManager audioManager;
+
     [SerializeField] public float speed;
     private float timer;
     // Start is called before the first frame update
@@ -31,11 +33,17 @@ public class EnemyProjectile : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<PlayerHealth>().health -= 1;
+            audioManager.PlaySFX(audioManager.playerDamage);
             Destroy(gameObject);
         }
     }
