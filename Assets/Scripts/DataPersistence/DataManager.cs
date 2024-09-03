@@ -11,6 +11,8 @@ public class DataManager : MonoBehaviour
     public float highScore;
     public float[] highScores;
 
+
+
     private void Awake()
     {
         if (Instance != null)

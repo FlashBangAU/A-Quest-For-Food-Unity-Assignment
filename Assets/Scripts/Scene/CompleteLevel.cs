@@ -31,6 +31,7 @@ public class CompleteLevel : MonoBehaviour
 
     [SerializeField] float timerEndScene = 0f;
     [SerializeField] float timeEndScene = 5f;
+    [SerializeField] GameObject ScoreCanvas;
 
     public SceneController sceneController;
 
@@ -141,6 +142,7 @@ public class CompleteLevel : MonoBehaviour
 
     public void DisplayScoreUI()
     {
+        ScoreCanvas.SetActive(true);
         showScoreTitleUI.text = "SCORE";
         showScoreUI.text = showScore.ToString("N0");
     }
