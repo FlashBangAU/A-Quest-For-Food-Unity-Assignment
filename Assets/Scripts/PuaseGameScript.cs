@@ -19,6 +19,8 @@ public class PuaseGameScript : MonoBehaviour
         }
         else
         {
+            //ensure that loading new scene is not paused
+            Time.timeScale = 1f;
             pausescreen.SetActive(false);
         }
         
@@ -60,9 +62,4 @@ public class PuaseGameScript : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
-    
-    
-    
-
-
 }
