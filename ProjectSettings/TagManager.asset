@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Weak Point
   - Ladder
+  - Pausedscreen
   layers:
   - Default
   - TransparentFX
