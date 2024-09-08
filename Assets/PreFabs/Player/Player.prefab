@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56958af411c83dc49a36831741bf83e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  makeClouds: 0
   clouds:
   - {fileID: 5149977442542402948, guid: 781518d13ce01084faecf6c411e1d99a, type: 3}
   - {fileID: 5149977442542402948, guid: d4b50f820b386d44a844b1416b1043c0, type: 3}
@@ -97,6 +98,7 @@ GameObject:
   - component: {fileID: 1126856523924172142}
   - component: {fileID: 5220876486473601534}
   - component: {fileID: 6662360791085800618}
+  - component: {fileID: 7828593200806459362}
   - component: {fileID: 6091915266309559014}
   - component: {fileID: 7194277923347485122}
   m_Layer: 3
@@ -268,6 +270,20 @@ MonoBehaviour:
   cs: {fileID: 0}
   healthBar: {fileID: 7677937991113377215}
   bgm: {fileID: 0}
+--- !u!114 &7828593200806459362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3794918074216593617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df03f5a34b191847bb7cd87c88375a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounce: 0
+  rb2D: {fileID: 0}
 --- !u!95 &6091915266309559014
 Animator:
   serializedVersion: 5
