@@ -232,7 +232,7 @@ public class PlayerMovement : MonoBehaviour
         {
             hasBeenAirborne = false;
             audioManager.PlaySFX(audioManager.playerLand);
-            Debug.Log("Collision with ground");
+            //Debug.Log("Collision with ground");
         }
     }
 
