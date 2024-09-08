@@ -15,6 +15,12 @@ public class SelectLevel : MonoBehaviour
     bool canSelect = false;
     bool canPlay = false;
 
+    public float bronzeScoreMin;
+    public float silverScoreMin;
+    public float goldScoreMin;
+
+    [SerializeField] private Animator selectLevelAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +38,16 @@ public class SelectLevel : MonoBehaviour
         {
             highScore = dm.GetHighScoreForLevel(level);
             highScoreUI.text = highScore.ToString("N0");
+            if (highScore >= goldScoreMin)
+            {
+                selectLevelAnimator.Play("GoldScore");
+            } else if (highScore >= silverScoreMin)
+            {
+                selectLevelAnimator.Play("SilverScore");
+            } else if (highScore >= bronzeScoreMin)
+            {
+                selectLevelAnimator.Play("BronzeScore");
+            }
         }
 
         instructionalQueueUI.text = "";
