@@ -38,6 +38,13 @@ public class CompleteLevel : MonoBehaviour
 
     public bool removeAllSaveData = false;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void Start()
     {
         // Check for DataManager instance
@@ -81,6 +88,7 @@ public class CompleteLevel : MonoBehaviour
         }
     }
 
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !hasFinished)
@@ -96,6 +104,8 @@ public class CompleteLevel : MonoBehaviour
             score *= 1000;
             showScore = (int)score;
             hasFinished = true;
+
+            audioManager.PlaySFX(audioManager.levelComplete);
 
             CheckHighScore();
 

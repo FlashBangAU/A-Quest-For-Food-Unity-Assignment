@@ -14,6 +14,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip playerDeath;
     public AudioClip playerAttack;
     public AudioClip playerDamage;
+    public AudioClip playerJump;
+    public AudioClip playerLand;
+    public AudioClip enemyHurt;
+    public AudioClip enemyAttack;
     public AudioClip foodPickup;
     public AudioClip levelComplete;
     public AudioClip checkpoint;
