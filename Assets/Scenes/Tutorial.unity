@@ -939,6 +939,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 495877695}
     - target: {fileID: 4222913994745290996, guid: 146c6e92013a70c4d97c6c26b5b50119, type: 3}
+      propertyPath: removeAllSaveData
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222913994745290996, guid: 146c6e92013a70c4d97c6c26b5b50119, type: 3}
       propertyPath: showHighScoreTitleUI
       value: 
       objectReference: {fileID: 286950007}
