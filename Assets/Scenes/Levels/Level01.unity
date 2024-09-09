@@ -37710,6 +37710,121 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3117aec557a141f4fafebf5b5cd75ade, type: 3}
+--- !u!1001 &1217818102
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1850884403}
+    m_Modifications:
+    - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Name
+      value: NPC (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845956818841502175, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: playerAttack
+      value: 
+      objectReference: {fileID: 1868247972}
+    - target: {fileID: 1845956818841502175, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: variableName
+      value: jumpPower
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845956818841502175, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 1868247973}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: 'Captain Squeak '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcNameUI
+      value: 
+      objectReference: {fileID: 536880494}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 361161726}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 938400007}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: "I hope you\u2019re ready for what\u2019s out there."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: The key to surviving is learning the enemies' patterns.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: "Caterpillars tend to move slowly, but if you get too close, they\u2019ll
+        defend their territory. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: "Time your moves, and you\u2019ll make it through."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2457345
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+--- !u!4 &1217818103 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+  m_PrefabInstance: {fileID: 1217818102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1221377980 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 800372205731150184, guid: 3117aec557a141f4fafebf5b5cd75ade, type: 3}
@@ -37909,6 +38024,120 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1259238330}
   m_SourcePrefab: {fileID: 100100000, guid: 373c60ec5853995468d16ff5f814898f, type: 3}
+--- !u!1001 &1255445604
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1850884403}
+    m_Modifications:
+    - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Name
+      value: NPC (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845956818841502175, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: playerAttack
+      value: 
+      objectReference: {fileID: 1868247972}
+    - target: {fileID: 1845956818841502175, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: variableName
+      value: jumpPower
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845956818841502175, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 1868247973}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Master Scurry
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcNameUI
+      value: 
+      objectReference: {fileID: 536880494}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 361161726}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 938400007}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: 'You know, the stem borers that roam the plains are quite dangerous. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: They feed on plants and destroy crops from the inside.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: ' Keep your wits about you if you encounter them!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -165.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2457345
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+--- !u!4 &1255445605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+  m_PrefabInstance: {fileID: 1255445604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1259238327 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6425066436379426931, guid: 373c60ec5853995468d16ff5f814898f, type: 3}
@@ -38136,7 +38365,7 @@ PrefabInstance:
       objectReference: {fileID: 1868247973}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcName
-      value: Lost Soul
+      value: 'Optimist Cheddar '
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -38156,11 +38385,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: Hey. Looks like you can't get back up.
+      value: "I\u2019m sure you\u2019ll do great out there! You\u2019ve got the skills,
+        and we\u2019re all cheering for you back at the colony. "
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: Well cya.
+      value: "Stay sharp and bring back some food\u2014we\u2019re all counting on
+        you, but I know you won\u2019t let us down!\""
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38379,6 +38610,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3842167717108722201, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -582.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3842167717108722201, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -309.94
+      objectReference: {fileID: 0}
     - target: {fileID: 3882965663234129477, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_margin.w
       value: 23.912766
@@ -38454,6 +38693,14 @@ PrefabInstance:
     - target: {fileID: 6884024139695456652, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_margin.w
       value: 23.912766
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151943376611702483, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151943376611702483, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7249644568218656730, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -75895,6 +76142,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1868247973}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Chief Eldar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 536880494}
@@ -75912,32 +76163,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: Hey, can you help me get up?
+      value: '"Hey, this is a nice place to set up camp. '
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: Wha... What are you doing?
+      value: "You\u2019ve got a long journey ahead, but I know you\u2019ll pull through
+        for the colony!\""
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]
-      value: Ahh!! ARRRRGGGGGGHHHHHH!!! AHHHHHHHHHHHHHHHHHHHHHHHH!!!!
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[3]
-      value: MMMYYYY!!! LEEEGGSS!!!! MYYYY LEEEGGSSS!!!! AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!!!
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[4]
-      value: '*Item Get    !Rare Drop!    GrassHopper Legs*                        
-        You can now jump higher!'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.86299133
+      value: -188.93
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.248393
+      value: -4.93
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -76287,6 +76538,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1017578301}
+  - {fileID: 1255445605}
+  - {fileID: 1217818103}
   - {fileID: 472096955}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
