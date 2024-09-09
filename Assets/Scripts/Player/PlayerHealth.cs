@@ -18,6 +18,8 @@ public class PlayerHealth : MonoBehaviour
     Vector2 checkPoint;
     [SerializeField] BackGroundMovement bgm;
 
+    AudioManager audioManager;
+
     void Start()
     {
         checkPoint = transform.position; // Initialize checkpoint to start position
@@ -45,6 +47,11 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }
+    }
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Die()
@@ -104,6 +111,7 @@ public class PlayerHealth : MonoBehaviour
         // Detect when player collects a coin
         if (other.gameObject.CompareTag("Coin"))
         {
+            audioManager.PlaySFX(audioManager.foodPickup);
             Destroy(other.gameObject);
             cs.coinCount += Random.Range(2, 4); // Add random number of coins to player count
         }
@@ -111,6 +119,7 @@ public class PlayerHealth : MonoBehaviour
         // Detect when player reaches a checkpoint
         if (other.gameObject.CompareTag("CheckPoint"))
         {
+            audioManager.PlaySFX(audioManager.checkpoint);
             checkPoint = transform.position; // Update checkpoint position to current player position
             if (bgm != null)
             {

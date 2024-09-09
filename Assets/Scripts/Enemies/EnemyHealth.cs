@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     public HealthBar healthBar;
     public PlayerHealth ph;
 
+    AudioManager audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +30,15 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     public void TakeDamage(int damage)
     {
         health -= damage;
+        audioManager.PlaySFX(audioManager.enemyHurt);
         healthBar.UpdateHealth(health);
         Debug.Log("Enemy Takes Damage");
     }

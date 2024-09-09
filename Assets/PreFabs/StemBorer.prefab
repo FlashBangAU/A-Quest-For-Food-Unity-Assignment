@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6498163961027574507}
   - component: {fileID: 5117648934307940595}
   - component: {fileID: 8394029132151088387}
+  - component: {fileID: 4290466616324608167}
   m_Layer: 6
   m_Name: StemBorer
   m_TagString: Untagged
@@ -63,8 +64,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -13.01582, y: -1.7854011, z: 0.29284763}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3.4, y: 3.4, z: 3.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4321736816235353021}
   - {fileID: 8110484017651953129}
@@ -112,9 +113,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.9339623, g: 0.4978195, b: 0.4978195, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: 21300000, guid: fabec4e8f5cab874897c69e5bb2f4245, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -200,6 +201,7 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   healthBar: {fileID: 5432947091703198561}
+  ph: {fileID: 0}
 --- !u!114 &5117648934307940595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +236,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 8949632235500175305, guid: 0f8f62eb9308fe34b9d89bd8127f6707, type: 3}
   projPos: {fileID: 4321736816235353021}
+--- !u!95 &4290466616324608167
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412715892179208197}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5bc99e44cd2dd6e439fd0de4a3e28b24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6602013869465704562
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +329,18 @@ PrefabInstance:
       value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 1263855865955287095, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263855865955287095, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263855865955287095, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263855865955287095, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -339,7 +374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1263855865955287095, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.82
+      value: 0.406
       objectReference: {fileID: 0}
     - target: {fileID: 1263855865955287095, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -353,6 +388,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1263855865955287095, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5789542372180081744, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -360,6 +399,22 @@ PrefabInstance:
     - target: {fileID: 5789542372180081744, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6547035419225052804, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.4526
+      objectReference: {fileID: 0}
+    - target: {fileID: 6547035419225052804, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.114
+      objectReference: {fileID: 0}
+    - target: {fileID: 6547035419225052804, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000000029802
+      objectReference: {fileID: 0}
+    - target: {fileID: 6547035419225052804, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0000000074506
       objectReference: {fileID: 0}
     - target: {fileID: 8733457195034842919, guid: 2f1c6c34503aa5e4ea1d2913ebb43bab, type: 3}
       propertyPath: m_Name
