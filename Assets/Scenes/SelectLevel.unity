@@ -395,8 +395,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_Name
-      value: NPC (1)
+      value: NPC1
       objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcNameUI
+      value: 
+      objectReference: {fileID: 952056248}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 2099696098}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1942188295}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.400002
@@ -468,8 +480,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: NPC2
       objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcNameUI
+      value: 
+      objectReference: {fileID: 952056248}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 2099696098}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
       value: level2
@@ -534,8 +558,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: NPC2
       objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcNameUI
+      value: 
+      objectReference: {fileID: 952056248}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 2099696098}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1942188295}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.45
@@ -644,7 +680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3922012727504744722, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4272470049407474925, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_IsActive
@@ -657,6 +693,10 @@ PrefabInstance:
     - target: {fileID: 4801814869514068581, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -304.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116118816222236539, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8194593719104546423, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -871,7 +911,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_Name
-      value: NPC (1)
+      value: NPC1
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -884,7 +924,7 @@ PrefabInstance:
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialoguePanel
       value: 
-      objectReference: {fileID: 950081358}
+      objectReference: {fileID: 1942188295}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.400002
@@ -1020,11 +1060,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae392df589f1e8439316f88b61b2776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &950081358 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3922012727504744722, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
-  m_PrefabInstance: {fileID: 722369603}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &952056248 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6532503721370616203, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
@@ -1325,8 +1360,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1688488073}
   - {fileID: 550925391}
+  - {fileID: 1688488073}
   m_Father: {fileID: 451139705}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1564538219
@@ -1339,8 +1374,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_Name
-      value: NPC (1)
+      value: NPC1
       objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcNameUI
+      value: 
+      objectReference: {fileID: 952056248}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 2099696098}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1942188295}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.400002
@@ -1420,8 +1467,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 655213719}
   - {fileID: 1564538220}
+  - {fileID: 655213719}
   m_Father: {fileID: 451139705}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1629310530
@@ -1434,8 +1481,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: NPC1
       objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcNameUI
+      value: 
+      objectReference: {fileID: 952056248}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 2099696098}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
       value: Tutorial
@@ -5740,8 +5799,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: NPC2
       objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcNameUI
+      value: 
+      objectReference: {fileID: 952056248}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 2099696098}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
       value: level3
@@ -5942,7 +6013,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: NPC2
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -6030,7 +6101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1944693900
 Transform:
   m_ObjectHideFlags: 0
@@ -6044,8 +6115,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1917607473}
   - {fileID: 879403070}
+  - {fileID: 1917607473}
   m_Father: {fileID: 451139705}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2065619379

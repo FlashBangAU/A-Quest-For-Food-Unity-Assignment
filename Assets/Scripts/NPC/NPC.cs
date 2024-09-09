@@ -27,7 +27,6 @@ public class NPC : MonoBehaviour
         RemoveText();
         npcNameUI.text = npcName;
         dialogueText.text = "";
-        promptUI.text = "";
     }
 
     // Update is called once per frame
