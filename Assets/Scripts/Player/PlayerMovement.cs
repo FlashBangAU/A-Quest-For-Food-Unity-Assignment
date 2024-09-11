@@ -28,8 +28,16 @@ public class PlayerMovement : MonoBehaviour
     bool jumpedRight = false;
 
     bool onLadder = false;
+    bool hasBeenAirborne = false;
 
     Rigidbody2D rb;
+
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     //start is called before the first frame update
     void Start()
@@ -128,8 +136,11 @@ public class PlayerMovement : MonoBehaviour
             // Player Bottom Jump
             if (Input.GetKey(KeyCode.W) && jumpBottom.canJump == true)
             {
+
                 rb.velocity = new Vector2(rb.velocity.x, jumpPower);
                 isJumping = true;
+                hasBeenAirborne = true;
+                audioManager.PlaySFX(audioManager.playerJump);
             }
 
             // Player Left Contact Jump
@@ -139,11 +150,15 @@ public class PlayerMovement : MonoBehaviour
                 {
                     rb.velocity = new Vector2(0, jumpPower);
                     isJumping = true;
+                    hasBeenAirborne = true;
+                    audioManager.PlaySFX(audioManager.playerJump);
                 }
                 if (Input.GetKey(KeyCode.D))
                 {
                     rb.velocity = new Vector2(4, jumpPower);
                     isJumping = true;
+                    hasBeenAirborne = true;
+                    audioManager.PlaySFX(audioManager.playerJump);
                 }
                 jumpedLeft = true;
             }
@@ -155,11 +170,15 @@ public class PlayerMovement : MonoBehaviour
                 {
                     rb.velocity = new Vector2(-4, jumpPower);
                     isJumping = true;
+                    hasBeenAirborne = true;
+                    audioManager.PlaySFX(audioManager.playerJump);
                 }
                 if (Input.GetKey(KeyCode.D))
                 {
                     rb.velocity = new Vector2(0, jumpPower);
                     isJumping = true;
+                    hasBeenAirborne = true;
+                    audioManager.PlaySFX(audioManager.playerJump);
                 }
                 jumpedRight = true;
             }
@@ -206,11 +225,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // When player collides with ground, jump animation stops and player can jump again
-    //public void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    isJumping = false;
-    //    Debug.Log("Collision with ground");
-    //}
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        //isJumping = false;
+        if (collision.gameObject.CompareTag("Ground") && hasBeenAirborne)
+        {
+            hasBeenAirborne = false;
+            audioManager.PlaySFX(audioManager.playerLand);
+            //Debug.Log("Collision with ground");
+        }
+    }
 
     // Prevents player from walking off platform and jumping
     public void OnCollisionExit2D(Collision2D collision)
