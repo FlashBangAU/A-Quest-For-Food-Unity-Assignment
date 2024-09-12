@@ -50,7 +50,7 @@ public class CloudGeneration : MonoBehaviour
     
     void Prewarm()
     {
-        for (int i = 0; i < 10; i++) 
+        for (int i = 0; i <= 20; i++) 
         {
             Vector2 spawnPos = startPos + Vector2.left * (i * 3);
             SpawnCloud(spawnPos);
