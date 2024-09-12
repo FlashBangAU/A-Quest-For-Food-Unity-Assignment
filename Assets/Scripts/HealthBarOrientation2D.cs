@@ -28,19 +28,17 @@ public class HealthBarOrientation2D : MonoBehaviour
 
     public void FlipSprite()
     {
-        if (isFacingRight && Input.GetKey(KeyCode.A) && isPlayer || !isFacingRight && Input.GetKey(KeyCode.D) && isPlayer)
+        if (isFacingRight && Input.GetKey(KeyCode.A) || !isFacingRight && Input.GetKey(KeyCode.D))
         {
-            isFacingRight = !isFacingRight;
-            Vector2 ls = transform.localScale;
-            ls.x *= -1f;
-            transform.localScale = ls;
+            if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) { }
+            else
+            {
+
+                isFacingRight = !isFacingRight;
+                Vector2 ls = transform.localScale;
+                ls.x *= -1f;
+                transform.localScale = ls;
+            }
         }
-        else if (!isPlayer && player.transform.position.x < transform.position.x && !isFacingRight || !isPlayer && player.transform.position.x > transform.position.x && isFacingRight)
-        {
-            isFacingRight = !isFacingRight;
-            Vector2 ls = transform.localScale;
-            ls.x *= -1f;
-            transform.localScale = ls;
-        } 
     }
 }
