@@ -578,7 +578,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1774206358}
+  - {fileID: 4080553957824914947}
   - {fileID: 1407633148}
   - {fileID: 1714621682}
   - {fileID: 900246485}
@@ -1008,91 +1008,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a195f096440ba5842a415b0a69f256d8, type: 3}
---- !u!1001 &397362351
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 220102901}
-    m_Modifications:
-    - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: m_Name
-      value: NPC
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: npcName
-      value: Cheeky Charlie
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: npcNameUI
-      value: 
-      objectReference: {fileID: 1698980698}
-    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 274024338}
-    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: dialoguePanel
-      value: 
-      objectReference: {fileID: 412042120}
-    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: dialogue.Array.data[0]
-      value: Hey!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: dialogue.Array.data[1]
-      value: Wrong way play like you're reading a book.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: dialogue.Array.data[2]
-      value: Now go forth Adventurer!
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -81.62008
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.2292404
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.024749009
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
 --- !u!1 &412042120 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5116118816222236539, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
@@ -2733,11 +2648,6 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
   m_PrefabInstance: {fileID: 709853333}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1774206358 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-  m_PrefabInstance: {fileID: 397362351}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1926397574
 GameObject:
@@ -22117,6 +22027,95 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1845956819188270448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8003169554339837486, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+  m_PrefabInstance: {fileID: 2754196448503351614}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba5c1d1e983e0745bbb178ece985faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &2754196448503351614
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 220102901}
+    m_Modifications:
+    - target: {fileID: 1581102789234410510, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: m_Name
+      value: NPC Cheeky Charlie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156181597498809411, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: upgrades
+      value: 
+      objectReference: {fileID: 1845956819188270448}
+    - target: {fileID: 8156181597498809411, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: npcNameUI
+      value: 
+      objectReference: {fileID: 1698980698}
+    - target: {fileID: 8156181597498809411, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 274024338}
+    - target: {fileID: 8156181597498809411, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 412042120}
+    - target: {fileID: 8760275796785135833, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -81.422
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760275796785135833, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.427
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760275796785135833, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024749009
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760275796785135833, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760275796785135833, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760275796785135833, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760275796785135833, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760275796785135833, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760275796785135833, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760275796785135833, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+--- !u!4 &4080553957824914947 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8760275796785135833, guid: a0bd83768208ef64d8d4b9caded29e53, type: 3}
+  m_PrefabInstance: {fileID: 2754196448503351614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7972016501166890967
 PrefabInstance:
   m_ObjectHideFlags: 0
