@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c7e48d27072840b4d918d7b637a3326b
+guid: e67b9b8381983224babc175af135465b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 38
+  spritePixelsToUnits: 34
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kingdom guard rat 1_0
+      name: Grasshopper npc_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 38
-        height: 38
+        width: 32
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8eba0fbf17b66954ca558fe8d7392378
-      internalID: -948127672
+      spriteID: bd7d4772b4042d4439b6d324e803c985
+      internalID: 1054193509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kingdom guard rat 1_1
+      name: Grasshopper npc_1
       rect:
         serializedVersion: 2
-        x: 38
+        x: 34
         y: 0
-        width: 38
-        height: 38
+        width: 32
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d2ff06452fa5c849a318f90eb4e5b26
-      internalID: -1951066080
+      spriteID: 27cdd23ed512c38449122b051012beb2
+      internalID: 297599794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kingdom guard rat 1_2
+      name: Grasshopper npc_2
       rect:
         serializedVersion: 2
-        x: 76
+        x: 67
         y: 0
-        width: 38
-        height: 38
+        width: 33
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be084006102c53840849fa43daeb8633
-      internalID: 2066356403
+      spriteID: 658900dcc64e2614e8be892e09a9885f
+      internalID: 2086072740
       vertices: []
       indices: 
       edges: []
@@ -170,9 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Kingdom guard rat 1_0: -948127672
-      Kingdom guard rat 1_1: -1951066080
-      Kingdom guard rat 1_2: 2066356403
+      Grasshopper npc_0: 1054193509
+      Grasshopper npc_1: 297599794
+      Grasshopper npc_2: 2086072740
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

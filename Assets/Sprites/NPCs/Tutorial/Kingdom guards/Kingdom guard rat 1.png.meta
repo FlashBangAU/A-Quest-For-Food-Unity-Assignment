@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9b29df2ae568342428de2cac55d6850e
+guid: c7e48d27072840b4d918d7b637a3326b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,49 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player idle, jump, attack_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 38
-        width: 38
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac969c582ab943e4aa410eb14dfda9e8
-      internalID: 813862550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player idle, jump, attack_1
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 38
-        width: 38
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 853261e492554b547bcd3e1740415d91
-      internalID: -2039141338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player idle, jump, attack_2
+      name: Kingdom guard rat 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab891f11e1be6bb4f98cd4895b45b71c
-      internalID: 954206898
+      spriteID: 5e58707bc36801e4a868fb76342c37a9
+      internalID: -1071034348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player idle, jump, attack_3
+      name: Kingdom guard rat 1_1
       rect:
         serializedVersion: 2
         x: 38
@@ -174,8 +132,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04b22ee7927c6e24da78d375f0a0fd4c
-      internalID: 1428657175
+      spriteID: 6f067994ea125c54691250b1538765fe
+      internalID: 1936266363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kingdom guard rat 1_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2377ec1f6dadb44b6a6e627f22ab5e
+      internalID: 750289472
       vertices: []
       indices: 
       edges: []
@@ -191,10 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player idle, jump, attack_0: 813862550
-      player idle, jump, attack_1: -2039141338
-      player idle, jump, attack_2: 954206898
-      player idle, jump, attack_3: 1428657175
+      Kingdom guard rat 1_0: -1071034348
+      Kingdom guard rat 1_1: 1936266363
+      Kingdom guard rat 1_2: 750289472
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

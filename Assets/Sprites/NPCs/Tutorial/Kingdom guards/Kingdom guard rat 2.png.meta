@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c8add220c0e3cc4085bf430559f99a1
-      internalID: -710222083
+      spriteID: bab4e8db5a3618a4e83dca859032def6
+      internalID: -308837355
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aac0d770cf5624445809db27ab914bab
-      internalID: 848278365
+      spriteID: 2024411233dda734ab8e998a8bd24a89
+      internalID: -479322533
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce28f7f7d3c405c42a389d60c83d59d7
-      internalID: -902282193
+      spriteID: 82961ddbe38c58f48a3ed12a4f771394
+      internalID: -1669461782
       vertices: []
       indices: 
       edges: []
@@ -170,9 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Kingdom guard rat 2_0: -710222083
-      Kingdom guard rat 2_1: 848278365
-      Kingdom guard rat 2_2: -902282193
+      Kingdom guard rat 2_0: -308837355
+      Kingdom guard rat 2_1: -479322533
+      Kingdom guard rat 2_2: -1669461782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
