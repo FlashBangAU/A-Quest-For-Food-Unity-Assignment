@@ -22468,7 +22468,7 @@ MonoBehaviour:
   npcName: Elder Rat Mono
   upgrades: {fileID: 1845956819274269002}
   locationNPCImage: {fileID: 286950009}
-  npcDialogueSprite: {fileID: 0}
+  npcDialogueSprite: {fileID: 21300000, guid: e9f06e91558639445a19c4eba1511b1a, type: 3}
 --- !u!114 &3130267430125128416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22494,7 +22494,7 @@ MonoBehaviour:
   npcName: Rat Kingdom Guard
   upgrades: {fileID: 1845956819627228944}
   locationNPCImage: {fileID: 286950009}
-  npcDialogueSprite: {fileID: 0}
+  npcDialogueSprite: {fileID: 21300000, guid: 2f5d02d003a630c42bd4e2a4f896a387, type: 3}
 --- !u!114 &3130267431767087508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22520,7 +22520,7 @@ MonoBehaviour:
   npcName: Rat Kingdom Guard
   upgrades: {fileID: 1845956818047724644}
   locationNPCImage: {fileID: 286950009}
-  npcDialogueSprite: {fileID: 0}
+  npcDialogueSprite: {fileID: 21300000, guid: 3ded3b60959b25745bebe41d705481c9, type: 3}
 --- !u!114 &3130267431953366778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22548,7 +22548,7 @@ MonoBehaviour:
   npcName: Bestfriend Bill
   upgrades: {fileID: 1845956817965779722}
   locationNPCImage: {fileID: 286950009}
-  npcDialogueSprite: {fileID: 0}
+  npcDialogueSprite: {fileID: 21300000, guid: cc1b1213c81902d40802c53b4a04e3da, type: 3}
 --- !u!1 &3142056836589164838
 GameObject:
   m_ObjectHideFlags: 0
@@ -22839,7 +22839,7 @@ MonoBehaviour:
   npcName: Cheeky Charlie
   upgrades: {fileID: 1845956819188270448}
   locationNPCImage: {fileID: 286950009}
-  npcDialogueSprite: {fileID: -1943301817, guid: af0004b0b7c51d34ab06ffcdace5c9c6, type: 3}
+  npcDialogueSprite: {fileID: 21300000, guid: 187cd21c23a7f3946868b045b40c4576, type: 3}
 --- !u!61 &4080553957824914950
 BoxCollider2D:
   m_ObjectHideFlags: 0
