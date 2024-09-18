@@ -874,8 +874,36 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -297.84
       objectReference: {fileID: 0}
+    - target: {fileID: 4945833580137442120, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6012103069106268861, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318009955171089254, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 662316b7fdb5093479be4b08434b33f4, type: 3}
+    - target: {fileID: 7151943376611702483, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440846088277568868, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1943301817, guid: af0004b0b7c51d34ab06ffcdace5c9c6, type: 3}
+    - target: {fileID: 7440846088277568868, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440846088277568868, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458733795860991891, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8074919028715572109, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
@@ -990,6 +1018,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ae392df589f1e8439316f88b61b2776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &286950009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6318009955171089254, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+  m_PrefabInstance: {fileID: 286950004}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &378380423
@@ -22428,6 +22467,8 @@ MonoBehaviour:
   npcNameUI: {fileID: 1698980698}
   npcName: Elder Rat Mono
   upgrades: {fileID: 1845956819274269002}
+  locationNPCImage: {fileID: 0}
+  npcDialogueSprite: {fileID: 0}
 --- !u!114 &3130267430125128416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22452,6 +22493,8 @@ MonoBehaviour:
   npcNameUI: {fileID: 1698980698}
   npcName: Rat Kingdom Guard
   upgrades: {fileID: 1845956819627228944}
+  locationNPCImage: {fileID: 0}
+  npcDialogueSprite: {fileID: 0}
 --- !u!114 &3130267431767087508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22476,6 +22519,8 @@ MonoBehaviour:
   npcNameUI: {fileID: 1698980698}
   npcName: Rat Kingdom Guard
   upgrades: {fileID: 1845956818047724644}
+  locationNPCImage: {fileID: 0}
+  npcDialogueSprite: {fileID: 0}
 --- !u!114 &3130267431953366778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22502,6 +22547,8 @@ MonoBehaviour:
   npcNameUI: {fileID: 1698980698}
   npcName: Bestfriend Bill
   upgrades: {fileID: 1845956817965779722}
+  locationNPCImage: {fileID: 286950009}
+  npcDialogueSprite: {fileID: 0}
 --- !u!1 &3142056836589164838
 GameObject:
   m_ObjectHideFlags: 0
@@ -22791,6 +22838,8 @@ MonoBehaviour:
   npcNameUI: {fileID: 1698980698}
   npcName: Cheeky Charlie
   upgrades: {fileID: 1845956819188270448}
+  locationNPCImage: {fileID: 286950009}
+  npcDialogueSprite: {fileID: -1943301817, guid: af0004b0b7c51d34ab06ffcdace5c9c6, type: 3}
 --- !u!61 &4080553957824914950
 BoxCollider2D:
   m_ObjectHideFlags: 0
