@@ -22467,7 +22467,7 @@ MonoBehaviour:
   npcNameUI: {fileID: 1698980698}
   npcName: Elder Rat Mono
   upgrades: {fileID: 1845956819274269002}
-  locationNPCImage: {fileID: 0}
+  locationNPCImage: {fileID: 286950009}
   npcDialogueSprite: {fileID: 0}
 --- !u!114 &3130267430125128416
 MonoBehaviour:
@@ -22493,7 +22493,7 @@ MonoBehaviour:
   npcNameUI: {fileID: 1698980698}
   npcName: Rat Kingdom Guard
   upgrades: {fileID: 1845956819627228944}
-  locationNPCImage: {fileID: 0}
+  locationNPCImage: {fileID: 286950009}
   npcDialogueSprite: {fileID: 0}
 --- !u!114 &3130267431767087508
 MonoBehaviour:
@@ -22519,7 +22519,7 @@ MonoBehaviour:
   npcNameUI: {fileID: 1698980698}
   npcName: Rat Kingdom Guard
   upgrades: {fileID: 1845956818047724644}
-  locationNPCImage: {fileID: 0}
+  locationNPCImage: {fileID: 286950009}
   npcDialogueSprite: {fileID: 0}
 --- !u!114 &3130267431953366778
 MonoBehaviour:
