@@ -16,6 +16,7 @@ public class NPC : MonoBehaviour
     public float wordSpeed;
     public bool playerIsClose;
     private bool isTyping = false;
+    private bool lastLine = false;
 
     public TextMeshProUGUI promptUI;
     public TextMeshProUGUI npcNameUI;
@@ -40,8 +41,14 @@ public class NPC : MonoBehaviour
     {
         try
         {
-            if (Input.GetKeyDown(KeyCode.E) && playerIsClose && isTyping == false)
+            if(lastLine)
             {
+                index = 0;
+                RemoveText();
+            }
+           else if (Input.GetKeyDown(KeyCode.E) && playerIsClose && isTyping == false)
+            {
+                lastLine = false;
                 npcNameUI.text = npcName;
                 if (!dialoguePanel.activeInHierarchy)
                 {
@@ -63,6 +70,7 @@ public class NPC : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
             {
+                isTyping = false;
                 RemoveText();
             }
         } catch (MissingReferenceException e)
@@ -79,7 +87,6 @@ public class NPC : MonoBehaviour
             typingCoroutine = null;
         }
         dialogueText.text = "";
-        index = 0;
         dialoguePanel.SetActive(false);
     }
 
@@ -117,6 +124,7 @@ public class NPC : MonoBehaviour
             {
                 upgrades.UpdateVariable();
             }
+            lastLine = true;
             RemoveText();
         }
     }
@@ -137,6 +145,7 @@ public class NPC : MonoBehaviour
             isTyping = false;
             playerIsClose = false;
             promptUI.text = "";
+            lastLine = false;
             RemoveText();
         }
     }
