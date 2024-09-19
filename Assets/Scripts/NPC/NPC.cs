@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
+using System;
 
 public class NPC : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class NPC : MonoBehaviour
 
     public float wordSpeed;
     public bool playerIsClose;
+    private bool isTyping = false;
 
     public TextMeshProUGUI promptUI;
     public TextMeshProUGUI npcNameUI;
@@ -37,20 +40,25 @@ public class NPC : MonoBehaviour
     {
         try
         {
-            if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+            if (Input.GetKeyDown(KeyCode.E) && playerIsClose && isTyping == false)
             {
                 npcNameUI.text = npcName;
                 if (!dialoguePanel.activeInHierarchy)
                 {
                     dialoguePanel.SetActive(true);
+                    isTyping = true;
                     StartTyping();
                 }
                 else if (dialogueText.text == dialogue[index])
                 {
+                    isTyping = true;
                     NextLine();
                 }
                 dialoguePanel.SetActive(true);
-                locationNPCImage.sprite = npcDialogueSprite;
+                if (npcDialogueSprite != null)
+                {
+                    locationNPCImage.sprite = npcDialogueSprite;
+                }
                 StartTyping();
             }
             if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
@@ -93,6 +101,7 @@ public class NPC : MonoBehaviour
             yield return new WaitForSeconds(wordSpeed);
         }
         typingCoroutine = null;
+        isTyping = false;
     }
 
     public void NextLine()
@@ -125,6 +134,7 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            isTyping = false;
             playerIsClose = false;
             promptUI.text = "";
             RemoveText();
