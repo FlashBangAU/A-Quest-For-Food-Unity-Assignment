@@ -311,8 +311,7 @@ MonoBehaviour:
   playerJump: {fileID: 8300000, guid: a9dcab187f9862a4d8894b13eab03220, type: 3}
   playerLand: {fileID: 8300000, guid: 62b8494d844c88242bbc39de68a8991a, type: 3}
   enemyHurt: {fileID: 8300000, guid: eb8378b754166d34fa3747344d6ad78e, type: 3}
-  enemyAttack: {fileID: 8300000, guid: 6b5fab12b72aa644ca48d5690407718e, type: 3}
-  enemySquish: {fileID: 8300000, guid: 262f3dd8697d72241a0d59c5814b683d, type: 3}
+  enemyAttack: {fileID: 0}
   foodPickup: {fileID: 8300000, guid: 394c485d6ae05634d9197d470d1ab07f, type: 3}
   levelComplete: {fileID: 8300000, guid: f809f79f0e544734da9924b12f38f015, type: 3}
   checkpoint: {fileID: 8300000, guid: f82f0d97d5c678142b851b511174eef4, type: 3}

@@ -123,9 +123,4 @@ public class DataManager : MonoBehaviour
         }
         return 0f; // Return a default value if out of range
     }
-
-    public int highScoreGetLength()
-    {
-        return highScores.Length;
-    }
 }

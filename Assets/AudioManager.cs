@@ -18,7 +18,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip playerLand;
     public AudioClip enemyHurt;
     public AudioClip enemyAttack;
-    public AudioClip enemySquish;
     public AudioClip foodPickup;
     public AudioClip levelComplete;
     public AudioClip checkpoint;

@@ -216,7 +216,6 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))    {}
             else
             {
-                
                 isFacingRight = !isFacingRight;
                 Vector2 ls = transform.localScale;
                 ls.x *= -1f;

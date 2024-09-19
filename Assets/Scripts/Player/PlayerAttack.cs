@@ -14,7 +14,6 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private Animator attackAnimation;
     public Timer timer;
-    public Animator attackSlashAnimation;
 
     AudioManager audioManager;
 
@@ -34,7 +33,6 @@ public class PlayerAttack : MonoBehaviour
                 timer.StartTimer();
                 audioManager.PlaySFX(audioManager.playerAttack);
                 attackAnimation.Play("AttackAnimation");
-                attackSlashAnimation.Play("PlayerAttacks");
                 Collider2D[] eniemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < eniemiesToDamage.Length; i++)
                 {

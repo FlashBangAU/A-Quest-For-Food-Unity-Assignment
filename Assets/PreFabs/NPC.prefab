@@ -249,13 +249,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
+  promptUI: {fileID: 5099701656390668401}
   dialogue:
   - Hey.
   - There are 10 types of people in this world.
   - Those who understand binary and those who don't.
   wordSpeed: 0.06
   playerIsClose: 0
-  promptUI: {fileID: 5099701656390668401}
   npcNameUI: {fileID: 0}
   npcName: Eldergrass Sentinal Leaper
   upgrades: {fileID: 1845956818841502175}
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '!!!'
+  m_text: '[E]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

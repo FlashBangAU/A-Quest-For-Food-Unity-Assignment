@@ -7,9 +7,7 @@ public class CloudGeneration : MonoBehaviour
     public bool makeClouds = false;
     public GameObject[] clouds;
 
-    public float minSpawnInterval;
-    public float maxSpawnInterval;
-    private float spawnInterval = 1.5F;
+    public float spawnInterval;
 
     public GameObject endPoint;
 
@@ -24,11 +22,6 @@ public class CloudGeneration : MonoBehaviour
             Invoke("AttemptSpawn", spawnInterval);  
         }
     }
-
-    //private void Update()
-    //{
-        
-    //}
 
     void SpawnCloud(Vector2 startPos)
     {
@@ -57,7 +50,7 @@ public class CloudGeneration : MonoBehaviour
     
     void Prewarm()
     {
-        for (int i = 0; i <= 20; i++) 
+        for (int i = 0; i < 10; i++) 
         {
             Vector2 spawnPos = startPos + Vector2.left * (i * 3);
             SpawnCloud(spawnPos);
