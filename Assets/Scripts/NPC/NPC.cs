@@ -22,6 +22,9 @@ public class NPC : MonoBehaviour
 
     private Coroutine typingCoroutine;
 
+    public Image locationNPCImage;
+    public Sprite npcDialogueSprite;
+
     void Start()
     {
         RemoveText();
@@ -46,6 +49,9 @@ public class NPC : MonoBehaviour
                 {
                     NextLine();
                 }
+                dialoguePanel.SetActive(true);
+                locationNPCImage.sprite = npcDialogueSprite;
+                StartTyping();
             }
             if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
             {
