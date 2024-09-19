@@ -4841,6 +4841,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d414df97d4c11a478a42e1b26d1ca20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1660138415 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7677937991113377215, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+  m_PrefabInstance: {fileID: 4420926875541020844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023e10a8a85bb534784088ab6c208b86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1750335344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5174667960546538802, guid: 5050fc807cc744d489b086d1fc6f90bb, type: 3}
@@ -5338,6 +5349,10 @@ PrefabInstance:
       propertyPath: jumpLeft
       value: 
       objectReference: {fileID: 928790190}
+    - target: {fileID: 5220876486473601534, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1660138415}
     - target: {fileID: 5220876486473601534, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: jumpRight
       value: 

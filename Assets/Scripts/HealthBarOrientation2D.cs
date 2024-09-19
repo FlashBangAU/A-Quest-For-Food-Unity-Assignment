@@ -23,24 +23,34 @@ public class HealthBarOrientation2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FlipSprite();
+        if (isPlayer)
+        {
+            FlipSprite();
+        }
+        else if (player.transform.position.x > transform.position.x && isFacingRight || player.transform.position.x < transform.position.x && !isFacingRight)
+        {
+            FlipSprite();
+        }
     }
 
     public void FlipSprite()
     {
         if (isFacingRight && Input.GetKey(KeyCode.A) && isPlayer || !isFacingRight && Input.GetKey(KeyCode.D) && isPlayer)
         {
-            isFacingRight = !isFacingRight;
-            Vector2 ls = transform.localScale;
-            ls.x *= -1f;
-            transform.localScale = ls;
-        }
-        else if (!isPlayer && player.transform.position.x < transform.position.x && !isFacingRight || !isPlayer && player.transform.position.x > transform.position.x && isFacingRight)
+            if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) { }
+            else
+            {
+                isFacingRight = !isFacingRight;
+                Vector2 ls = transform.localScale;
+                ls.x *= -1f;
+                transform.localScale = ls;
+            }
+        }else if(!isPlayer)
         {
             isFacingRight = !isFacingRight;
             Vector2 ls = transform.localScale;
             ls.x *= -1f;
             transform.localScale = ls;
-        } 
+        }
     }
 }

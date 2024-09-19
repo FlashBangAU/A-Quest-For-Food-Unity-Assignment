@@ -8,6 +8,14 @@ public class EnemyProjectile : MonoBehaviour
 
     [SerializeField] public float speed;
     private float timer;
+
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +68,7 @@ public class EnemyProjectile : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<PlayerHealth>().health -= 1;
+            audioManager.PlaySFX(audioManager.playerDamage);
             Destroy(gameObject);
         }
     }
