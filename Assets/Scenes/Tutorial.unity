@@ -17783,6 +17783,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6344760167104773363, guid: 28c1513abb7fe8c4dbe0721d5a21c7c0, type: 3}
+      propertyPath: rb2D
+      value: 
+      objectReference: {fileID: 1161477648}
     - target: {fileID: 8769401657874664573, guid: 28c1513abb7fe8c4dbe0721d5a21c7c0, type: 3}
       propertyPath: m_Name
       value: PlayerJumpCheckers
@@ -19174,6 +19178,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d414df97d4c11a478a42e1b26d1ca20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1161477648 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5387960745285683124, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+  m_PrefabInstance: {fileID: 952553218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1175867719
 GameObject:
   m_ObjectHideFlags: 0
@@ -40967,13 +40976,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2249841086167571830, guid: e6283d1246214324d972f263993a284a, type: 3}
-      propertyPath: playerJump
+      propertyPath: enemyAttack
       value: 
-      objectReference: {fileID: 8300000, guid: a9dcab187f9862a4d8894b13eab03220, type: 3}
+      objectReference: {fileID: 8300000, guid: 6b5fab12b72aa644ca48d5690407718e, type: 3}
     - target: {fileID: 2249841086167571830, guid: e6283d1246214324d972f263993a284a, type: 3}
-      propertyPath: playerLand
+      propertyPath: enemySquish
       value: 
-      objectReference: {fileID: 8300000, guid: 62b8494d844c88242bbc39de68a8991a, type: 3}
+      objectReference: {fileID: 8300000, guid: 262f3dd8697d72241a0d59c5814b683d, type: 3}
     - target: {fileID: 8188274425908085841, guid: e6283d1246214324d972f263993a284a, type: 3}
       propertyPath: m_Name
       value: AudioManager
