@@ -37736,7 +37736,7 @@ PrefabInstance:
       objectReference: {fileID: 1868247973}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcName
-      value: 'Captain Squeak '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -37756,20 +37756,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: "I hope you\u2019re ready for what\u2019s out there."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: The key to surviving is learning the enemies' patterns.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]
-      value: "Caterpillars tend to move slowly, but if you get too close, they\u2019ll
-        defend their territory. "
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[3]
-      value: "Time your moves, and you\u2019ll make it through."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[4]
@@ -38050,7 +38049,7 @@ PrefabInstance:
       objectReference: {fileID: 1868247973}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcName
-      value: Master Scurry
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -38070,15 +38069,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: 'You know, the stem borers that roam the plains are quite dangerous. '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: They feed on plants and destroy crops from the inside.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]
-      value: ' Keep your wits about you if you encounter them!'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[3]
@@ -38365,7 +38364,7 @@ PrefabInstance:
       objectReference: {fileID: 1868247973}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcName
-      value: 'Optimist Cheddar '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -38385,13 +38384,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: "I\u2019m sure you\u2019ll do great out there! You\u2019ve got the skills,
-        and we\u2019re all cheering for you back at the colony. "
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: "Stay sharp and bring back some food\u2014we\u2019re all counting on
-        you, but I know you won\u2019t let us down!\""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38516,11 +38513,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 37371c8d4581b064bbd6a81b7f2b91a7, type: 3}
     - target: {fileID: 2902680391265804921, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.15
+      value: -26.815908
       objectReference: {fileID: 0}
     - target: {fileID: 2902680391265804921, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6290002
+      value: -2.6290011
       objectReference: {fileID: 0}
     - target: {fileID: 2902680391265804921, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -76143,7 +76140,7 @@ PrefabInstance:
       objectReference: {fileID: 1868247973}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcName
-      value: Chief Eldar
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -76163,12 +76160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: '"Hey, this is a nice place to set up camp. '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: "You\u2019ve got a long journey ahead, but I know you\u2019ll pull through
-        for the colony!\""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]

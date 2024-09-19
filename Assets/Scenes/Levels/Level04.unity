@@ -37360,7 +37360,7 @@ PrefabInstance:
       objectReference: {fileID: 1510282415}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcName
-      value: Chief Eldar
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -37380,15 +37380,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: "You\u2019ve done it! The colony will survive thanks to your efforts. "
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: This is more than enough to keep us going through the hardest times.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]
-      value: "You\u2019re our hero!"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[3]
@@ -38231,7 +38231,7 @@ PrefabInstance:
       objectReference: {fileID: 1510282415}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcName
-      value: Master Scurry
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -38251,19 +38251,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: "You\u2019ve collected enough food to save us! "
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: The colony will thrive now.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]
-      value: "You\u2019ve also helped us better understand how to combat those pests."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[3]
-      value: "Next time, we\u2019ll be ready for them."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[4]
@@ -40059,7 +40059,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2902680391265804921, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.467825
+      value: -26.815908
       objectReference: {fileID: 0}
     - target: {fileID: 2902680391265804921, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -40814,7 +40814,7 @@ PrefabInstance:
       objectReference: {fileID: 1510282415}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcName
-      value: Captain Squeak
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -40834,15 +40834,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: Mission accomplished!
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: "You\u2019ve gathered more than enough to keep the colony alive."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]
-      value: "Now it\u2019s time to rest up and prepare for the future."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[3]
@@ -76680,7 +76680,7 @@ PrefabInstance:
       objectReference: {fileID: 1510282415}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcName
-      value: Optimist Cheddar
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -76704,11 +76704,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: "The future is bright, thanks to you. We\u2019re forever in your debt. "
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: "The colony is saved, and it\u2019s all thanks to your bravery."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x

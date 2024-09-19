@@ -174,15 +174,14 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1384527141}
   dialogueText: {fileID: 1384527139}
   dialogue:
-  - Great work! Did you notice how the pests are behaving more aggressively?
-  - 'The scarcity of food makes them bolder. '
-  - The stem borers can burrow into plants and make it almost impossible for them
-    to grow again.
+  - 
+  - 
+  - 
   wordSpeed: 0.06
   playerIsClose: 0
   promptUI: {fileID: 1312379189}
   npcNameUI: {fileID: 1384527140}
-  npcName: Master Scurry
+  npcName: 
   upgrades: {fileID: 68296358}
 --- !u!212 &68296360
 SpriteRenderer:
@@ -98224,14 +98223,14 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1384527141}
   dialogueText: {fileID: 1384527139}
   dialogue:
-  - "You\u2019re doing great! Remember, it's not just about finding food."
-  - 'You need to watch out for new abilities you can gain along the way. '
-  - Every upgrade makes you stronger.
+  - 
+  - 
+  - 
   wordSpeed: 0.06
   playerIsClose: 0
   promptUI: {fileID: 1031945662}
   npcNameUI: {fileID: 1384527140}
-  npcName: Captain Squeak
+  npcName: 
   upgrades: {fileID: 1022592572}
 --- !u!212 &1022592574
 SpriteRenderer:
@@ -100584,15 +100583,13 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1384527141}
   dialogueText: {fileID: 1384527139}
   dialogue:
-  - "Even more food! Everyone\u2019s talking about how amazing you\u2019ve been out
-    there."
-  - "You\u2019re bringing back more than just food\u2014you\u2019re bringing back
-    hope!"
+  - 
+  - 
   wordSpeed: 0.06
   playerIsClose: 0
   promptUI: {fileID: 1675112187}
   npcNameUI: {fileID: 1384527140}
-  npcName: Optimist Cheddar
+  npcName: 
   upgrades: {fileID: 1432157519}
 --- !u!212 &1432157521
 SpriteRenderer:
@@ -140748,15 +140745,15 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1384527141}
   dialogueText: {fileID: 1384527139}
   dialogue:
-  - 'More food means more hope, and hope is what we need most right now. '
-  - " We\u2019re depending on you, but you\u2019re doing great. "
-  - 'Each step you take brings the colony closer to salvation. '
-  - Be wary of the dangers that lie ahead, but trust in your skills.
+  - 
+  - 
+  - 
+  - 
   wordSpeed: 0.06
   playerIsClose: 0
   promptUI: {fileID: 880092254}
   npcNameUI: {fileID: 1384527140}
-  npcName: Elder Whikers
+  npcName: 
   upgrades: {fileID: 1850884404}
 --- !u!212 &1850884406
 SpriteRenderer:

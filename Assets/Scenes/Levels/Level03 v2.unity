@@ -442,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 37371c8d4581b064bbd6a81b7f2b91a7, type: 3}
     - target: {fileID: 2902680391265804921, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -60.79647
+      value: -60.893486
       objectReference: {fileID: 0}
     - target: {fileID: 2902680391265804921, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -127379,15 +127379,15 @@ MonoBehaviour:
   dialoguePanel: {fileID: 469782915}
   dialogueText: {fileID: 469782914}
   dialogue:
-  - 'More food means more hope, and hope is what we need most right now. '
-  - "We\u2019re depending on you, but you\u2019re doing great. "
-  - 'Each step you take brings the colony closer to salvation. '
-  - Be wary of the dangers that lie ahead, but trust in your skills.
+  - 
+  - 
+  - 
+  - 
   wordSpeed: 0.06
   playerIsClose: 0
   promptUI: {fileID: 714056172}
   npcNameUI: {fileID: 1779825984}
-  npcName: Elder Whiskers
+  npcName: 
   upgrades: {fileID: 1468133758}
 --- !u!4 &1468133761
 Transform:
@@ -128237,15 +128237,15 @@ MonoBehaviour:
   dialoguePanel: {fileID: 469782915}
   dialogueText: {fileID: 469782914}
   dialogue:
-  - 'More food means more hope, and hope is what we need most right now. '
-  - "We\u2019re depending on you, but you\u2019re doing great. "
-  - 'Each step you take brings the colony closer to salvation. '
-  - Be wary of the dangers that lie ahead, but trust in your skills.
+  - 
+  - 
+  - 
+  - 
   wordSpeed: 0.06
   playerIsClose: 0
   promptUI: {fileID: 77566753}
   npcNameUI: {fileID: 1779825984}
-  npcName: Elder Whiskers
+  npcName: 
   upgrades: {fileID: 1646288648}
 --- !u!212 &1646288647
 SpriteRenderer:
