@@ -27,28 +27,33 @@ public class NPC : MonoBehaviour
         RemoveText();
         npcNameUI.text = npcName;
         dialogueText.text = "";
-        promptUI.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        try
         {
-            npcNameUI.text = npcName;
-            if (!dialoguePanel.activeInHierarchy)
+            if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
             {
-                dialoguePanel.SetActive(true);
-                StartTyping();
+                npcNameUI.text = npcName;
+                if (!dialoguePanel.activeInHierarchy)
+                {
+                    dialoguePanel.SetActive(true);
+                    StartTyping();
+                }
+                else if (dialogueText.text == dialogue[index])
+                {
+                    NextLine();
+                }
             }
-            else if (dialogueText.text == dialogue[index])
+            if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
             {
-                NextLine();
+                RemoveText();
             }
-        }
-        if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
+        } catch (MissingReferenceException e)
         {
-            RemoveText();
+            Debug.LogException(e);
         }
     }
 
