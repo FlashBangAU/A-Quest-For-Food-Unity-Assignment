@@ -880,6 +880,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3143552217888924290, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.77
+      objectReference: {fileID: 0}
     - target: {fileID: 3473391021669935361, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -910,7 +914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5116118816222236539, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6532503721370616203, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_fontAsset
