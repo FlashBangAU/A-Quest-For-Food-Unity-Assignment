@@ -9,6 +9,9 @@ public class StemBorerAttack : MonoBehaviour
     private GameObject player;
 
     private float timeNectShot;
+
+    AudioManager audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +34,15 @@ public class StemBorerAttack : MonoBehaviour
             {
                 timer = 0;
                 shoot();
+                audioManager.PlaySFX(audioManager.enemyAttack);
                 timeNectShot = Random.Range(3, 6);
             }
         }
+    }
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     //shoot projectile

@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         else if (!isJumping)// Horizontal movement when touching ground
         {
             horizontalInput = Input.GetAxis("Horizontal");
-            if (timeBtwSprint < 0)
+            if (timeBtwSprint <= 0)
             {
                 if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
                 {
@@ -216,6 +216,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))    {}
             else
             {
+                
                 isFacingRight = !isFacingRight;
                 Vector2 ls = transform.localScale;
                 ls.x *= -1f;
@@ -237,10 +238,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Prevents player from walking off platform and jumping
-    public void OnCollisionExit2D(Collision2D collision)
-    {
-        isJumping = true;
-    }
+    //public void OnCollisionExit2D(Collision2D collision)
+    //{
+        //isJumping = true;
+        //Debug.Log("now jumping");
+    //}
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
