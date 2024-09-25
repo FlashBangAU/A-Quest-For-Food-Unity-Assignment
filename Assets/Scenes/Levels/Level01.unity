@@ -75491,6 +75491,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
       value: -23.681944
+      value: -28.15
 =======
       value: -28.15
 >>>>>>> level-branch
