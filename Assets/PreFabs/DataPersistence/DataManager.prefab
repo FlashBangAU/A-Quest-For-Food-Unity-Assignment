@@ -47,3 +47,5 @@ MonoBehaviour:
   level: 0
   highScore: 0
   highScores: []
+  musicVolume: 0
+  sfxVolume: 0
