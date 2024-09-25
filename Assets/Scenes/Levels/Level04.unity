@@ -71300,6 +71300,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6344760167104773363, guid: 28c1513abb7fe8c4dbe0721d5a21c7c0, type: 3}
+      propertyPath: rb2D
+      value: 
+      objectReference: {fileID: 1510282417}
     - target: {fileID: 8769401657874664573, guid: 28c1513abb7fe8c4dbe0721d5a21c7c0, type: 3}
       propertyPath: m_Name
       value: PlayerJumpCheckers
@@ -74325,6 +74329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea30b9280bbaa347b63b430e0e275e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1510282417 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5387960745285683124, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+  m_PrefabInstance: {fileID: 1510282412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1537730413
 PrefabInstance:
   m_ObjectHideFlags: 0
