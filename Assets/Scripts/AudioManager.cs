@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using UnityEngine.Audio;
+
 
 public class AudioManager : MonoBehaviour
 {
@@ -15,7 +17,6 @@ public class AudioManager : MonoBehaviour
     [Header("------- Audio Clips -------")]
     // Add more where required
     public AudioClip background;
-    public AudioClip button;
     public AudioClip playerDeath;
     public AudioClip playerAttack;
     public AudioClip playerDamage;
@@ -28,6 +29,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip levelComplete;
     public AudioClip checkpoint;
 
+
+    //When given an AudioClip parameter from a different script, plays SFX using the SFX Audio Source
     // Starts background music on scene start
     private void Start()
     {
