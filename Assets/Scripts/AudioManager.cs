@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< HEAD
+=======
 using UnityEngine.Audio;
+>>>>>>> sound-branch
 
 public class AudioManager : MonoBehaviour
 {
@@ -9,9 +12,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
 
+<<<<<<< HEAD
     [Header("------- Audio Clips -------")]
     //Add more where required
     public AudioClip background;
+=======
     [Header("------- Audio Mixer -------")]
     public AudioMixer mainMixer;
 
@@ -19,6 +24,7 @@ public class AudioManager : MonoBehaviour
     // Add more where required
     public AudioClip background;
     public AudioClip button;
+>>>>>>> sound-branch
     public AudioClip playerDeath;
     public AudioClip playerAttack;
     public AudioClip playerDamage;
@@ -31,6 +37,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip levelComplete;
     public AudioClip checkpoint;
 
+<<<<<<< HEAD
     //Starts background music on scene start
     private void Start()
     {
@@ -39,6 +46,7 @@ public class AudioManager : MonoBehaviour
     }
 
     //When given an AudioClip parameter from a different script, plays SFX using the SFX Audio Source
+=======
     // Starts background music on scene start
     private void Start()
     {
@@ -54,10 +62,14 @@ public class AudioManager : MonoBehaviour
     }
 
     // When given an AudioClip parameter from a different script, plays SFX using the SFX Audio Source
+>>>>>>> sound-branch
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
     }
+<<<<<<< HEAD
+}
+=======
 
     private void ApplySavedVolumes()
     {
@@ -91,3 +103,4 @@ public class AudioManager : MonoBehaviour
         DataManager.Instance.WriteData(); // Save the data to persistent storage
     }
 }
+>>>>>>> sound-branch
