@@ -467,7 +467,8 @@ GameObject:
   - component: {fileID: 733641257}
   - component: {fileID: 733641259}
   - component: {fileID: 733641260}
-  m_Layer: 0
+  - component: {fileID: 733641261}
+  m_Layer: 9
   m_Name: HitBoxPhase1
   m_TagString: BossHitBox
   m_Icon: {fileID: 0}
@@ -483,8 +484,8 @@ Transform:
   m_GameObject: {fileID: 733641256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.39, y: 0.36, z: 0}
-  m_LocalScale: {x: 0.28406, y: 0.28406, z: 0.28406}
+  m_LocalPosition: {x: -0.954, y: 0.3348, z: 0}
+  m_LocalScale: {x: 0.1349285, y: 0.5176709, z: 0.28406}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1768567930}
@@ -586,6 +587,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &733641261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733641256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b623d52b47de5e41a3c093ac0a15d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pc: {fileID: 1768567928}
+  p1c: {fileID: 1768567927}
 --- !u!1 &847660573
 GameObject:
   m_ObjectHideFlags: 0
@@ -4869,6 +4884,7 @@ MonoBehaviour:
   perchHeight: 15
   swoopSpeed: 7
   perchTime: 2
+  minDistanceFromPlayer: 5
 --- !u!114 &1768567926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4900,14 +4916,15 @@ MonoBehaviour:
   attackRange: 2
   jumpHeight: 3.5
   jumpDistance: 4
+  runAway: 0
   hoppingMode: 1
   peckMode: 0
-  peckCycle: 0
-  maxTimeBtwPeck: 0
-  minTimeBtwPeck: 0
+  maxTimeBtwPeck: 2
+  minTimeBtwPeck: 0.8
   timeBtwPeck: 0
   nextPeck: 0
   peckCounter: 0
+  timeStuck: 3
   onGround: 0
 --- !u!114 &1768567928
 MonoBehaviour:

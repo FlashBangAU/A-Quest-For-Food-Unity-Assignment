@@ -9,6 +9,7 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] Transform attackPos;
     [SerializeField] LayerMask whatIsEnemies;
+    [SerializeField] LayerMask whatIsBossHitBox;
     [SerializeField] float attackRange;
     [SerializeField] int damage;
 
@@ -39,6 +40,11 @@ public class PlayerAttack : MonoBehaviour
                 for (int i = 0; i < eniemiesToDamage.Length; i++)
                 {
                     eniemiesToDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+                }
+                Collider2D[] bossToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsBossHitBox);
+                for (int i = 0; i < bossToDamage.Length; i++)
+                {
+                    bossToDamage[i].GetComponent<checkIfHit>().bossGotHit();
                 }
             }
             if(Input.GetKeyDown(KeyCode.P) == false)

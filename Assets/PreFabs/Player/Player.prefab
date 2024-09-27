@@ -82,7 +82,8 @@ MonoBehaviour:
   - {fileID: 5149977442542402948, guid: d4b50f820b386d44a844b1416b1043c0, type: 3}
   - {fileID: 5149977442542402948, guid: e2733ab5b95345a4792b4891b00d4f35, type: 3}
   - {fileID: 5149977442542402948, guid: b07a83d55c8f0d14ab89ac9f5e7968bc, type: 3}
-  spawnInterval: 1.5
+  minSpawnInterval: 0
+  maxSpawnInterval: 0
   endPoint: {fileID: 3121601184569179604}
 --- !u!1 &3794918074216593617
 GameObject:
@@ -223,6 +224,9 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 64
+  whatIsBossHitBox:
+    serializedVersion: 2
+    m_Bits: 512
   attackRange: 0.92
   damage: 1
   attackAnimation: {fileID: 6091915266309559014}
@@ -342,8 +346,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.41749996}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5833334, y: 1.5833334}
+    pivot: {x: 0.5, y: 0.69}
+    oldSize: {x: 1.9, y: 1.9}
     newSize: {x: 1.42, y: 1.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
