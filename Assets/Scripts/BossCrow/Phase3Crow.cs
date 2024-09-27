@@ -76,13 +76,13 @@ public class Phase3Crow : MonoBehaviour
         do
         {
             float randomX = Random.Range(branch1.position.x, branch2.position.x);
-
+            int perchDirection = Random.Range(1, 2);
             // Ensure the perch position is a safe distance from the player
-            if (player.position.x - minDistanceFromPlayer > branch1.position.x)
+            if ((player.position.x - minDistanceFromPlayer) > branch1.position.x && perchDirection <= 1.5f)
             {
                 randomX = Random.Range(branch1.position.x, player.position.x - minDistanceFromPlayer);
             }
-            else if (player.position.x + minDistanceFromPlayer < branch2.position.x)
+            else if ((player.position.x + minDistanceFromPlayer) < branch2.position.x && perchDirection > 1.5f)
             {
                 randomX = Random.Range(player.position.x + minDistanceFromPlayer, branch2.position.x);
             }
@@ -107,11 +107,11 @@ public class Phase3Crow : MonoBehaviour
         // Flip the sprite based on the player's position relative to the crow's position
         if (player.position.x < transform.position.x) // Player is to the left
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f); // Flip sprite left
+            transform.localScale = new Vector3(3.25477f, 3.166692f, 8.3274f); // Flip sprite left
         }
         else // Player is to the right
         {
-            transform.localScale = new Vector3(1f, 1f, 1f); // Flip sprite right
+            transform.localScale = new Vector3(-3.25477f, 3.166692f, 8.3274f); // Flip sprite right
         }
     }
 
@@ -119,6 +119,7 @@ public class Phase3Crow : MonoBehaviour
     {
         isSwooping = true; // Set swooping state
         Vector3 startPosition = transform.position;
+        FlipSprite();
 
         // Define the target position directly based on the player's current position
         Vector3 targetPosition = new Vector3(player.position.x, player.position.y, startPosition.z);
@@ -176,11 +177,11 @@ public class Phase3Crow : MonoBehaviour
         // Flip the sprite based on the return position relative to the crow's current position
         if (returnPosition.x < transform.position.x) // Return position is to the left
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f); // Flip sprite left
+            transform.localScale = new Vector3(3.25477f, 3.166692f, 8.3274f); // Flip sprite left
         }
         else // Return position is to the right
         {
-            transform.localScale = new Vector3(1f, 1f, 1f); // Flip sprite right
+            transform.localScale = new Vector3(-3.25477f, 3.166692f, 8.3274f); // Flip sprite right
         }
     }
 }

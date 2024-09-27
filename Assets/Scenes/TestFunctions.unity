@@ -4881,10 +4881,10 @@ MonoBehaviour:
   pc: {fileID: 1768567928}
   branch1: {fileID: 116015325}
   branch2: {fileID: 1173039735}
-  perchHeight: 15
+  perchHeight: 2
   swoopSpeed: 7
   perchTime: 2
-  minDistanceFromPlayer: 5
+  minDistanceFromPlayer: 10
 --- !u!114 &1768567926
 MonoBehaviour:
   m_ObjectHideFlags: 0
