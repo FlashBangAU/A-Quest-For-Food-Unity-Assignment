@@ -483,13 +483,8 @@ Transform:
   m_GameObject: {fileID: 733641256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -0.956, y: 0.31, z: 0}
-  m_LocalScale: {x: 0.22, y: 0.49, z: 0.28406}
-=======
   m_LocalPosition: {x: -0.246, y: -0.249, z: 0}
   m_LocalScale: {x: 0.28406, y: 0.28406, z: 0.28406}
->>>>>>> 99149b181c1c74418053710d39d389beacf83d9d
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1768567930}
@@ -4881,7 +4876,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768567924}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05196ab84a4006d4a8e4ddaeb00c0b6d, type: 3}
   m_Name: 
@@ -4894,34 +4889,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768567924}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26fede5b842cdba4aab9a85a5de4b561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pc: {fileID: 1768567928}
   rb: {fileID: 1768567932}
-<<<<<<< HEAD
   hitBoxPhase1: {fileID: 733641256}
-  attackRange: 6
+  attackRange: 2
   jumpHeight: 3.5
   jumpDistance: 4
   hoppingMode: 1
   peckMode: 0
   peckCycle: 0
-  maxTimeBtwPeck: 2
-  minTimeBtwPeck: 0.8
-=======
-  hitBoxPhase1: {fileID: 1768567924}
-  attackRange: 0
-  jumpHeight: 0
-  jumpDistance: 0
-  hoppingMode: 0
-  peckMode: 0
-  peckCycle: 0
   maxTimeBtwPeck: 0
   minTimeBtwPeck: 0
->>>>>>> 99149b181c1c74418053710d39d389beacf83d9d
   timeBtwPeck: 0
   nextPeck: 0
   peckCounter: 0
