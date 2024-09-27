@@ -9,6 +9,7 @@ public class Phase3Crow : MonoBehaviour
     public float perchHeight = 15f; // Height above the branches for perching (Y offset)
     public float swoopSpeed = 7f; // Speed at which the bird swoops down towards the player
     public float perchTime = 2f;   // Time the crow stays perched before swooping
+    public float minDistanceFromPlayer = 5f; // Minimum distance to maintain from the player when choosing perch
 
     private Vector3 perchPosition; // The current position where the crow will perch
     private bool isSwooping = false; // Indicates whether the crow is currently swooping down
@@ -34,50 +35,85 @@ public class Phase3Crow : MonoBehaviour
             // If the crow is not currently swooping
             if (!isSwooping)
             {
-                perchTimer += Time.deltaTime; // Increment the perch timer based on the time passed since the last frame
+                // Increment the perch timer based on the time passed since the last frame
+                perchTimer += Time.deltaTime;
 
                 // Move the crow to the current perch position
                 transform.position = perchPosition;
 
-                // Log the current perch timer for debugging
-                Debug.Log("Perch Timer: " + perchTimer);
-
                 // Check if the perch timer has exceeded the designated perch time
                 if (perchTimer >= perchTime)
                 {
-                    // Log that the crow is about to swoop towards the player's position
-                    Debug.Log("Starting swoop to player at position: " + player.position);
-
-                    // Start the coroutine to handle the swooping action
-                    StartCoroutine(SwoopToPlayer());
-
-                    // Reset the perch timer for the next cycle
-                    perchTimer = 0f;
+                    // Start the swoop action and reset perch timer for the next cycle
+                    StartSwoop();
                 }
             }
         }
     }
 
+    // Separated swoop initiation for readability and reusability
+    private void StartSwoop()
+    {
+        // Log that the crow is about to swoop towards the player's position
+        Debug.Log("Starting swoop to player at position: " + player.position);
+
+        // Flip the sprite to face the player before swooping
+        FlipSprite();
+
+        // Start the coroutine to handle the swooping action
+        StartCoroutine(SwoopToPlayer());
+
+        // Reset the perch timer for the next cycle
+        perchTimer = 0f;
+    }
+
     private void ChooseRandomPerchPosition()
     {
-        // Debug the positions of branch1 and branch2 to ensure they are different
         Debug.Log("Branch 1 Position: " + branch1.position);
         Debug.Log("Branch 2 Position: " + branch2.position);
 
         Vector3 newPerchPosition;
         do
         {
-            // Calculate a random perch position between Branch1 and Branch2
             float randomX = Random.Range(branch1.position.x, branch2.position.x);
-            newPerchPosition = new Vector3(randomX, branch1.position.y + perchHeight, 0);
+
+            // Ensure the perch position is a safe distance from the player
+            if (player.position.x - minDistanceFromPlayer > branch1.position.x)
+            {
+                randomX = Random.Range(branch1.position.x, player.position.x - minDistanceFromPlayer);
+            }
+            else if (player.position.x + minDistanceFromPlayer < branch2.position.x)
+            {
+                randomX = Random.Range(player.position.x + minDistanceFromPlayer, branch2.position.x);
+            }
+            else
+            {
+                randomX = Random.Range(branch1.position.x, branch2.position.x);
+            }
+
+            newPerchPosition = new Vector3(randomX, branch1.position.y + perchHeight, transform.position.z); // Keep the z position
             Debug.Log("Attempting to set New Perch Position: " + newPerchPosition);
         }
         while (newPerchPosition == perchPosition); // Repeat if the same as the current perch position
 
         perchPosition = newPerchPosition; // Set the new perch position
+        transform.position = perchPosition; // Immediately move to the new perch
         Debug.Log("New Perch Position set: " + perchPosition);
     }
 
+
+    private void FlipSprite()
+    {
+        // Flip the sprite based on the player's position relative to the crow's position
+        if (player.position.x < transform.position.x) // Player is to the left
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f); // Flip sprite left
+        }
+        else // Player is to the right
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f); // Flip sprite right
+        }
+    }
 
     private IEnumerator SwoopToPlayer()
     {
@@ -119,6 +155,9 @@ public class Phase3Crow : MonoBehaviour
 
         Debug.Log("Returning to new perch at: " + returnPosition); // Log return details
 
+        // Flip the sprite to face the new perch position
+        FlipSpriteForReturn(returnPosition);
+
         // Move back up to the perch
         while (Time.time < startTime + journeyTime)
         {
@@ -132,5 +171,16 @@ public class Phase3Crow : MonoBehaviour
         isSwooping = false; // Reset swooping state for the next swoop
     }
 
-
+    private void FlipSpriteForReturn(Vector3 returnPosition)
+    {
+        // Flip the sprite based on the return position relative to the crow's current position
+        if (returnPosition.x < transform.position.x) // Return position is to the left
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f); // Flip sprite left
+        }
+        else // Return position is to the right
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f); // Flip sprite right
+        }
+    }
 }
