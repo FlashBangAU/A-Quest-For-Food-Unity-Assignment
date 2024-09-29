@@ -8,6 +8,7 @@ public class Phase1Crow : MonoBehaviour
     public Rigidbody2D rb;
     private GameObject player;
     public GameObject hitBoxPhase1;
+    public AttackPlayerBoss attackPlayerBoss;
     [SerializeField] float attackRange;
 
     private float xBtw;
@@ -112,12 +113,12 @@ public class Phase1Crow : MonoBehaviour
                 if(nextPeck <= timeBtwPeck && peckCounter < 3)
                 {
                     Peck();
-                    Debug.Log("Pecked at Player");
+                    //Debug.Log("Pecked at Player");
 
                     nextPeck = Random.Range(minTimeBtwPeck, maxTimeBtwPeck);
                     timeBtwPeck = 0f;
                     peckCounter++;
-                } else if (peckCounter == 3)
+                } else if (peckCounter == 3 && nextPeck <= timeBtwPeck)
                 {
                     Stuck();
                 }
@@ -126,19 +127,12 @@ public class Phase1Crow : MonoBehaviour
         }
     }
 
-    //checks if boss has contact with ground
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground") && !onGround)
-        {
-            onGround = true;
-        }
-    }
-
     //will damage player
     private void Peck()
     {
-
+        //play peck animation
+        //Debug.Log("Peck action is played");
+        attackPlayerBoss.PlayerGotHit();
     }
 
     //will make boss vulnrable for a period of time
@@ -147,6 +141,7 @@ public class Phase1Crow : MonoBehaviour
 
         if (hitBoxPhase1.active == false)
         {
+            Peck();
             tStuck = 0f;
             hitBoxPhase1.SetActive(true);
         }
@@ -166,5 +161,14 @@ public class Phase1Crow : MonoBehaviour
         runAway = true;
         peckCounter = 0;
         tStuck = 0f;
+    }
+
+    //checks if boss has contact with ground
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground") && !onGround)
+        {
+            onGround = true;
+        }
     }
 }
