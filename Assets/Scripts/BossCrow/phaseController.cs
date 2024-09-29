@@ -14,7 +14,7 @@ public class phaseController : MonoBehaviour
 
     void Start()
     {
-        phase3 = true; // Automatically start in Phase 3 for testing
+        //phase3 = true; // Automatically start in Phase 3 for testing
     }
 
 

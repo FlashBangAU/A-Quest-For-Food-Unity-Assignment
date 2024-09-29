@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class AttackPlayerBoss : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class AttackPlayerBoss : MonoBehaviour
     public Rigidbody2D playerRB; // Reference to the player's Rigidbody2D
     private bool canDamage = false; // Flag to indicate if the player can be damaged
 
-    private float KBTimer = 0f; // Timer to manage damage timing
-    private float KBInterval = 1.2f; // Time interval between damage applications
+    [SerializeField] private float KBTimer = 0f; // Timer to manage damage timing
+    [SerializeField] private float KBInterval = 1.2f; // Time interval between damage applications
+
+    public float knockbackForce = 10f;
 
     private void FixedUpdate()
     {
@@ -20,7 +23,10 @@ public class AttackPlayerBoss : MonoBehaviour
         // If within the damage interval, apply movement to the player
         if (KBTimer >= 0f)
         {
-            playerRB.velocity = new Vector2(-4f, 4f); 
+            playerRB.velocity = Vector2.zero;
+            Vector2 knockbackDirection = new Vector2(-1, 1).normalized; // left-up direction
+            playerRB.velocity = Vector2.zero;
+            playerRB.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
         }
     }
 
@@ -28,7 +34,7 @@ public class AttackPlayerBoss : MonoBehaviour
     {
         if (canDamage)
         {
-            Debug.Log("Player Got Hit");
+            //Debug.Log("Player Got Hit");
             KBTimer = KBInterval; // Reset the timer
             PlayerHealth playerHealth = playerGO.GetComponent<PlayerHealth>();
             if (playerHealth != null)
@@ -47,7 +53,7 @@ public class AttackPlayerBoss : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canDamage = true; // Allow damage to the player
-            Debug.Log("Player can be damaged");
+            //Debug.Log("Player can be damaged");
         }
     }
 
@@ -56,7 +62,7 @@ public class AttackPlayerBoss : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canDamage = false; // Prevent damage to the player
-            Debug.Log("Player can't be damaged");
+            //Debug.Log("Player can't be damaged");
         }
     }
 }
