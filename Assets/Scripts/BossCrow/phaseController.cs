@@ -12,6 +12,12 @@ public class phaseController : MonoBehaviour
     [SerializeField] public bool phase3;
     bool isDefeated = false;
 
+    void Start()
+    {
+        phase3 = true; // Automatically start in Phase 3 for testing
+    }
+
+
     // Update is called once per frame
     void Update()
     {

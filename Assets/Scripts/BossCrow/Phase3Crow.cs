@@ -19,6 +19,7 @@ public class Phase3Crow : MonoBehaviour
 
     void Start()
     {
+
         // Find the player object in the scene by its tag
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -26,7 +27,7 @@ public class Phase3Crow : MonoBehaviour
         ChooseRandomPerchPosition();
         Debug.Log("Initial Perch Position: " + perchPosition); // Log the initial perch position for debugging
     }
-
+    /*
     void Update()
     {
         // Check if the game is currently in phase 3
@@ -49,7 +50,37 @@ public class Phase3Crow : MonoBehaviour
                 }
             }
         }
+    }*/
+
+    private bool hasInitializedPerch = false;
+
+    void Update()
+    {
+        if (pc.phase3)
+        {
+            // Check if the crow has already initialized its perch
+            if (!hasInitializedPerch)
+            {
+                ChooseRandomPerchPosition(); // Set initial perch position only once
+                hasInitializedPerch = true; // Prevent re-initialization
+            }
+
+            // If the crow is not currently swooping
+            if (!isSwooping)
+            {
+                perchTimer += Time.deltaTime;
+
+                // Move the crow to the current perch position
+                transform.position = perchPosition;
+
+                if (perchTimer >= perchTime)
+                {
+                    StartSwoop(); // Start swooping after the perch time
+                }
+            }
+        }
     }
+
 
     // Separated swoop initiation for readability and reusability
     private void StartSwoop()
@@ -73,33 +104,76 @@ public class Phase3Crow : MonoBehaviour
         Debug.Log("Branch 2 Position: " + branch2.position);
 
         Vector3 newPerchPosition;
-        do
+        bool isValidPosition = false;
+        int maxAttempts = 70;  // To avoid infinite loops
+
+        for (int attempt = 0; attempt < maxAttempts; attempt++) // Attempt to find a valid perch within 10 tries
         {
             float randomX = Random.Range(branch1.position.x, branch2.position.x);
-            int perchDirection = Random.Range(1, 2);
-            // Ensure the perch position is a safe distance from the player
-            if ((player.position.x - minDistanceFromPlayer) > branch1.position.x && perchDirection <= 1.5f)
-            {
-                randomX = Random.Range(branch1.position.x, player.position.x - minDistanceFromPlayer);
-            }
-            else if ((player.position.x + minDistanceFromPlayer) < branch2.position.x && perchDirection > 1.5f)
-            {
-                randomX = Random.Range(player.position.x + minDistanceFromPlayer, branch2.position.x);
-            }
-            else
-            {
-                randomX = Random.Range(branch1.position.x, branch2.position.x);
-            }
 
-            newPerchPosition = new Vector3(randomX, branch1.position.y + perchHeight, transform.position.z); // Keep the z position
-            Debug.Log("Attempting to set New Perch Position: " + newPerchPosition);
+            // Ensure the perch is a minimum distance from the player
+            if (Mathf.Abs(randomX - player.position.x) >= minDistanceFromPlayer)
+            {
+                newPerchPosition = new Vector3(randomX, branch1.position.y + perchHeight, transform.position.z);
+                Debug.Log("Attempting to set New Perch Position: " + newPerchPosition);
+
+                // Check if the new perch position is sufficiently different from the current one
+                if (Vector3.Distance(newPerchPosition, perchPosition) > 1f)
+                {
+                    perchPosition = newPerchPosition; // Set the new perch position
+                    isValidPosition = true;
+                    break;  // Exit loop as we've found a valid position
+                }
+            }
         }
-        while (newPerchPosition == perchPosition); // Repeat if the same as the current perch position
 
-        perchPosition = newPerchPosition; // Set the new perch position
-        transform.position = perchPosition; // Immediately move to the new perch
-        Debug.Log("New Perch Position set: " + perchPosition);
+        if (isValidPosition)
+        {
+            // Move the bird to the new perch
+            transform.position = perchPosition;
+            Debug.Log("New Perch Position set: " + perchPosition);
+        }
+        else
+        {
+            Debug.LogWarning("Could not find a valid new perch position after several attempts.");
+        }
     }
+
+
+    /*
+     private void ChooseRandomPerchPosition()
+     {
+         Debug.Log("Branch 1 Position: " + branch1.position);
+         Debug.Log("Branch 2 Position: " + branch2.position);
+
+         Vector3 newPerchPosition;
+         do
+         {
+             float randomX = Random.Range(branch1.position.x, branch2.position.x);
+             int perchDirection = Random.Range(1, 2);
+             // Ensure the perch position is a safe distance from the player
+             if ((player.position.x - minDistanceFromPlayer) > branch1.position.x && perchDirection <= 1.5f)
+             {
+                 randomX = Random.Range(branch1.position.x, player.position.x - minDistanceFromPlayer);
+             }
+             else if ((player.position.x + minDistanceFromPlayer) < branch2.position.x && perchDirection > 1.5f)
+             {
+                 randomX = Random.Range(player.position.x + minDistanceFromPlayer, branch2.position.x);
+             }
+             else
+             {
+                 randomX = Random.Range(branch1.position.x, branch2.position.x);
+             }
+
+             newPerchPosition = new Vector3(randomX, branch1.position.y + perchHeight, transform.position.z); // Keep the z position
+             Debug.Log("Attempting to set New Perch Position: " + newPerchPosition);
+         }
+         while (newPerchPosition == perchPosition); // Repeat if the same as the current perch position
+
+         perchPosition = newPerchPosition; // Set the new perch position
+         transform.position = perchPosition; // Immediately move to the new perch
+         Debug.Log("New Perch Position set: " + perchPosition);
+     }*/
 
 
     private void FlipSprite()
