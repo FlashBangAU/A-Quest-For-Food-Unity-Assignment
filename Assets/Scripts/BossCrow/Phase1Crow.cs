@@ -32,6 +32,7 @@ public class Phase1Crow : MonoBehaviour
 
     [SerializeField] bool onGround;
     private bool hoppingRight;
+    private bool weakPointActive = false;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -138,12 +139,12 @@ public class Phase1Crow : MonoBehaviour
     //will make boss vulnrable for a period of time
     private void Stuck()
     {
-
-        if (hitBoxPhase1.active == false)
+        if (weakPointActive == false)
         {
             Peck();
             tStuck = 0f;
             hitBoxPhase1.SetActive(true);
+            weakPointActive = true;
         }
 
         if (tStuck > timeStuck)
@@ -158,6 +159,7 @@ public class Phase1Crow : MonoBehaviour
         hoppingMode = true;
         peckMode = false;
         hitBoxPhase1.SetActive(false);
+        weakPointActive = false;
         runAway = true;
         peckCounter = 0;
         tStuck = 0f;
