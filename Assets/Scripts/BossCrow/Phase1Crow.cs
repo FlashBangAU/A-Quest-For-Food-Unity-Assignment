@@ -7,6 +7,7 @@ public class Phase1Crow : MonoBehaviour
     public phaseController pc;
     public Rigidbody2D rb;
     private GameObject player;
+    private Rigidbody2D playerRb; // Player's Rigidbody for applying knockback
     public GameObject hitBoxPhase1;
     [SerializeField] float attackRange;
 
@@ -31,15 +32,40 @@ public class Phase1Crow : MonoBehaviour
 
     [SerializeField] bool onGround;
     private bool hoppingRight;
-    void Start()
+
+    [SerializeField] float knockbackForceX = 10f; // Force of knockback in the X direction
+    [SerializeField] float knockbackForceY = 5f;  // Force of knockback in the Y direction
+    /*void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        hitBoxPhase1.SetActive(false);
+    }*/
+
+    private bool isKnockedBack = false;
+
+    void Start()
+    {
+        // Find the player object in the scene by tag
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        // Check if the player was found and assign the player's Rigidbody2D
+        if (player != null)
+        {
+            playerRb = player.GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component from the player
+        }
+        else
+        {
+            Debug.LogError("Player object not found! Ensure the player has the 'Player' tag.");
+        }
+
+        // Ensure the hitbox is initially disabled
         hitBoxPhase1.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (player.transform.position.x < hitBoxPhase1.transform.position.x)
         {
             hoppingRight = false;
@@ -124,6 +150,16 @@ public class Phase1Crow : MonoBehaviour
                 
             }
         }
+        if (playerRb != null && Mathf.Abs(playerRb.velocity.x) > 0.1f)
+        {
+            isKnockedBack = true;
+            Debug.Log("Player is being knocked back!");
+        }
+        else
+        {
+            isKnockedBack = false;
+        }
+
     }
 
     //checks if boss has contact with ground
@@ -135,11 +171,37 @@ public class Phase1Crow : MonoBehaviour
         }
     }
 
-    //will damage player
+
+    // Simulate peck knockback
     private void Peck()
+         
     {
+        // Log player's velocity before applying knockback
+
+        Debug.Log("Player velocity before knockback: " + playerRb.velocity);
+
+        // Declare knockbackDirection here inside the Peck() method
+        Vector2 knockbackDirection;
+        if (player.transform.position.x > transform.position.x)
+        {
+            knockbackDirection = new Vector2(knockbackForceX, knockbackForceY); // Knock player to the right
+        }
+        else
+        {
+            knockbackDirection = new Vector2(-knockbackForceX, knockbackForceY); // Knock player to the left
+        }
+
+        // Apply knockback to player's Rigidbody2D
+       // playerRb.velocity = Vector2.zero; // Reset velocity
+        playerRb.AddForce(knockbackDirection, ForceMode2D.Impulse);
+
+        Debug.Log("Applying knockback in direction: " + knockbackDirection);
+        
 
     }
+
+
+
 
     //will make boss vulnrable for a period of time
     private void Stuck()
