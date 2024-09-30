@@ -1,4 +1,6 @@
-
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class phaseController : MonoBehaviour
@@ -12,7 +14,7 @@ public class phaseController : MonoBehaviour
 
     void Start()
     {
-       
+        //phase3 = true; // Automatically start in Phase 3 for testing
     }
 
 
