@@ -35,15 +35,9 @@ public class Phase1Crow : MonoBehaviour
 
     private bool isKnockedBack = false;
 
-    [SerializeField] float knockbackForceX = 10f; // Force of knockback in the X direction
-    [SerializeField] float knockbackForceY = 5f;  // Force of knockback in the Y direction
-    /*void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-        hitBoxPhase1.SetActive(false);
-    }*/
-
-
+    [SerializeField] float knockbackForceX = 20f; // Force of knockback in the X direction
+    [SerializeField] float knockbackForceY = 15f;  // Force of knockback in the Y direction
+ 
     void Start()
     {
         // Find the player object in the scene by tag
@@ -151,7 +145,7 @@ public class Phase1Crow : MonoBehaviour
                 
             }
         }
-        if (playerRb != null && Mathf.Abs(playerRb.velocity.x) > 0.1f)
+       /* if (playerRb != null && Mathf.Abs(playerRb.velocity.x) > 0.1f)
         {
             isKnockedBack = true;
             Debug.Log("Player is being knocked back!");
@@ -159,7 +153,7 @@ public class Phase1Crow : MonoBehaviour
         else
         {
             isKnockedBack = false;
-        }
+        }*/
 
     }
 
@@ -193,7 +187,7 @@ public class Phase1Crow : MonoBehaviour
         }
 
         // Apply knockback to player's Rigidbody2D
-       // playerRb.velocity = Vector2.zero; // Reset velocity
+        playerRb.velocity = Vector2.zero; // Reset velocity
         playerRb.AddForce(knockbackDirection, ForceMode2D.Impulse);
 
         Debug.Log("Applying knockback in direction: " + knockbackDirection);
