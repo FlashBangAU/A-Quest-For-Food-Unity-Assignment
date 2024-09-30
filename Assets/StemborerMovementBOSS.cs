@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StemBorerMovement : MonoBehaviour
+public class StemBorerMovementBOSS : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float chaseHeight;
@@ -24,7 +24,6 @@ public class StemBorerMovement : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        checkPoint = transform.position;
         if (player.transform.position.x < transform.position.x)
         {
             FlipSprite();
@@ -53,15 +52,7 @@ public class StemBorerMovement : MonoBehaviour
             flyOnRight = false;
         }
 
-        Collider2D[] playerTofight = Physics2D.OverlapCircleAll(detectPos.position, detectRange, whatIsPlayer);
-        if (playerTofight.Length != 0)
-        {
-            Chase();
-        }
-        else if (playerTofight.Length == 0)
-        {
-            Neutral();
-        }
+        Chase();
 
         if (isFacingRight && !flyOnRight || !isFacingRight && flyOnRight)
         {
@@ -87,11 +78,6 @@ public class StemBorerMovement : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, tempPos, speed * Time.deltaTime);
     }
 
-    private void Neutral()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, checkPoint, speed * Time.deltaTime);
-    }
-
     void OnDrawGizmosSelected()
     {
         //Gizmos.color = Color.red;
@@ -100,9 +86,9 @@ public class StemBorerMovement : MonoBehaviour
 
     void FlipSprite()
     {
-            isFacingRight = !isFacingRight;
-            Vector2 ls = transform.localScale;
-            ls.x *= -1f;
-            transform.localScale = ls;
+        isFacingRight = !isFacingRight;
+        Vector2 ls = transform.localScale;
+        ls.x *= -1f;
+        transform.localScale = ls;
     }
 }
