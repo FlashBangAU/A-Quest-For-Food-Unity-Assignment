@@ -82,7 +82,7 @@ public class Phase2Crow : MonoBehaviour
                 }
                 if (transform.position.x > stick.transform.position.x && isFacingRight || transform.position.x < stick.transform.position.x && !isFacingRight)
                 {
-                    flipSprite();
+                    FlipSprite();
                 }
             }
 
@@ -117,10 +117,15 @@ public class Phase2Crow : MonoBehaviour
                 {
                     if (transform.position.x > nextFlyPos.x && isFacingRight || transform.position.x < nextFlyPos.x && !isFacingRight)
                     {
-                        flipSprite();
+                        FlipSprite();
                     }
                 }
             }
+        }
+        else
+        {
+            stickHeld = false;
+            sba.isHeld = false;
         }
     }
 
@@ -150,7 +155,7 @@ public class Phase2Crow : MonoBehaviour
         nextFlyPos = new Vector3(nextFlyPosX, flyingHeight, 0);
     }
 
-    private void flipSprite()
+    private void FlipSprite()
     {
         isFacingRight = !isFacingRight;
         Vector2 ls = transform.localScale;
