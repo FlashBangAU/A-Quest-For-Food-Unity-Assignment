@@ -4829,6 +4829,9 @@ MonoBehaviour:
   p1c: {fileID: 1768567927}
   playerGO: {fileID: 1715909453}
   playerRB: {fileID: 1715909454}
+  KBTimer: 0
+  KBInterval: 1.2
+  knockbackForce: 10
 --- !u!61 &1289862579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5097,7 +5100,6 @@ MonoBehaviour:
   pc: {fileID: 1768567928}
   rb: {fileID: 1768567932}
   hitBoxPhase1: {fileID: 733641256}
-  attackPlayerBoss: {fileID: 1289862578}
   attackRange: 2
   jumpHeight: 3.5
   jumpDistance: 4
@@ -5126,7 +5128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 12
-  phase0: 0
+  phase0: 1
   phase1: 0
   phase2: 0
   phase3: 0

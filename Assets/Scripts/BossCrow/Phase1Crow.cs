@@ -33,6 +33,8 @@ public class Phase1Crow : MonoBehaviour
     [SerializeField] bool onGround;
     private bool hoppingRight;
 
+    private bool isKnockedBack = false;
+
     [SerializeField] float knockbackForceX = 10f; // Force of knockback in the X direction
     [SerializeField] float knockbackForceY = 5f;  // Force of knockback in the Y direction
     /*void Start()
@@ -41,7 +43,6 @@ public class Phase1Crow : MonoBehaviour
         hitBoxPhase1.SetActive(false);
     }*/
 
-    private bool isKnockedBack = false;
 
     void Start()
     {
