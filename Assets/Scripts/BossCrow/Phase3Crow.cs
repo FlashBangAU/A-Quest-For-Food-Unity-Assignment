@@ -27,58 +27,76 @@ public class Phase3Crow : MonoBehaviour
         ChooseRandomPerchPosition();
         Debug.Log("Initial Perch Position: " + perchPosition); // Log the initial perch position for debugging
     }
-    /*
-    void Update()
-    {
-        // Check if the game is currently in phase 3
-        if (pc.phase3)
-        {
-            // If the crow is not currently swooping
-            if (!isSwooping)
-            {
-                // Increment the perch timer based on the time passed since the last frame
-                perchTimer += Time.deltaTime;
 
-                // Move the crow to the current perch position
-                transform.position = perchPosition;
 
-                // Check if the perch timer has exceeded the designated perch time
-                if (perchTimer >= perchTime)
-                {
-                    // Start the swoop action and reset perch timer for the next cycle
-                    StartSwoop();
-                }
-            }
-        }
-    }*/
-
-    private bool hasInitializedPerch = false;
+    private bool hasInitializedPerch = false;  // A flag to track if the initial perch has been set
 
     void Update()
     {
+        // Check if the game is currently in Phase 3 (boss fight phase)
         if (pc.phase3)
         {
             // Check if the crow has already initialized its perch
             if (!hasInitializedPerch)
             {
-                ChooseRandomPerchPosition(); // Set initial perch position only once
-                hasInitializedPerch = true; // Prevent re-initialization
+                // Set an initial random perch position only once at the start of Phase 3
+                ChooseRandomPerchPosition();
+
+                // Start the coroutine to smoothly move the crow to the chosen perch position
+                StartCoroutine(MoveToPerch(perchPosition));
+
+                // Mark the perch as initialized so this block runs only once
+                hasInitializedPerch = true;
             }
 
-            // If the crow is not currently swooping
-            if (!isSwooping)
+            // If the crow is not swooping (i.e., perched)
+            if (!isSwooping && hasInitializedPerch)
             {
+                // Increment the perch timer based on the time passed since the last frame
                 perchTimer += Time.deltaTime;
 
-                // Move the crow to the current perch position
-                transform.position = perchPosition;
-
+                // If the crow has perched long enough, start the swooping behavior
                 if (perchTimer >= perchTime)
                 {
-                    StartSwoop(); // Start swooping after the perch time
+                    // Start swooping down towards the player after the perch time has elapsed
+                    StartSwoop();
                 }
             }
         }
+    }
+
+
+    // Smoothly move to the first perch when Phase 3 starts
+    private IEnumerator MoveToPerch(Vector3 targetPerchPosition)
+    {
+        // Store the current position of the crow (where it's starting from)
+        Vector3 startPosition = transform.position;
+
+        // Calculate the total distance from the current position to the target perch
+        float journeyLength = Vector3.Distance(startPosition, targetPerchPosition);
+
+        // Calculate how long it will take to reach the perch based on the defined swoop speed
+        // Using the swoopSpeed for consistency in movement speed, whether swooping or perching
+        float journeyTime = journeyLength / swoopSpeed;
+
+        // Record the time when the movement starts
+        float startTime = Time.time;
+
+        // Loop that moves the crow smoothly towards the target perch position
+        while (Time.time < startTime + journeyTime)
+        {
+            // Calculate the normalized time (t) for the movement from 0 to 1
+            float t = (Time.time - startTime) / journeyTime;
+
+            // Smoothly move the crow from the start position to the target perch using linear interpolation (Lerp)
+            transform.position = Vector3.Lerp(startPosition, targetPerchPosition, t);
+
+            // Yield to the next frame to allow smooth animation across multiple frames
+            yield return null;
+        }
+
+        // Log a message to the console indicating that the crow has reached its perch
+        Debug.Log("Crow has smoothly reached the perch at: " + targetPerchPosition);
     }
 
 
@@ -138,42 +156,6 @@ public class Phase3Crow : MonoBehaviour
             Debug.LogWarning("Could not find a valid new perch position after several attempts.");
         }
     }
-
-
-    /*
-     private void ChooseRandomPerchPosition()
-     {
-         Debug.Log("Branch 1 Position: " + branch1.position);
-         Debug.Log("Branch 2 Position: " + branch2.position);
-
-         Vector3 newPerchPosition;
-         do
-         {
-             float randomX = Random.Range(branch1.position.x, branch2.position.x);
-             int perchDirection = Random.Range(1, 2);
-             // Ensure the perch position is a safe distance from the player
-             if ((player.position.x - minDistanceFromPlayer) > branch1.position.x && perchDirection <= 1.5f)
-             {
-                 randomX = Random.Range(branch1.position.x, player.position.x - minDistanceFromPlayer);
-             }
-             else if ((player.position.x + minDistanceFromPlayer) < branch2.position.x && perchDirection > 1.5f)
-             {
-                 randomX = Random.Range(player.position.x + minDistanceFromPlayer, branch2.position.x);
-             }
-             else
-             {
-                 randomX = Random.Range(branch1.position.x, branch2.position.x);
-             }
-
-             newPerchPosition = new Vector3(randomX, branch1.position.y + perchHeight, transform.position.z); // Keep the z position
-             Debug.Log("Attempting to set New Perch Position: " + newPerchPosition);
-         }
-         while (newPerchPosition == perchPosition); // Repeat if the same as the current perch position
-
-         perchPosition = newPerchPosition; // Set the new perch position
-         transform.position = perchPosition; // Immediately move to the new perch
-         Debug.Log("New Perch Position set: " + perchPosition);
-     }*/
 
 
     private void FlipSprite()
