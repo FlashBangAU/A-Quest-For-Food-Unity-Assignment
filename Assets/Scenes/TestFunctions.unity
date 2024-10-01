@@ -694,7 +694,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c56589debaa77f4bbf09d5521f6732d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -775,14 +775,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.5, y: 0.7}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.7}
   m_EdgeRadius: 0
 --- !u!50 &834180813
 Rigidbody2D:
@@ -5256,6 +5256,7 @@ GameObject:
   - component: {fileID: 1768567927}
   - component: {fileID: 1768567926}
   - component: {fileID: 1768567925}
+  - component: {fileID: 1768567933}
   m_Layer: 4
   m_Name: CrowBoss
   m_TagString: Untagged
@@ -5270,7 +5271,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768567924}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 249faacbb98025146bbdd1b552579c32, type: 3}
   m_Name: 
@@ -5307,7 +5308,7 @@ MonoBehaviour:
   detectRange: 2
   whatIsStick:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
   stickOnGround: 0
   flyingHeight: 2
   nextFlyPosX: 0
@@ -5315,6 +5316,7 @@ MonoBehaviour:
   minXDistanceFlyPos: 10
   timeToPickup: 4
   waitToPickup: 4
+  animatior: {fileID: 0}
 --- !u!114 &1768567927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5344,6 +5346,7 @@ MonoBehaviour:
   peckCounter: 0
   timeStuck: 3
   onGround: 0
+  animatior: {fileID: 1768567933}
 --- !u!114 &1768567928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5358,8 +5361,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 12
   phase0: 0
-  phase1: 1
-  phase2: 0
+  phase1: 0
+  phase2: 1
   phase3: 0
 --- !u!212 &1768567929
 SpriteRenderer:
@@ -5402,7 +5405,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a72f160e4e1e6b43be0e9e860b88ce9, type: 3}
+  m_Sprite: {fileID: -850417700, guid: fd0ce5bc17b3db6448e717881a712c70, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5493,6 +5496,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &1768567933
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768567924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b6baf2e258f62e7409928d2cad9aa6f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1791882994
 GameObject:
   m_ObjectHideFlags: 0

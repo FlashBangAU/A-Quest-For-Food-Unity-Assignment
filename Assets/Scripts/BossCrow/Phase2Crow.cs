@@ -39,6 +39,8 @@ public class Phase2Crow : MonoBehaviour
 
     bool isFacingRight = false;
 
+    [SerializeField] private Animator animatior;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +81,7 @@ public class Phase2Crow : MonoBehaviour
                     rb.gravityScale = 1;
                     timerOn = true;
                     hitBoxPhase2.SetActive(true);
+                    animatior.Play("peckAnimation");
                 }
                 if (transform.position.x > stick.transform.position.x && isFacingRight || transform.position.x < stick.transform.position.x && !isFacingRight)
                 {

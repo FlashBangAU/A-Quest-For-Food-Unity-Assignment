@@ -33,6 +33,8 @@ public class Phase1Crow : MonoBehaviour
     [SerializeField] bool onGround;
     private bool hoppingRight;
     private bool weakPointActive = false;
+
+    [SerializeField] private Animator animatior;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -57,6 +59,11 @@ public class Phase1Crow : MonoBehaviour
 
         if (pc.phase1 == true)
         {
+            if (!onGround)
+            {
+                animatior.Play("hopAnimation");
+            }
+
             //bird runs to the right of screen
             if (runAway && onGround)
             {
@@ -134,6 +141,7 @@ public class Phase1Crow : MonoBehaviour
         //play peck animation
         //Debug.Log("Peck action is played");
         attackPlayerBoss.PlayerGotHit();
+        animatior.Play("peckAnimation");
     }
 
     //will make boss vulnrable for a period of time
@@ -146,6 +154,7 @@ public class Phase1Crow : MonoBehaviour
             hitBoxPhase1.SetActive(true);
             weakPointActive = true;
         }
+        animatior.Play("peckAnimation");
 
         if (tStuck > timeStuck)
         {
