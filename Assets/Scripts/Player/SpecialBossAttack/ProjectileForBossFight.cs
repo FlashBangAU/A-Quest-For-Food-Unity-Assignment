@@ -26,7 +26,7 @@ public class ProjectileForBossFight : MonoBehaviour
     void Update()
     {
         // Update direction towards the boss
-        bossPos = new Vector3(boss.transform.position.x - 2, boss.transform.position.y);
+        bossPos = new Vector3(boss.transform.position.x - 3, boss.transform.position.y);
         Vector2 newDirection = (bossPos - transform.position).normalized;
 
         // Limit the movement based on last direction

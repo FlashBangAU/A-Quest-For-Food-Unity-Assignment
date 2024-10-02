@@ -42,40 +42,59 @@ public class PlayerAttack : MonoBehaviour
     {
         HandleNormalAttack();
         HandleSpecialAttack();
+
+        if(isLevel5)
+        {
+            phase3 = crowBoss.GetComponent<phaseController>().phase3;
+        }
     }
 
     private void HandleNormalAttack()
     {
-        if (timeBtwAttack <= 0 && Input.GetKeyDown(KeyCode.P))
+        if (timeBtwAttack <= 0)
         {
-            timeBtwAttack = startTimeBtwAttack;
-            timerNormAtk.StartTimer();
-            audioManager.PlaySFX(audioManager.playerAttack);
-            attackAnimation.Play("AttackAnimation");
-            attackSlashAnimation.Play("PlayerAttacks");
-
-            DamageEnemies(whatIsEnemies);
-            DamageBoss(whatIsBossHitBox);
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                timeBtwAttack = startTimeBtwAttack;
+                timerNormAtk.StartTimer();
+                audioManager.PlaySFX(audioManager.playerAttack);
+                attackAnimation.Play("AttackAnimation");
+                attackSlashAnimation.Play("PlayerAttacks");
+                DamageEnemies(whatIsEnemies);
+                DamageBoss(whatIsBossHitBox);
+            }
+            if (Input.GetKeyDown(KeyCode.P) == false)
+            {
+                timerNormAtk.StopTimer();
+            }
         }
         else
         {
             timeBtwAttack -= Time.deltaTime;
-            timerNormAtk.StopTimer();
         }
     }
 
     private void HandleSpecialAttack()
     {
-        if (timeBtwAttackSpecial <= 0 && isLevel5 && phase3 && Input.GetKeyDown(KeyCode.P))
+        if (isLevel5)
         {
-            timeBtwAttackSpecial = startTimeBtwAttackSpecial;
-            timerSpecialAtk.StartTimer();
-            Instantiate(projectileForBossFight, projPos.position, Quaternion.identity);
-        }
-        else
-        {
-            timeBtwAttackSpecial -= Time.deltaTime;
-            timerSpecialAtk.StopTimer();
+            if (timeBtwAttackSpecial <= 0 && phase3)
+            {
+                if (Input.GetKeyDown(KeyCode.P))
+                {
+                    timeBtwAttackSpecial = startTimeBtwAttackSpecial;
+                    timerSpecialAtk.StartTimer();
+                    Instantiate(projectileForBossFight, projPos.position, Quaternion.identity);
+                }
+                if (Input.GetKeyDown(KeyCode.P) == false)
+                {
+                    timerSpecialAtk.StopTimer();
+                }
+            }
+            else
+            {
+                timeBtwAttackSpecial -= Time.deltaTime;
+            }
         }
     }
 
