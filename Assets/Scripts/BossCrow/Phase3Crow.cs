@@ -17,6 +17,14 @@ public class Phase3Crow : MonoBehaviour
 
     private float perchTimer = 0f; // Timer to track how long the crow has been perched
 
+    private AudioManager audioManager; // Reference for AudioManager
+
+    // Used to connect the AudioManager reference to the existing AudioManager object
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Start()
     {
 
@@ -176,6 +184,9 @@ public class Phase3Crow : MonoBehaviour
         isSwooping = true; // Set swooping state
         Vector3 startPosition = transform.position;
         FlipSprite();
+
+        // Play crow call to signal swoop
+        audioManager.PlaySFX(audioManager.bossCall);
 
         // Define the target position directly based on the player's current position
         Vector3 targetPosition = new Vector3(player.position.x, player.position.y, startPosition.z);

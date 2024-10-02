@@ -41,6 +41,14 @@ public class Phase2Crow : MonoBehaviour
 
     [SerializeField] private Animator animatior;
 
+    private AudioManager audioManager; // Reference for AudioManager
+
+    // Used to connect the AudioManager reference to the existing AudioManager object
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -139,6 +147,7 @@ public class Phase2Crow : MonoBehaviour
         sba.isHeld = true;
         rb.gravityScale = 0;
         hitBoxPhase2.SetActive(false);
+        audioManager.PlaySFX(audioManager.bossCall);
     }
 
     private void DropStick()
@@ -146,6 +155,7 @@ public class Phase2Crow : MonoBehaviour
         stickHeld = false;
         sba.isHeld = false;
         timerOn = false;
+        audioManager.PlaySFX(audioManager.bossCall);
     }
 
     private void SelectBranchPos()

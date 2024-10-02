@@ -34,6 +34,14 @@ public class Phase1Crow : MonoBehaviour
     private bool hoppingRight;
     private bool weakPointActive = false;
 
+    private AudioManager audioManager; // Reference for AudioManager
+
+    // Used to connect the AudioManager reference to the existing AudioManager object
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     [SerializeField] private Animator animatior;
     void Start()
     {
@@ -69,6 +77,7 @@ public class Phase1Crow : MonoBehaviour
             {
                 //play hop animation
                 rb.velocity = new Vector2(jumpDistance, jumpHeight);
+                audioManager.PlaySFX(audioManager.bossJump);
                 onGround = false;
                 if (tStuck > 3f)
                 {
@@ -83,12 +92,14 @@ public class Phase1Crow : MonoBehaviour
                 {
                     //play hop animation
                     rb.velocity = new Vector2(jumpDistance, jumpHeight);
+                    audioManager.PlaySFX(audioManager.bossJump);
                     onGround = false;
                 }
                 else if (onGround && !hoppingRight)
                 {
                     //play hop anmiation
                     rb.velocity = new Vector2(-jumpDistance, jumpHeight);
+                    audioManager.PlaySFX(audioManager.bossJump);
                     onGround = false;
                 }
 
@@ -142,6 +153,7 @@ public class Phase1Crow : MonoBehaviour
         //Debug.Log("Peck action is played");
         attackPlayerBoss.PlayerGotHit();
         animatior.Play("peckAnimation");
+        audioManager.PlaySFX(audioManager.peckGround);
     }
 
     //will make boss vulnrable for a period of time
@@ -172,6 +184,7 @@ public class Phase1Crow : MonoBehaviour
         runAway = true;
         peckCounter = 0;
         tStuck = 0f;
+        audioManager.PlaySFX(audioManager.bossCall);
     }
 
     //checks if boss has contact with ground

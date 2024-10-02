@@ -17,6 +17,13 @@ public class stemborerStick : MonoBehaviour
 
     public bool onGround;
 
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +44,7 @@ public class stemborerStick : MonoBehaviour
             if(spawnNewEnemy > spawnInterval)
             {
                 Instantiate(stemBorerBoss, spawnPos.position, Quaternion.identity);
+                audioManager.PlaySFX(audioManager.foodPickup);
                 spawnNewEnemy = 0f;
             }
         }

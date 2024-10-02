@@ -9,11 +9,17 @@ public class AttackPlayerBoss : MonoBehaviour
     public GameObject playerGO; // Reference to the player GameObject
     public Rigidbody2D playerRB; // Reference to the player's Rigidbody2D
     private bool canDamage = false; // Flag to indicate if the player can be damaged
+    private AudioManager audioManager;
 
     [SerializeField] private float KBTimer = 0f; // Timer to manage damage timing
     [SerializeField] private float KBInterval = 1.2f; // Time interval between damage applications
 
     public float knockbackForce = 10f;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void FixedUpdate()
     {
@@ -37,9 +43,11 @@ public class AttackPlayerBoss : MonoBehaviour
             //Debug.Log("Player Got Hit");
             KBTimer = KBInterval; // Reset the timer
             PlayerHealth playerHealth = playerGO.GetComponent<PlayerHealth>();
+
             if (playerHealth != null)
             {
                 playerHealth.health -= 1; // Reduce player's health
+                audioManager.PlaySFX(audioManager.playerDamage);
             }
             else
             {
