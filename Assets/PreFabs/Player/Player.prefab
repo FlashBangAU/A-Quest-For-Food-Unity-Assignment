@@ -227,11 +227,15 @@ MonoBehaviour:
   whatIsBossHitBox:
     serializedVersion: 2
     m_Bits: 512
-  attackRange: 0.92
+  attackRange: 1.01
   damage: 1
   attackAnimation: {fileID: 6091915266309559014}
   timer: {fileID: 0}
   attackSlashAnimation: {fileID: 8432525780652769144}
+  isLevel5: 1
+  startTimeBtwAttackSpecial: 3
+  projectileForBossFight: {fileID: 6909838569437984530, guid: 8fc4856558a21c742affaa659ce359cd, type: 3}
+  projPos: {fileID: 512813001747819666}
 --- !u!114 &5220876486473601534
 MonoBehaviour:
   m_ObjectHideFlags: 0

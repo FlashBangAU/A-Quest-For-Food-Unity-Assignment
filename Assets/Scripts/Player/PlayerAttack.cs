@@ -6,6 +6,8 @@ public class PlayerAttack : MonoBehaviour
 {
     float timeBtwAttack;
     [SerializeField] float startTimeBtwAttack;
+    float timeBtwAttackSpecial;
+    [SerializeField] float startTimeBtwAttackSpecial;
 
     [SerializeField] Transform attackPos;
     [SerializeField] LayerMask whatIsEnemies;
@@ -14,45 +16,84 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] int damage;
 
     [SerializeField] private Animator attackAnimation;
-    public Timer timer;
+    public Timer timerNormAtk;
+    public Timer timerSpecialAtk;
     public Animator attackSlashAnimation;
+
+    [SerializeField] bool isLevel5 = false;
+    GameObject crowBoss;
+    public bool phase3;
+    public GameObject projectileForBossFight;
+    [SerializeField] Transform projPos;
 
     AudioManager audioManager;
 
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        if (isLevel5)
+        {
+            crowBoss = GameObject.FindGameObjectWithTag("BossSpeicalHitBox");
+            phase3 = crowBoss.GetComponent<phaseController>().phase3;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(timeBtwAttack <= 0)
+        HandleNormalAttack();
+        HandleSpecialAttack();
+    }
+
+    private void HandleNormalAttack()
+    {
+        if (timeBtwAttack <= 0 && Input.GetKeyDown(KeyCode.P))
         {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                timeBtwAttack = startTimeBtwAttack;
-                timer.StartTimer();
-                audioManager.PlaySFX(audioManager.playerAttack);
-                attackAnimation.Play("AttackAnimation");
-                attackSlashAnimation.Play("PlayerAttacks");
-                Collider2D[] eniemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                for (int i = 0; i < eniemiesToDamage.Length; i++)
-                {
-                    eniemiesToDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
-                }
-                Collider2D[] bossToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsBossHitBox);
-                for (int i = 0; i < bossToDamage.Length; i++)
-                {
-                    bossToDamage[i].GetComponent<checkIfHit>().bossGotHit();
-                }
-            }
-            if(Input.GetKeyDown(KeyCode.P) == false)
-                timer.StopTimer();
+            timeBtwAttack = startTimeBtwAttack;
+            timerNormAtk.StartTimer();
+            audioManager.PlaySFX(audioManager.playerAttack);
+            attackAnimation.Play("AttackAnimation");
+            attackSlashAnimation.Play("PlayerAttacks");
+
+            DamageEnemies(whatIsEnemies);
+            DamageBoss(whatIsBossHitBox);
         }
         else
         {
             timeBtwAttack -= Time.deltaTime;
+            timerNormAtk.StopTimer();
+        }
+    }
+
+    private void HandleSpecialAttack()
+    {
+        if (timeBtwAttackSpecial <= 0 && isLevel5 && phase3 && Input.GetKeyDown(KeyCode.P))
+        {
+            timeBtwAttackSpecial = startTimeBtwAttackSpecial;
+            timerSpecialAtk.StartTimer();
+            Instantiate(projectileForBossFight, projPos.position, Quaternion.identity);
+        }
+        else
+        {
+            timeBtwAttackSpecial -= Time.deltaTime;
+            timerSpecialAtk.StopTimer();
+        }
+    }
+
+    private void DamageEnemies(LayerMask enemiesLayer)
+    {
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemiesLayer);
+        foreach (Collider2D enemy in enemiesToDamage)
+        {
+            enemy.GetComponent<EnemyHealth>().TakeDamage(damage);
+        }
+    }
+
+    private void DamageBoss(LayerMask bossLayer)
+    {
+        Collider2D[] bossesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, bossLayer);
+        foreach (Collider2D boss in bossesToDamage)
+        {
+            boss.GetComponent<checkIfHit>().bossGotHit();
         }
     }
 
