@@ -22,7 +22,7 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] bool isLevel5 = false;
     GameObject crowBoss;
-    public bool phase3;
+    bool phase3;
     public GameObject projectileForBossFight;
     [SerializeField] Transform projPos;
 
