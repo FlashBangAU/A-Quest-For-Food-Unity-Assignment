@@ -850,6 +850,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 60674879}
     - target: {fileID: 2249841086167571830, guid: e6283d1246214324d972f263993a284a, type: 3}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 8300000, guid: d3a770cbca6a33b4da77885a79280139, type: 3}
+    - target: {fileID: 2249841086167571830, guid: e6283d1246214324d972f263993a284a, type: 3}
       propertyPath: musicSlider
       value: 
       objectReference: {fileID: 792513411}
@@ -1547,10 +1551,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 817830185}
   m_HandleRect: {fileID: 1975590359}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 20
+  m_MinValue: -30
+  m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: -10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
