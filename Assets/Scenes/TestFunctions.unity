@@ -149,6 +149,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.4, y: 4.92, z: 0}
+  m_LocalPosition: {x: -33.7, y: 14.8, z: -0.24561265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -348,6 +349,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6283d1246214324d972f263993a284a, type: 3}
+--- !u!114 &516695334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2249841086167571830, guid: e6283d1246214324d972f263993a284a, type: 3}
+  m_PrefabInstance: {fileID: 516695333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e60b835f266ff4d8e1394d8ec22795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &635488484 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3882965663234129477, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
@@ -509,6 +521,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.1999998, y: -4.51, z: 0}
+  m_LocalPosition: {x: -2.29, y: -3.73, z: 0}
   m_LocalScale: {x: 5.95, y: 1.375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -528,6 +541,8 @@ GameObject:
   - component: {fileID: 733641261}
   m_Layer: 9
   m_Name: HitBoxPhase1and2
+  m_Layer: 0
+  m_Name: HitBoxPhase1
   m_TagString: BossHitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -544,6 +559,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.954, y: 0.3348, z: 0}
   m_LocalScale: {x: 0.1349285, y: 0.5176709, z: 0.28406}
+  m_LocalPosition: {x: -0.956, y: 0.31, z: 0}
+  m_LocalScale: {x: 0.22, y: 0.49, z: 0.28406}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1768567930}
@@ -5021,6 +5038,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.920001, y: 6.33, z: 0}
+  m_LocalPosition: {x: 43.2, y: 14.8, z: -0.24561265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5449,6 +5467,9 @@ GameObject:
   m_Layer: 4
   m_Name: CrowBoss
   m_TagString: BossSpeicalHitBox
+  m_Layer: 0
+  m_Name: CrowBoss
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5503,6 +5524,7 @@ MonoBehaviour:
   minXDistanceFlyPos: 10
   timeToPickup: 4
   animatior: {fileID: 1768567933}
+  pc: {fileID: 1768567928}
 --- !u!114 &1768567927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5526,6 +5548,18 @@ MonoBehaviour:
   minTimeBtwPeck: 0.8
   timeStuck: 3
   animatior: {fileID: 1768567933}
+  attackRange: 6
+  jumpHeight: 3.5
+  jumpDistance: 4
+  hoppingMode: 1
+  peckMode: 0
+  peckCycle: 0
+  maxTimeBtwPeck: 2
+  minTimeBtwPeck: 0.8
+  timeBtwPeck: 0
+  nextPeck: 0
+  peckCounter: 0
+  onGround: 0
 --- !u!114 &1768567928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5585,6 +5619,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -850417700, guid: fd0ce5bc17b3db6448e717881a712c70, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a72f160e4e1e6b43be0e9e860b88ce9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5612,6 +5647,11 @@ Transform:
   - {fileID: 1289862581}
   - {fileID: 1397271244}
   - {fileID: 327563722}
+  m_LocalPosition: {x: -3.6413, y: 1.3190806, z: 0}
+  m_LocalScale: {x: 8.3274, y: 8.3274, z: 8.3274}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 733641257}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1768567931
@@ -5647,6 +5687,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.56}
+  m_Offset: {x: 0, y: 0.55}
   serializedVersion: 2
   m_Radius: 0.5
 --- !u!50 &1768567932
@@ -6353,6 +6394,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3180613929794567789, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 516695334}
+    - target: {fileID: 3180613929794567789, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySFX
+      objectReference: {fileID: 0}
     - target: {fileID: 3842167717108722201, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -311.54
@@ -6393,6 +6442,10 @@ PrefabInstance:
       propertyPath: timeRemaining
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8337732273828833056, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 8337732273828833056, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_Icon
       value: 

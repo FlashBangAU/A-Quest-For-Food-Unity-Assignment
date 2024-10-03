@@ -6,6 +6,7 @@ using UnityEngine;
 public class phaseController : MonoBehaviour
 {
     [SerializeField] public int health;
+    [SerializeField] int health;
     [SerializeField] public bool phase0;
     [SerializeField] public bool phase1;
     [SerializeField] public bool phase2;

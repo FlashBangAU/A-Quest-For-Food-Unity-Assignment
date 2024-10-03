@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 
 public class AudioManager : MonoBehaviour
@@ -35,6 +36,10 @@ public class AudioManager : MonoBehaviour
 
 
     //When given an AudioClip parameter from a different script, plays SFX using the SFX Audio Source
+    [Header("------- UI Elements -------")]
+    public Slider musicSlider;
+    public Slider sfxSlider;
+
     // Starts background music on scene start
     private void Start()
     {
@@ -47,6 +52,9 @@ public class AudioManager : MonoBehaviour
 
         // Apply saved volume settings
         ApplySavedVolumes();
+
+        // Initialize sliders with the current volume settings
+        InitializeSliders();
     }
 
     // When given an AudioClip parameter from a different script, plays SFX using the SFX Audio Source
@@ -71,19 +79,50 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void InitializeSliders()
+    {
+        if (DataManager.Instance != null)
+        {
+            float musicVolume = DataManager.Instance.musicVolume;
+            float sfxVolume = DataManager.Instance.sfxVolume;
+
+            if (musicSlider != null)
+            {
+                musicSlider.value = musicVolume;
+                musicSlider.onValueChanged.AddListener(SetMusicVolume);
+            }
+
+            if (sfxSlider != null)
+            {
+                sfxSlider.value = sfxVolume;
+                sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("DataManager instance not found!");
+        }
+    }
+
     public void SetMusicVolume(float musicVolume)
     {
         Debug.Log(musicVolume);
         mainMixer.SetFloat("MusicVolume", musicVolume);
-        DataManager.Instance.musicVolume = musicVolume; // Save to DataManager
-        DataManager.Instance.WriteData(); // Save the data to persistent storage
+        if (DataManager.Instance != null)
+        {
+            DataManager.Instance.musicVolume = musicVolume; // Save to DataManager
+            DataManager.Instance.WriteData(); // Save the data to persistent storage
+        }
     }
 
     public void SetSFXVolume(float sfxVolume)
     {
         Debug.Log(sfxVolume);
         mainMixer.SetFloat("SFXVolume", sfxVolume);
-        DataManager.Instance.sfxVolume = sfxVolume; // Save to DataManager
-        DataManager.Instance.WriteData(); // Save the data to persistent storage
+        if (DataManager.Instance != null)
+        {
+            DataManager.Instance.sfxVolume = sfxVolume; // Save to DataManager
+            DataManager.Instance.WriteData(); // Save the data to persistent storage
+        }
     }
 }
