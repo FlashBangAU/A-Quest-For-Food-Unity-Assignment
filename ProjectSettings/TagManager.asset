@@ -15,6 +15,7 @@ TagManager:
   - Audio
   - Pausedscreen
   - BossHitBox
+  - BossSpeicalHitBox
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - Enemy
   - Coin
   - Ground
-  - 
-  - 
+  - BossHitBox
+  - Stick
   - 
   - 
   - 

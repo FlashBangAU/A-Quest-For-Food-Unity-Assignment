@@ -28,6 +28,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip foodPickup;
     public AudioClip levelComplete;
     public AudioClip checkpoint;
+    public AudioClip bossHurt;
+    public AudioClip peckGround;
+    public AudioClip bossJump;
+    public AudioClip bossCall;
 
 
     //When given an AudioClip parameter from a different script, plays SFX using the SFX Audio Source
