@@ -53,14 +53,6 @@ public class Phase2Crow : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-public class Phase2Crow : MonoBehaviour
-{
-    public phaseController pc;
-    // Start is called before the first frame update
-    void Start()
-    {
-
     }
 
     // Update is called once per frame
@@ -184,9 +176,5 @@ public class Phase2Crow : MonoBehaviour
         transform.localScale = ls;
 
         stickXOffset *= -1;
-        if (pc.phase2 == true)
-        {
-
-        }
     }
 }

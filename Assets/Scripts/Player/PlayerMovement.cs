@@ -35,8 +35,6 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isKnockedBack = false; // Flag for knockback state
 
-    bool onDescent =false;
-
     Rigidbody2D rb;
 
     AudioManager audioManager;
@@ -58,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         jumpWait = jumpWait * Time.deltaTime;
-
 
 
         // Logging horizontal input
@@ -164,7 +161,6 @@ public class PlayerMovement : MonoBehaviour
 
             // Player Left Contact Jump
             if (Input.GetKey(KeyCode.W) && jumpLeft.canJump && !jumpedLeft && onDescent || Input.GetKeyDown(KeyCode.W) && jumpLeft.canJump && !jumpedLeft)
-            if (Input.GetKey(KeyCode.W) && jumpLeft.canJump && !jumpedLeft && onDescent || Input.GetKeyDown(KeyCode.W))
             {
                 if (Input.GetKey(KeyCode.A))
                 {
@@ -185,7 +181,6 @@ public class PlayerMovement : MonoBehaviour
 
             // Player Right Contact Jump
             if (Input.GetKey(KeyCode.W) && jumpRight.canJump && !jumpedRight && onDescent || Input.GetKeyDown(KeyCode.W) && jumpRight.canJump && !jumpedRight)
-            if (Input.GetKey(KeyCode.W) && jumpRight.canJump && !jumpedRight && onDescent || Input.GetKeyDown(KeyCode.W))
             {
                 if (Input.GetKey(KeyCode.A))
                 {

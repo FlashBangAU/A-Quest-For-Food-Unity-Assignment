@@ -48,21 +48,6 @@ public class Phase1Crow : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         hitBoxPhase1.SetActive(false);
-    [SerializeField] bool hoppingMode;
-    [SerializeField] bool peckMode;
-
-    [SerializeField] bool peckCycle;
-    [SerializeField] float maxTimeBtwPeck;
-    [SerializeField] float minTimeBtwPeck;
-    [SerializeField] private float timeBtwPeck;
-    [SerializeField] private float nextPeck;
-    [SerializeField] private int peckCounter;
-
-    [SerializeField] bool onGround;
-    private bool hoppingRight;
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -104,12 +89,6 @@ public class Phase1Crow : MonoBehaviour
             else if (hoppingMode)
             {
                 //player hopping towards player
-
-
-        if(pc.phase1 == true)
-        {
-            if (hoppingMode && !peckCycle)
-            {
                 if (onGround && hoppingRight)
                 {
                     //play hop animation
@@ -126,9 +105,6 @@ public class Phase1Crow : MonoBehaviour
                 }
 
                 //gets range away from player for peck
-                    onGround = false;
-                }
-
                 xBtw = player.transform.position.x - hitBoxPhase1.transform.position.x;
                 if(xBtw < 0)
                 {
@@ -146,7 +122,6 @@ public class Phase1Crow : MonoBehaviour
                 {
                     peckMode = true;
                     hoppingMode = false;
-                    peckCycle = true;
                     timeBtwPeck = 0f;
                     nextPeck = Random.Range(minTimeBtwPeck, maxTimeBtwPeck);
                 }
@@ -154,22 +129,17 @@ public class Phase1Crow : MonoBehaviour
             else if (peckMode && onGround)
             {
                 //play peck animation 3 times then will become stuck
-                //play peck animation
                 
                 if(nextPeck <= timeBtwPeck && peckCounter < 3)
                 {
                     Peck();
                     //Debug.Log("Pecked at Player");
-                    Debug.Log("Pecked at Player");
 
                     nextPeck = Random.Range(minTimeBtwPeck, maxTimeBtwPeck);
                     timeBtwPeck = 0f;
                     peckCounter++;
                 } else if (peckCounter == 3 && nextPeck <= timeBtwPeck)
                 {
-                } else if (peckCounter == 3)
-                {
-                    peckCounter = 0;
                     Stuck();
                 }
                 
@@ -225,17 +195,5 @@ public class Phase1Crow : MonoBehaviour
         {
             onGround = true;
         }
-    }
-
-    private void Peck()
-    {
-
-    }
-
-    private void Stuck()
-    {
-        peckMode = false;
-        peckCycle = false;
-        hoppingMode = true;
     }
 }
