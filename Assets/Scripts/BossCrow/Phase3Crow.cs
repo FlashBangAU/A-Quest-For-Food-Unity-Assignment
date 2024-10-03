@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Phase3Crow : MonoBehaviour
 {
+    Rigidbody2D rb;
+
     public phaseController pc;  // Reference to the phase controller that manages game phases
     public Transform branch1;    // Transform for the first branch where the bird can perch
     public Transform branch2;    // Transform for the second branch where the bird can perch
@@ -27,6 +29,7 @@ public class Phase3Crow : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
 
         // Find the player object in the scene by its tag
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -44,6 +47,8 @@ public class Phase3Crow : MonoBehaviour
         // Check if the game is currently in Phase 3 (boss fight phase)
         if (pc.phase3)
         {
+            rb.gravityScale = 0;
+
             // Check if the crow has already initialized its perch
             if (!hasInitializedPerch)
             {

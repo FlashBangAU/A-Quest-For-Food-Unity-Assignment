@@ -5063,7 +5063,7 @@ MonoBehaviour:
   playerRB: {fileID: 1715909454}
   KBTimer: 0
   KBInterval: 1.2
-  knockbackForce: 10
+  knockbackForce: 5
 --- !u!61 &1289862579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5927,11 +5927,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 861928866069854660, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.57
+      value: 1.74
       objectReference: {fileID: 0}
     - target: {fileID: 861928866069854660, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.616
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: timerNormAtk
@@ -5941,6 +5941,10 @@ PrefabInstance:
       propertyPath: timerSpecialAtk
       value: 
       objectReference: {fileID: 738686462}
+    - target: {fileID: 1989455977702163472, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1989455977702163472, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
@@ -6030,6 +6034,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 928790189}
     - target: {fileID: 5220876486473601534, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220876486473601534, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: jumpBottom
       value: 
       objectReference: {fileID: 928790188}
@@ -6041,6 +6049,10 @@ PrefabInstance:
       propertyPath: groundCollider
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5387960745285683124, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0e9a58fe9e13ba74aa1366b552407cba, type: 2}
     - target: {fileID: 6662360791085800618, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: cs
       value: 

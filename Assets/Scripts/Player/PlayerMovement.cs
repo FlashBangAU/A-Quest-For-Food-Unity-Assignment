@@ -29,9 +29,11 @@ public class PlayerMovement : MonoBehaviour
     bool jumpedRight = false;
 
     bool onLadder = false;
-    bool hasBeenAirborne = false;
+    public bool hasBeenAirborne = false;
 
     bool onDescent =false;
+
+    public bool isKnockedBack = false; // Flag for knockback state
 
     Rigidbody2D rb;
 
@@ -60,7 +62,10 @@ public class PlayerMovement : MonoBehaviour
         // Logging horizontal input
         //Debug.Log("Horizontal Input: " + horizontalInput);
 
-        rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        if (!isKnockedBack)
+        {
+            rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        }
 
         if (onLadder == true)
         {
@@ -243,6 +248,7 @@ public class PlayerMovement : MonoBehaviour
         //isJumping = false;
         if (collision.gameObject.CompareTag("Ground") && hasBeenAirborne)
         {
+            isKnockedBack = false;
             hasBeenAirborne = false;
             audioManager.PlaySFX(audioManager.playerLand);
             //Debug.Log("Collision with ground");

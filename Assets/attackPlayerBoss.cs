@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class AttackPlayerBoss : MonoBehaviour
 {
@@ -19,6 +18,11 @@ public class AttackPlayerBoss : MonoBehaviour
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        // Ensure playerRB is assigned, assuming playerGO has Rigidbody2D
+        if (playerGO != null)
+        {
+            playerRB = playerGO.GetComponent<Rigidbody2D>();
+        }
     }
 
     private void FixedUpdate()
@@ -27,20 +31,37 @@ public class AttackPlayerBoss : MonoBehaviour
         KBTimer -= Time.deltaTime;
 
         // If within the damage interval, apply movement to the player
-        if (KBTimer >= 0f)
+        if (KBTimer >= 0f && canDamage)
         {
-            playerRB.velocity = Vector2.zero;
-            Vector2 knockbackDirection = new Vector2(-1, 1).normalized; // left-up direction
-            playerRB.velocity = Vector2.zero;
-            playerRB.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+            ApplyKnockback();
         }
     }
+
+    public void ApplyKnockback()
+    {
+        if (playerRB != null)
+        {
+            // Calculate knockback direction
+            Vector3 knockbackDirection = new Vector3(-1, 1, 0).normalized; // Up and to the left
+
+            // Optional: If you want to apply force relative to player direction
+            // Vector3 knockbackDirection = (playerGO.transform.position - transform.position).normalized + new Vector3(-1, 1, 0);
+
+            // Resetting velocity may not be necessary; you can comment this out if you want a more natural effect
+            playerGO.GetComponent<PlayerMovement>().isKnockedBack = true;
+            playerGO.GetComponent<PlayerMovement>().hasBeenAirborne = true;
+            playerRB.velocity = Vector2.zero;
+            playerRB.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+            Debug.Log("Knockback Direction: " + knockbackDirection);
+            Debug.Log("Knockback Force: " + (knockbackDirection * knockbackForce));
+        }
+    }
+
 
     public void PlayerGotHit()
     {
         if (canDamage)
         {
-            //Debug.Log("Player Got Hit");
             KBTimer = KBInterval; // Reset the timer
             PlayerHealth playerHealth = playerGO.GetComponent<PlayerHealth>();
 
