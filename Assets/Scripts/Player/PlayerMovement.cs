@@ -35,8 +35,6 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isKnockedBack = false; // Flag for knockback state
 
-    bool onDescent =false;
-
     Rigidbody2D rb;
 
     AudioManager audioManager;
@@ -59,11 +57,7 @@ public class PlayerMovement : MonoBehaviour
     {
         jumpWait = jumpWait * Time.deltaTime;
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> New-Objects
         // Logging horizontal input
         //Debug.Log("Horizontal Input: " + horizontalInput);
 
@@ -166,11 +160,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // Player Left Contact Jump
-<<<<<<< HEAD
             if (Input.GetKey(KeyCode.W) && jumpLeft.canJump && !jumpedLeft && onDescent || Input.GetKeyDown(KeyCode.W) && jumpLeft.canJump && !jumpedLeft)
-=======
-            if (Input.GetKey(KeyCode.W) && jumpLeft.canJump && !jumpedLeft && onDescent || Input.GetKeyDown(KeyCode.W))
->>>>>>> New-Objects
             {
                 if (Input.GetKey(KeyCode.A))
                 {
@@ -190,11 +180,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // Player Right Contact Jump
-<<<<<<< HEAD
             if (Input.GetKey(KeyCode.W) && jumpRight.canJump && !jumpedRight && onDescent || Input.GetKeyDown(KeyCode.W) && jumpRight.canJump && !jumpedRight)
-=======
-            if (Input.GetKey(KeyCode.W) && jumpRight.canJump && !jumpedRight && onDescent || Input.GetKeyDown(KeyCode.W))
->>>>>>> New-Objects
             {
                 if (Input.GetKey(KeyCode.A))
                 {
