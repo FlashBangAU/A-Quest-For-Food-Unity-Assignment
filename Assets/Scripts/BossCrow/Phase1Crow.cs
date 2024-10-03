@@ -17,22 +17,24 @@ public class Phase1Crow : MonoBehaviour
     [SerializeField] float jumpHeight;
     [SerializeField] float jumpDistance;
 
-    [SerializeField] bool runAway;
-    [SerializeField] bool hoppingMode;
-    [SerializeField] bool peckMode;
+    bool runAway;
+    bool hoppingMode;
+    bool peckMode;
 
     [SerializeField] float maxTimeBtwPeck;
     [SerializeField] float minTimeBtwPeck;
-    [SerializeField] private float timeBtwPeck;
-    [SerializeField] private float nextPeck;
-    [SerializeField] private int peckCounter;
+    private float timeBtwPeck;
+    private float nextPeck;
+    private int peckCounter;
 
     private float tStuck;
     public float timeStuck;
 
-    [SerializeField] bool onGround;
+    bool onGround;
     private bool hoppingRight;
     private bool weakPointActive = false;
+
+    [SerializeField] private Animator animatior;
 
     private AudioManager audioManager; // Reference for AudioManager
 
@@ -42,7 +44,6 @@ public class Phase1Crow : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
-    [SerializeField] private Animator animatior;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");

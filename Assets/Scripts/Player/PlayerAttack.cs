@@ -90,6 +90,9 @@ public class PlayerAttack : MonoBehaviour
                 {
                     timerSpecialAtk.StopTimer();
                 }
+            }else if (!phase3)
+            {
+                timerSpecialAtk.StopTimer();
             }
             else
             {

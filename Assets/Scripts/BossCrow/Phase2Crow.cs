@@ -25,16 +25,16 @@ public class Phase2Crow : MonoBehaviour
     private bool stickHeld = false;
     [SerializeField] float detectRange;
     [SerializeField] LayerMask whatIsStick;
-    public bool stickOnGround;
+    bool stickOnGround;
 
     [SerializeField] float flyingHeight;
-    public float nextFlyPosX;
-    public Vector3 nextFlyPos;
+    float nextFlyPosX;
+    Vector3 nextFlyPos;
     [SerializeField] float minXDistanceFlyPos;
 
     private float timeTillNextDrop;
     [SerializeField] private float timeToPickup;
-    [SerializeField] private float waitToPickup;
+    private float waitToPickup;
     bool timerOn = false;
 
     bool isFacingRight = false;

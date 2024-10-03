@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackPlayerBoss : MonoBehaviour
 {
-    public Phase1Crow p1c; // Reference to the boss (not currently used)
+    public GameObject bossRB;
     public GameObject playerGO; // Reference to the player GameObject
     public Rigidbody2D playerRB; // Reference to the player's Rigidbody2D
     private bool canDamage = false; // Flag to indicate if the player can be damaged
@@ -18,11 +18,6 @@ public class AttackPlayerBoss : MonoBehaviour
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-        // Ensure playerRB is assigned, assuming playerGO has Rigidbody2D
-        if (playerGO != null)
-        {
-            playerRB = playerGO.GetComponent<Rigidbody2D>();
-        }
     }
 
     private void FixedUpdate()
@@ -41,16 +36,22 @@ public class AttackPlayerBoss : MonoBehaviour
     {
         if (playerRB != null)
         {
-            // Calculate knockback direction
-            Vector3 knockbackDirection = new Vector3(-1, 1, 0).normalized; // Up and to the left
-
-            // Optional: If you want to apply force relative to player direction
-            // Vector3 knockbackDirection = (playerGO.transform.position - transform.position).normalized + new Vector3(-1, 1, 0);
+            Vector3 knockbackDirection;
 
             // Resetting velocity may not be necessary; you can comment this out if you want a more natural effect
             playerGO.GetComponent<PlayerMovement>().isKnockedBack = true;
             playerGO.GetComponent<PlayerMovement>().hasBeenAirborne = true;
             playerRB.velocity = Vector2.zero;
+
+            if (playerRB.transform.position.x > bossRB.transform.position.x)
+            {
+                knockbackDirection = new Vector3(1, 1, 0).normalized;//knock player right
+            }
+            else
+            {
+                knockbackDirection = new Vector3(-1, 1, 0).normalized; //knock player left
+            }
+
             playerRB.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
             Debug.Log("Knockback Direction: " + knockbackDirection);
             Debug.Log("Knockback Force: " + (knockbackDirection * knockbackForce));
@@ -60,7 +61,7 @@ public class AttackPlayerBoss : MonoBehaviour
 
     public void PlayerGotHit()
     {
-        if (canDamage)
+        if (canDamage && KBTimer <= 0f)
         {
             KBTimer = KBInterval; // Reset the timer
             PlayerHealth playerHealth = playerGO.GetComponent<PlayerHealth>();

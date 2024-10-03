@@ -19,6 +19,8 @@ public class Phase3Crow : MonoBehaviour
 
     private float perchTimer = 0f; // Timer to track how long the crow has been perched
 
+    public AttackPlayerBoss attackPlayerBoss;
+
     private AudioManager audioManager; // Reference for AudioManager
 
     // Used to connect the AudioManager reference to the existing AudioManager object
@@ -35,8 +37,8 @@ public class Phase3Crow : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         // Choose an initial perch position for the crow
-        ChooseRandomPerchPosition();
-        Debug.Log("Initial Perch Position: " + perchPosition); // Log the initial perch position for debugging
+        //ChooseRandomPerchPosition();
+        //Debug.Log("Initial Perch Position: " + perchPosition); // Log the initial perch position for debugging
     }
 
 
@@ -53,7 +55,7 @@ public class Phase3Crow : MonoBehaviour
             if (!hasInitializedPerch)
             {
                 // Set an initial random perch position only once at the start of Phase 3
-                ChooseRandomPerchPosition();
+                //ChooseRandomPerchPosition();
 
                 // Start the coroutine to smoothly move the crow to the chosen perch position
                 StartCoroutine(MoveToPerch(perchPosition));
@@ -131,8 +133,8 @@ public class Phase3Crow : MonoBehaviour
 
     private void ChooseRandomPerchPosition()
     {
-        Debug.Log("Branch 1 Position: " + branch1.position);
-        Debug.Log("Branch 2 Position: " + branch2.position);
+        //Debug.Log("Branch 1 Position: " + branch1.position);
+        //Debug.Log("Branch 2 Position: " + branch2.position);
 
         Vector3 newPerchPosition;
         bool isValidPosition = false;
@@ -209,6 +211,7 @@ public class Phase3Crow : MonoBehaviour
             float t = (Time.time - startTime) / journeyTime; // Calculate how far we are along the journey (0 to 1)
             transform.position = Vector3.Lerp(startPosition, targetPosition, t); // Move the bird toward the player's position
             yield return null; // Wait for the next frame
+            attackPlayerBoss.PlayerGotHit();
         }
 
         // Log when the bird reaches the player's position
