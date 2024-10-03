@@ -5058,6 +5058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23436dee964c10d4d8c4269f417455fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossRB: {fileID: 1768567924}
   playerGO: {fileID: 1715909453}
   playerRB: {fileID: 1715909454}
   KBTimer: 0
@@ -5249,6 +5250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23436dee964c10d4d8c4269f417455fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossRB: {fileID: 1768567924}
   playerGO: {fileID: 1715909453}
   playerRB: {fileID: 1715909454}
   KBTimer: 0

@@ -18,7 +18,7 @@ public class Phase1Crow : MonoBehaviour
     [SerializeField] float jumpDistance;
 
     bool runAway;
-    bool hoppingMode;
+    bool hoppingMode = true;
     bool peckMode;
 
     [SerializeField] float maxTimeBtwPeck;
