@@ -50,7 +50,10 @@ public class NPC : MonoBehaviour
             }
            else if (Input.GetKeyDown(KeyCode.E) && playerIsClose && isTyping == false)
             {
-                completeLevel.talkingNPC = true;
+                if (completeLevel != null)
+                {
+                    completeLevel.talkingNPC = true;
+                }
                 lastLine = false;
                 npcNameUI.text = npcName;
                 if (!dialoguePanel.activeInHierarchy)
@@ -91,7 +94,10 @@ public class NPC : MonoBehaviour
         }
         dialogueText.text = "";
         dialoguePanel.SetActive(false);
-        completeLevel.talkingNPC = false;
+        if (completeLevel != null)
+        {
+            completeLevel.talkingNPC = false;
+        }
     }
 
     void StartTyping()

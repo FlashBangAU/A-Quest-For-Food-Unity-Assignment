@@ -953,6 +953,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+--- !u!114 &722369604 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6182659538321263948, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+  m_PrefabInstance: {fileID: 722369603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae392df589f1e8439316f88b61b2776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &747523536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1406,6 +1417,14 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 939516622}
+    - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: timerNormAtk
+      value: 
+      objectReference: {fileID: 939516622}
+    - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: timerSpecialAtk
+      value: 
+      objectReference: {fileID: 722369604}
     - target: {fileID: 3794918074216593617, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_Name
       value: Player

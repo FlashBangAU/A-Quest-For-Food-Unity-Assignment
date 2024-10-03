@@ -323,6 +323,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 498027760}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: completeLevel
+      value: 
+      objectReference: {fileID: 735961143}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 498027762}
@@ -52477,6 +52481,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 146c6e92013a70c4d97c6c26b5b50119, type: 3}
+--- !u!114 &735961143 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4222913994745290996, guid: 146c6e92013a70c4d97c6c26b5b50119, type: 3}
+  m_PrefabInstance: {fileID: 735961142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c126e7a2c0bc9340abbc33b05082c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &782922400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -104971,6 +104986,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5174667960546538802, guid: 5050fc807cc744d489b086d1fc6f90bb, type: 3}
   m_PrefabInstance: {fileID: 1281721441}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1319378734 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6182659538321263948, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+  m_PrefabInstance: {fileID: 498027753}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae392df589f1e8439316f88b61b2776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1446250883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -104983,6 +105009,18 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 498027759}
+    - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: isLevel5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: timerNormAtk
+      value: 
+      objectReference: {fileID: 498027759}
+    - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: timerSpecialAtk
+      value: 
+      objectReference: {fileID: 1319378734}
     - target: {fileID: 3794918074216593617, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -105221,6 +105259,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 498027760}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: completeLevel
+      value: 
+      objectReference: {fileID: 735961143}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialoguePanel
       value: 
