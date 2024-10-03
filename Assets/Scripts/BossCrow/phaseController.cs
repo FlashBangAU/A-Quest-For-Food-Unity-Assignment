@@ -5,26 +5,19 @@ using UnityEngine;
 
 public class phaseController : MonoBehaviour
 {
-<<<<<<< HEAD
     [SerializeField] public int health;
-=======
-    [SerializeField] int health;
->>>>>>> sound-branch
     [SerializeField] public bool phase0;
     [SerializeField] public bool phase1;
     [SerializeField] public bool phase2;
     [SerializeField] public bool phase3;
     bool isDefeated = false;
 
-<<<<<<< HEAD
     void Start()
     {
         //phase3 = true; // Automatically start in Phase 3 for testing
     }
 
 
-=======
->>>>>>> sound-branch
     // Update is called once per frame
     void Update()
     {

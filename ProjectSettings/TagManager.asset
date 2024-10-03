@@ -15,10 +15,7 @@ TagManager:
   - Audio
   - Pausedscreen
   - BossHitBox
-<<<<<<< HEAD
   - BossSpeicalHitBox
-=======
->>>>>>> sound-branch
   layers:
   - Default
   - TransparentFX

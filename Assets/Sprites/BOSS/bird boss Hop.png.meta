@@ -151,13 +151,8 @@ TextureImporter:
         y: 0
         width: 220
         height: 120
-<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.5, y: 0.03}
-=======
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
->>>>>>> sound-branch
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,13 +172,8 @@ TextureImporter:
         y: 0
         width: 220
         height: 120
-<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.5, y: 0.03}
-=======
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
->>>>>>> sound-branch
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
