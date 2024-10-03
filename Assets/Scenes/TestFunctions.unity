@@ -148,7 +148,11 @@ Transform:
   m_GameObject: {fileID: 116015324}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -19.4, y: 4.92, z: 0}
+=======
+  m_LocalPosition: {x: -33.7, y: 14.8, z: -0.24561265}
+>>>>>>> sound-branch
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -222,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf25604f461bd64f8ca544e49991153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1 &327563721
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +258,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1768567930}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> sound-branch
 --- !u!114 &492250020 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8947115875651475493, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
@@ -348,6 +355,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6283d1246214324d972f263993a284a, type: 3}
+--- !u!114 &516695334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2249841086167571830, guid: e6283d1246214324d972f263993a284a, type: 3}
+  m_PrefabInstance: {fileID: 516695333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e60b835f266ff4d8e1394d8ec22795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &635488484 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3882965663234129477, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
@@ -359,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!114 &637420566 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6182659538321263948, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
@@ -370,6 +389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae392df589f1e8439316f88b61b2776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> sound-branch
 --- !u!1 &718153410
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +529,11 @@ Transform:
   m_GameObject: {fileID: 718153410}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 1.1999998, y: -4.51, z: 0}
+=======
+  m_LocalPosition: {x: -2.29, y: -3.73, z: 0}
+>>>>>>> sound-branch
   m_LocalScale: {x: 5.95, y: 1.375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -525,9 +550,14 @@ GameObject:
   - component: {fileID: 733641257}
   - component: {fileID: 733641259}
   - component: {fileID: 733641260}
+<<<<<<< HEAD
   - component: {fileID: 733641261}
   m_Layer: 9
   m_Name: HitBoxPhase1and2
+=======
+  m_Layer: 0
+  m_Name: HitBoxPhase1
+>>>>>>> sound-branch
   m_TagString: BossHitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,8 +572,13 @@ Transform:
   m_GameObject: {fileID: 733641256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -0.954, y: 0.3348, z: 0}
   m_LocalScale: {x: 0.1349285, y: 0.5176709, z: 0.28406}
+=======
+  m_LocalPosition: {x: -0.956, y: 0.31, z: 0}
+  m_LocalScale: {x: 0.22, y: 0.49, z: 0.28406}
+>>>>>>> sound-branch
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1768567930}
@@ -645,6 +680,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!114 &733641261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -838,6 +874,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+=======
+>>>>>>> sound-branch
 --- !u!1 &847660573
 GameObject:
   m_ObjectHideFlags: 0
@@ -5020,12 +5058,17 @@ Transform:
   m_GameObject: {fileID: 1173039734}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 2.920001, y: 6.33, z: 0}
+=======
+  m_LocalPosition: {x: 43.2, y: 14.8, z: -0.24561265}
+>>>>>>> sound-branch
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1289862577
 GameObject:
   m_ObjectHideFlags: 0
@@ -5370,6 +5413,8 @@ CircleCollider2D:
   m_Offset: {x: -0.0000009536743, y: -0.00000023841858}
   serializedVersion: 2
   m_Radius: 0.5
+=======
+>>>>>>> sound-branch
 --- !u!114 &1510207408 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6884024139695456652, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
@@ -5408,6 +5453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023e10a8a85bb534784088ab6c208b86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1 &1715909453 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3794918074216593617, guid: ab384a943fdd545439c76440de945f6d, type: 3}
@@ -5418,6 +5464,8 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5387960745285683124, guid: ab384a943fdd545439c76440de945f6d, type: 3}
   m_PrefabInstance: {fileID: 4420926875541020844}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> sound-branch
 --- !u!114 &1767672911 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5492186474593683169, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
@@ -5445,10 +5493,16 @@ GameObject:
   - component: {fileID: 1768567927}
   - component: {fileID: 1768567926}
   - component: {fileID: 1768567925}
+<<<<<<< HEAD
   - component: {fileID: 1768567933}
   m_Layer: 4
   m_Name: CrowBoss
   m_TagString: BossSpeicalHitBox
+=======
+  m_Layer: 0
+  m_Name: CrowBoss
+  m_TagString: Untagged
+>>>>>>> sound-branch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5466,6 +5520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pc: {fileID: 1768567928}
+<<<<<<< HEAD
   branch1: {fileID: 116015325}
   branch2: {fileID: 1173039735}
   perchHeight: 2
@@ -5473,6 +5528,8 @@ MonoBehaviour:
   perchTime: 2
   minDistanceFromPlayer: 10
   attackPlayerBoss: {fileID: 1397271245}
+=======
+>>>>>>> sound-branch
 --- !u!114 &1768567926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5485,6 +5542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05196ab84a4006d4a8e4ddaeb00c0b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   branch1: {fileID: 116015324}
   branch2: {fileID: 1173039734}
   hitBoxPhase2: {fileID: 733641256}
@@ -5503,6 +5561,9 @@ MonoBehaviour:
   minXDistanceFlyPos: 10
   timeToPickup: 4
   animatior: {fileID: 1768567933}
+=======
+  pc: {fileID: 1768567928}
+>>>>>>> sound-branch
 --- !u!114 &1768567927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5518,6 +5579,7 @@ MonoBehaviour:
   pc: {fileID: 1768567928}
   rb: {fileID: 1768567932}
   hitBoxPhase1: {fileID: 733641256}
+<<<<<<< HEAD
   attackPlayerBoss: {fileID: 1289862578}
   attackRange: 2
   jumpHeight: 3.5
@@ -5526,6 +5588,20 @@ MonoBehaviour:
   minTimeBtwPeck: 0.8
   timeStuck: 3
   animatior: {fileID: 1768567933}
+=======
+  attackRange: 6
+  jumpHeight: 3.5
+  jumpDistance: 4
+  hoppingMode: 1
+  peckMode: 0
+  peckCycle: 0
+  maxTimeBtwPeck: 2
+  minTimeBtwPeck: 0.8
+  timeBtwPeck: 0
+  nextPeck: 0
+  peckCounter: 0
+  onGround: 0
+>>>>>>> sound-branch
 --- !u!114 &1768567928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5584,7 +5660,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
   m_Sprite: {fileID: -850417700, guid: fd0ce5bc17b3db6448e717881a712c70, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: 4a72f160e4e1e6b43be0e9e860b88ce9, type: 3}
+>>>>>>> sound-branch
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5604,6 +5684,7 @@ Transform:
   m_GameObject: {fileID: 1768567924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 11.450001, y: 4.94, z: 0}
   m_LocalScale: {x: 3.2547703, y: 3.1666925, z: 8.3274}
   m_ConstrainProportionsScale: 0
@@ -5612,6 +5693,13 @@ Transform:
   - {fileID: 1289862581}
   - {fileID: 1397271244}
   - {fileID: 327563722}
+=======
+  m_LocalPosition: {x: -3.6413, y: 1.3190806, z: 0}
+  m_LocalScale: {x: 8.3274, y: 8.3274, z: 8.3274}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 733641257}
+>>>>>>> sound-branch
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1768567931
@@ -5646,7 +5734,11 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< HEAD
   m_Offset: {x: 0, y: 0.56}
+=======
+  m_Offset: {x: 0, y: 0.55}
+>>>>>>> sound-branch
   serializedVersion: 2
   m_Radius: 0.5
 --- !u!50 &1768567932
@@ -5676,6 +5768,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+<<<<<<< HEAD
 --- !u!95 &1768567933
 Animator:
   serializedVersion: 5
@@ -5697,6 +5790,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+=======
+>>>>>>> sound-branch
 --- !u!1 &1791882994
 GameObject:
   m_ObjectHideFlags: 0
@@ -5796,6 +5891,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &2036300685
 GameObject:
   m_ObjectHideFlags: 0
@@ -5827,6 +5923,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 834180810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> sound-branch
 --- !u!1 &2120577649
 GameObject:
   m_ObjectHideFlags: 0
@@ -6353,6 +6451,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3180613929794567789, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 516695334}
+    - target: {fileID: 3180613929794567789, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySFX
+      objectReference: {fileID: 0}
     - target: {fileID: 3842167717108722201, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -311.54
@@ -6393,6 +6499,10 @@ PrefabInstance:
       propertyPath: timeRemaining
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8337732273828833056, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 8337732273828833056, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_Icon
       value: 
@@ -6465,5 +6575,8 @@ SceneRoots:
   - {fileID: 718153414}
   - {fileID: 116015325}
   - {fileID: 1173039735}
+<<<<<<< HEAD
   - {fileID: 834180810}
   - {fileID: 7419889996796991023}
+=======
+>>>>>>> sound-branch

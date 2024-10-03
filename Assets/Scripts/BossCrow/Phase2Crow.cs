@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< HEAD
 using UnityEngine.XR;
 
 public class Phase2Crow : MonoBehaviour
@@ -53,11 +54,22 @@ public class Phase2Crow : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+=======
+
+public class Phase2Crow : MonoBehaviour
+{
+    public phaseController pc;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+>>>>>>> sound-branch
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         stickOnGround = sba.onGround;
 
         stickOffset = new Vector2(stick.transform.position.x + stickXOffset, stick.transform.position.y + stickYOffset);
@@ -176,5 +188,11 @@ public class Phase2Crow : MonoBehaviour
         transform.localScale = ls;
 
         stickXOffset *= -1;
+=======
+        if (pc.phase2 == true)
+        {
+
+        }
+>>>>>>> sound-branch
     }
 }
