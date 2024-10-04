@@ -36,6 +36,8 @@ public class CompleteLevel : MonoBehaviour
 
     float curHighScore;
 
+    public bool talkingNPC = false;
+
     public bool removeAllSaveData = false;
 
     AudioManager audioManager;
@@ -65,27 +67,38 @@ public class CompleteLevel : MonoBehaviour
 
     private void Update()
     {
+        // Update timer if the game is not finished
         if (!hasFinished)
         {
-            theTimeInSec = Time.timeSinceLevelLoad;
-            int HH = Mathf.FloorToInt(theTimeInSec / 3600.0f);
-            theTimeInSec %= 3600.0f;
-            int MM = Mathf.FloorToInt(theTimeInSec / 60.0f);
-            theTimeInSec %= 60.0f;
-            int SS = Mathf.FloorToInt(theTimeInSec / 1.0f);
-            theTimeInSec %= 1.0f;
-            int MILLISECONDS = Mathf.FloorToInt(theTimeInSec * 1000.0f);
-            //Debug.Log(MM.ToString("00") + ":" + SS.ToString("00") + ":" + MILLISECONDS.ToString("000"));
-            TimeUI.text = MM.ToString("00") + ":" + SS.ToString("00") + ":" + MILLISECONDS.ToString("000");
+            // If talking to an NPC, do not update the timer
+            if (!talkingNPC)
+            {
+                theTimeInSec += Time.deltaTime;  // Use deltaTime for smooth updates
+                UpdateTimeUI();
+            }
         }
-        else if (hasFinished)
+        else
         {
+            // Handle end scene timer
             timerEndScene += Time.deltaTime;
             if (timerEndScene >= timeEndScene)
             {
                 sceneController.startMenu();
             }
         }
+    }
+
+    private void UpdateTimeUI()
+    {
+        int HH = Mathf.FloorToInt(theTimeInSec / 3600.0f);
+        theTimeInSec %= 3600.0f;
+        int MM = Mathf.FloorToInt(theTimeInSec / 60.0f);
+        theTimeInSec %= 60.0f;
+        int SS = Mathf.FloorToInt(theTimeInSec);
+        int MILLISECONDS = Mathf.FloorToInt((theTimeInSec - SS) * 1000.0f);
+
+        // Update the UI text with formatted time
+        TimeUI.text = $"{MM:00}:{SS:00}:{MILLISECONDS:000}";
     }
 
 

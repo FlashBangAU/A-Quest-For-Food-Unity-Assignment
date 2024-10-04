@@ -94,8 +94,8 @@ public class StemBorerMovement : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(detectPos.position, detectRange);
+        //Gizmos.color = Color.red;
+        //Gizmos.DrawSphere(detectPos.position, detectRange);
     }
 
     void FlipSprite()

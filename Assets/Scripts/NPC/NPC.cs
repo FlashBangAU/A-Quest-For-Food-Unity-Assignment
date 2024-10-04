@@ -29,6 +29,8 @@ public class NPC : MonoBehaviour
     public Image locationNPCImage;
     public Sprite npcDialogueSprite;
 
+    public CompleteLevel completeLevel;
+
     void Start()
     {
         RemoveText();
@@ -48,6 +50,10 @@ public class NPC : MonoBehaviour
             }
            else if (Input.GetKeyDown(KeyCode.E) && playerIsClose && isTyping == false)
             {
+                if (completeLevel != null)
+                {
+                    completeLevel.talkingNPC = true;
+                }
                 lastLine = false;
                 npcNameUI.text = npcName;
                 if (!dialoguePanel.activeInHierarchy)
@@ -88,6 +94,10 @@ public class NPC : MonoBehaviour
         }
         dialogueText.text = "";
         dialoguePanel.SetActive(false);
+        if (completeLevel != null)
+        {
+            completeLevel.talkingNPC = false;
+        }
     }
 
     void StartTyping()

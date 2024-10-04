@@ -5,14 +5,17 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] int health;
     [SerializeField] int maxHealth;
 
+    private GameObject player;
     public HealthBar healthBar;
-    public PlayerHealth ph;
+    private PlayerHealth ph;
 
     AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        ph = player.GetComponent<PlayerHealth>();
         if (healthBar != null)
         {
             healthBar.SetMaxHealth(maxHealth);
