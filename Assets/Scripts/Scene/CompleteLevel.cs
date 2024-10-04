@@ -83,7 +83,7 @@ public class CompleteLevel : MonoBehaviour
             timerEndScene += Time.deltaTime;
             if (timerEndScene >= timeEndScene)
             {
-                sceneController.startMenu();
+                sceneController.startLevelSelector();
             }
         }
     }
