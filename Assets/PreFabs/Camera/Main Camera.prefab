@@ -3866,7 +3866,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 835024821712496299, guid: cb029586b846fd344ac4a91d1c836896, type: 3}
       propertyPath: seconds
-      value: 0.8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 835024821712496299, guid: cb029586b846fd344ac4a91d1c836896, type: 3}
       propertyPath: countMethod
@@ -3874,7 +3874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 835024821712496299, guid: cb029586b846fd344ac4a91d1c836896, type: 3}
       propertyPath: timeRemaining
-      value: 0.800000011920929
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 835024821712496299, guid: cb029586b846fd344ac4a91d1c836896, type: 3}
       propertyPath: secondsDisplay
