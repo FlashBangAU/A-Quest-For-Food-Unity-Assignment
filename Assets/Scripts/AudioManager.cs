@@ -28,10 +28,17 @@ public class AudioManager : MonoBehaviour
     public AudioClip levelComplete;
     public AudioClip checkpoint;
 
+    public AudioClip bossHurt;
+    public AudioClip peckGround;
+    public AudioClip bossJump;
+    public AudioClip bossCall;
+
     [Header("------- UI Elements -------")]
     public Slider musicSlider;
     public Slider sfxSlider;
 
+
+    //When given an AudioClip parameter from a different script, plays SFX using the SFX Audio Source
     // Starts background music on scene start
     private void Start()
     {

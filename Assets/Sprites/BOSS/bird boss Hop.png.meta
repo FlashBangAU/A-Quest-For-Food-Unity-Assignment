@@ -138,7 +138,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 736af455b5872d9419b8abb15e7069c1
-      internalID: 443701032
+      internalID: -7412714517309046192
       vertices: []
       indices: 
       edges: []
@@ -151,36 +151,15 @@ TextureImporter:
         y: 0
         width: 220
         height: 120
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 987c8e9b026174149905ab83c7b167bc
-      internalID: -330785580
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bird boss Hop_2
-      rect:
-        serializedVersion: 2
-        x: 440
-        y: 0
-        width: 220
-        height: 120
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff69cee4da776c64ba9f6f01af0a7e17
-      internalID: -1894839693
+      spriteID: f3e3ec306d85595c0800000000000000
+      internalID: -4209360600497766849
       vertices: []
       indices: 
       edges: []
@@ -188,7 +167,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -196,9 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bird boss Hop_0: 443701032
-      bird boss Hop_1: -330785580
-      bird boss Hop_2: -1894839693
+      bird boss Hop_0: -7412714517309046192
+      bird boss Hop_1: -4209360600497766849
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

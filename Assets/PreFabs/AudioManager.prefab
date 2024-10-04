@@ -306,6 +306,7 @@ MonoBehaviour:
   SFXSource: {fileID: 1080901633692778225}
   mainMixer: {fileID: 24100000, guid: b085737ff95b515489ba01c119c47cc9, type: 2}
   background: {fileID: 8300000, guid: b1644b425286e9f47982ac094658f513, type: 3}
+  button: {fileID: 8300000, guid: 8b7d4b9e1a796014fa87971fcba2d193, type: 3}
   playerDeath: {fileID: 8300000, guid: bcc79080e4ec6554db7a6946be8cca9d, type: 3}
   playerAttack: {fileID: 8300000, guid: f48db79b1778ba34f9db1411c542037b, type: 3}
   playerDamage: {fileID: 8300000, guid: bcc79080e4ec6554db7a6946be8cca9d, type: 3}

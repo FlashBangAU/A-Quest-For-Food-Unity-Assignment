@@ -17922,6 +17922,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 274024338}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: completeLevel
+      value: 
+      objectReference: {fileID: 378380424}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 412042120}
@@ -18958,6 +18962,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 146c6e92013a70c4d97c6c26b5b50119, type: 3}
+--- !u!114 &378380424 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4222913994745290996, guid: 146c6e92013a70c4d97c6c26b5b50119, type: 3}
+  m_PrefabInstance: {fileID: 378380423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c126e7a2c0bc9340abbc33b05082c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &392768239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19113,11 +19128,11 @@ PrefabInstance:
       objectReference: {fileID: 1161477647}
     - target: {fileID: 1341963250792000181, guid: f52ac98bf59f0854cbc4bc018d6e1ab6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 145.98947
+      value: 793.80316
       objectReference: {fileID: 0}
     - target: {fileID: 1341963250792000181, guid: f52ac98bf59f0854cbc4bc018d6e1ab6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 68.3072
+      value: 68.307
       objectReference: {fileID: 0}
     - target: {fileID: 1341963250792000181, guid: f52ac98bf59f0854cbc4bc018d6e1ab6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19231,6 +19246,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 274024338}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: completeLevel
+      value: 
+      objectReference: {fileID: 378380424}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialoguePanel
       value: 
@@ -19463,6 +19482,14 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 286950008}
+    - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: timerNormAtk
+      value: 
+      objectReference: {fileID: 286950008}
+    - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: timerSpecialAtk
+      value: 
+      objectReference: {fileID: 539676671}
     - target: {fileID: 2555483214915120740, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: seconds
       value: 0.8
@@ -20106,6 +20133,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 274024338}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: completeLevel
+      value: 
+      objectReference: {fileID: 378380424}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 412042120}
@@ -20262,6 +20293,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 274024338}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: completeLevel
+      value: 
+      objectReference: {fileID: 378380424}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialoguePanel
       value: 
@@ -21199,6 +21234,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 274024338}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: completeLevel
+      value: 
+      objectReference: {fileID: 378380424}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialoguePanel
       value: 

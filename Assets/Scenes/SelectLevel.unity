@@ -1689,6 +1689,14 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 939516622}
+    - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: timerNormAtk
+      value: 
+      objectReference: {fileID: 939516622}
+    - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: timerSpecialAtk
+      value: 
+      objectReference: {fileID: 722369604}
     - target: {fileID: 3794918074216593617, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1964,6 +1972,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1341963250792000181, guid: f52ac98bf59f0854cbc4bc018d6e1ab6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 668.719
+      objectReference: {fileID: 0}
     - target: {fileID: 1341963250792000181, guid: f52ac98bf59f0854cbc4bc018d6e1ab6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6

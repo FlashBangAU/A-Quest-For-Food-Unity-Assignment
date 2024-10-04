@@ -29,7 +29,11 @@ public class PlayerMovement : MonoBehaviour
     bool jumpedRight = false;
 
     bool onLadder = false;
-    bool hasBeenAirborne = false;
+    public bool hasBeenAirborne = false;
+
+    bool onDescent =false;
+
+    public bool isKnockedBack = false; // Flag for knockback state
 
     bool onDescent =false;
 
@@ -60,7 +64,10 @@ public class PlayerMovement : MonoBehaviour
         // Logging horizontal input
         //Debug.Log("Horizontal Input: " + horizontalInput);
 
-        rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        if (!isKnockedBack)
+        {
+            rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        }
 
         if (onLadder == true)
         {
@@ -156,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // Player Left Contact Jump
-            if (Input.GetKey(KeyCode.W) && jumpLeft.canJump && !jumpedLeft && onDescent || Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) && jumpLeft.canJump && !jumpedLeft && onDescent || Input.GetKeyDown(KeyCode.W) && jumpLeft.canJump && !jumpedLeft)
             {
                 if (Input.GetKey(KeyCode.A))
                 {
@@ -176,7 +183,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // Player Right Contact Jump
-            if (Input.GetKey(KeyCode.W) && jumpRight.canJump && !jumpedRight && onDescent || Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) && jumpRight.canJump && !jumpedRight && onDescent || Input.GetKeyDown(KeyCode.W) && jumpRight.canJump && !jumpedRight)
             {
                 if (Input.GetKey(KeyCode.A))
                 {
@@ -243,6 +250,7 @@ public class PlayerMovement : MonoBehaviour
         //isJumping = false;
         if (collision.gameObject.CompareTag("Ground") && hasBeenAirborne)
         {
+            isKnockedBack = false;
             hasBeenAirborne = false;
             audioManager.PlaySFX(audioManager.playerLand);
             //Debug.Log("Collision with ground");
