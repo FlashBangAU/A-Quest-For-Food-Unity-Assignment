@@ -348,6 +348,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6283d1246214324d972f263993a284a, type: 3}
+--- !u!114 &516695334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2249841086167571830, guid: e6283d1246214324d972f263993a284a, type: 3}
+  m_PrefabInstance: {fileID: 516695333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e60b835f266ff4d8e1394d8ec22795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &635488484 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3882965663234129477, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
@@ -6092,6 +6103,10 @@ PrefabInstance:
       value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
+      propertyPath: isLevel5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126856523924172142, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: timerNormAtk
       value: 
       objectReference: {fileID: 8716632691733995985}
@@ -6353,6 +6368,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3180613929794567789, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 516695334}
+    - target: {fileID: 3180613929794567789, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySFX
+      objectReference: {fileID: 0}
     - target: {fileID: 3842167717108722201, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -311.54
@@ -6381,6 +6404,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6182659538321263948, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: timeRemaining
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6396294157433456292, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_PixelPerfect
       value: 0
@@ -6393,6 +6420,10 @@ PrefabInstance:
       propertyPath: timeRemaining
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8337732273828833056, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 8337732273828833056, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_Icon
       value: 

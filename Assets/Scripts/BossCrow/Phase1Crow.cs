@@ -127,9 +127,7 @@ public class Phase1Crow : MonoBehaviour
                 }
             }
             else if (peckMode && onGround)
-            {
-                //play peck animation 3 times then will become stuck
-                
+            {                
                 if(nextPeck <= timeBtwPeck && peckCounter < 3)
                 {
                     Peck();
