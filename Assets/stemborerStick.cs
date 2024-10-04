@@ -41,7 +41,7 @@ public class stemborerStick : MonoBehaviour
 
             spawnNewEnemy += Time.deltaTime;
 
-            if(spawnNewEnemy > spawnInterval)
+            if (spawnNewEnemy > spawnInterval)
             {
                 Instantiate(stemBorerBoss, spawnPos.position, Quaternion.identity);
                 audioManager.PlaySFX(audioManager.foodPickup);

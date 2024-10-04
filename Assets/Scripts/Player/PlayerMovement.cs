@@ -35,8 +35,6 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isKnockedBack = false; // Flag for knockback state
 
-    bool onDescent =false;
-
     Rigidbody2D rb;
 
     AudioManager audioManager;
