@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class phaseController : MonoBehaviour
 {
+    [SerializeField] public GameObject deadSprite;
+    [SerializeField] public Rigidbody2D deadSpriteRB;
+
     [SerializeField] public int health;
     [SerializeField] public bool phase0;
     [SerializeField] public bool phase1;
@@ -32,7 +35,9 @@ public class phaseController : MonoBehaviour
 
         }else if (isDefeated)
         {
-
+            deadSprite.SetActive(true);
+            deadSpriteRB = gameObject.AddComponent<Rigidbody2D>();
+            Destroy(gameObject);
         }
     }
 
