@@ -37,9 +37,9 @@ public class Phase2Crow : MonoBehaviour
     private float waitToPickup;
     bool timerOn = false;
 
-    bool isFacingRight = false;
+    public bool isFacingRight = false;
 
-    [SerializeField] private Animator animatior;
+    [SerializeField] private Animator animator;
 
     private AudioManager audioManager; // Reference for AudioManager
 
@@ -89,7 +89,11 @@ public class Phase2Crow : MonoBehaviour
                     rb.gravityScale = 1;
                     timerOn = true;
                     hitBoxPhase2.SetActive(true);
-                    animatior.Play("peckAnimation");
+                    animator.Play("peckAnimation");
+                }
+                else
+                {
+                    animator.Play("flyingAnimation");
                 }
                 if (transform.position.x > stick.transform.position.x && isFacingRight || transform.position.x < stick.transform.position.x && !isFacingRight)
                 {
@@ -107,6 +111,8 @@ public class Phase2Crow : MonoBehaviour
 
             else if (!stickHeld && !stickOnGround)
             {
+                animator.Play("flyingAnimation");
+
                 transform.position = Vector2.MoveTowards(transform.position, nextFlyPos, flySpeed * Time.deltaTime);
                 if (transform.position == nextFlyPos)
                 {
@@ -118,6 +124,7 @@ public class Phase2Crow : MonoBehaviour
             //fly to random location between branches after picking up stick
             else if (stickHeld && rb.transform.position.y <= flyingHeight || stickHeld && rb.transform.position.y >= flyingHeight)
             {
+                animator.Play("flyingAnimation");
                 transform.position = Vector2.MoveTowards(transform.position, nextFlyPos, flySpeed * Time.deltaTime);
                 if (transform.position == nextFlyPos)
                 {
