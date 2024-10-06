@@ -287,6 +287,30 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1942188295}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: 'You''ve surpassed all our expectations! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: The colony can now thrive for seasons to come,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: 'thanks to your bravery and skill. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: "You\u2019ve not only brought us food"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: "-you\u2019ve brought us a future."
+      objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.400002
@@ -431,6 +455,30 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1942188295}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: "You\u2019re a true warrior! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: "The colony\u2019s stores are growing, "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: 'and hope is returning to our people. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: "But there\u2019s still a long way to go. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: " Stay sharp\u2014our future depends on you."
+      objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.400002
@@ -1602,8 +1650,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: level4
+      value: level5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: You've done it!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: " The toughest pests couldn\u2019t stop you, "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: 'and now we know how to deal with them in the future. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: Your journey is the stuff of legends,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[5]
+      value: and the colony will never forget it.
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2050,8 +2122,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
       value: level4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: The pests are getting more desperate,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: "aren\u2019t they? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: "You can see how aggressive they\u2019ve become."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: Keep your focus, and remember
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[5]
+      value: "-there\u2019s always a way to outsmart them."
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
