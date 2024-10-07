@@ -19698,6 +19698,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2f5d02d003a630c42bd4e2a4f896a387, type: 3}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
       value: This is where you complete the level. Upon completion you will recieve
         a score.
@@ -19708,7 +19712,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]
-      value: Getting A Score is required to move to the next level.
+      value: Getting a Score is required to move to the next level.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: As you, the 'Chosen One' eleminate pests. Our colony will thrive once
+        more.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: It is up to you... Good luck.
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalScale.x

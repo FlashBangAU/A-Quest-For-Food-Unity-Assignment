@@ -90,16 +90,21 @@ public class CompleteLevel : MonoBehaviour
 
     private void UpdateTimeUI()
     {
-        int HH = Mathf.FloorToInt(theTimeInSec / 3600.0f);
-        theTimeInSec %= 3600.0f;
-        int MM = Mathf.FloorToInt(theTimeInSec / 60.0f);
-        theTimeInSec %= 60.0f;
-        int SS = Mathf.FloorToInt(theTimeInSec);
-        int MILLISECONDS = Mathf.FloorToInt((theTimeInSec - SS) * 1000.0f);
+        // Calculate total elapsed time in seconds
+        float totalTimeInSec = theTimeInSec;
+
+        // Calculate hours, minutes, and seconds
+        int HH = Mathf.FloorToInt(totalTimeInSec / 3600.0f);
+        totalTimeInSec %= 3600.0f;
+        int MM = Mathf.FloorToInt(totalTimeInSec / 60.0f);
+        totalTimeInSec %= 60.0f;
+        int SS = Mathf.FloorToInt(totalTimeInSec);
+        int MILLISECONDS = Mathf.FloorToInt((theTimeInSec - (SS + MM * 60 + HH * 3600)) * 1000.0f);
 
         // Update the UI text with formatted time
         TimeUI.text = $"{MM:00}:{SS:00}:{MILLISECONDS:000}";
     }
+
 
 
     void OnTriggerEnter2D(Collider2D other)
