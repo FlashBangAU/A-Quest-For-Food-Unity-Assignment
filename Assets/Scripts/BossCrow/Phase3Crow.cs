@@ -39,7 +39,7 @@ public class Phase3Crow : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         // Choose an initial perch position for the crow
-        //ChooseRandomPerchPosition();
+        ChooseRandomPerchPosition();
         //Debug.Log("Initial Perch Position: " + perchPosition); // Log the initial perch position for debugging
     }
 

@@ -45,7 +45,13 @@ public class PlayerAttack : MonoBehaviour
 
         if(isLevel5)
         {
-            phase3 = crowBoss.GetComponent<phaseController>().phase3;
+            if (crowBoss != null)
+            {
+                phase3 = crowBoss.GetComponent<phaseController>().phase3;
+            }else
+            {
+                phase3 = false;
+            }
         }
     }
 

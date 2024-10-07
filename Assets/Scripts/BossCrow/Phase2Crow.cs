@@ -53,6 +53,7 @@ public class Phase2Crow : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        SelectBranchPos();
     }
 
     // Update is called once per frame

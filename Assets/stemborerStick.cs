@@ -13,6 +13,7 @@ public class stemborerStick : MonoBehaviour
     public Transform spawnPos;
     public GameObject stemBorerBoss;
     public Phase2Crow p2c;
+    bool p2cFacingRight;
 
     [SerializeField] Animator animator;
 
@@ -39,7 +40,10 @@ public class stemborerStick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool p2cFacingRight = p2c.isFacingRight;
+        if (p2c == null)
+        {
+            p2cFacingRight = p2c.isFacingRight;
+        }
         if (p2cFacingRight && !facingRight)
         {
             FlipSprite();

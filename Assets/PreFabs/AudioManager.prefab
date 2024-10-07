@@ -306,7 +306,6 @@ MonoBehaviour:
   SFXSource: {fileID: 1080901633692778225}
   mainMixer: {fileID: 24100000, guid: b085737ff95b515489ba01c119c47cc9, type: 2}
   background: {fileID: 8300000, guid: b1644b425286e9f47982ac094658f513, type: 3}
-  button: {fileID: 8300000, guid: 8b7d4b9e1a796014fa87971fcba2d193, type: 3}
   playerDeath: {fileID: 8300000, guid: bcc79080e4ec6554db7a6946be8cca9d, type: 3}
   playerAttack: {fileID: 8300000, guid: f48db79b1778ba34f9db1411c542037b, type: 3}
   playerDamage: {fileID: 8300000, guid: bcc79080e4ec6554db7a6946be8cca9d, type: 3}
@@ -318,3 +317,9 @@ MonoBehaviour:
   foodPickup: {fileID: 8300000, guid: 394c485d6ae05634d9197d470d1ab07f, type: 3}
   levelComplete: {fileID: 8300000, guid: f809f79f0e544734da9924b12f38f015, type: 3}
   checkpoint: {fileID: 8300000, guid: f82f0d97d5c678142b851b511174eef4, type: 3}
+  bossHurt: {fileID: 8300000, guid: 549dc381e048c034bac6a58e89fe3cfb, type: 3}
+  peckGround: {fileID: 8300000, guid: db3cc7c4fab3d3a4bb4178dec9e8bf59, type: 3}
+  bossJump: {fileID: 8300000, guid: 9b640e7f0e034af448ce20f9565ef059, type: 3}
+  bossCall: {fileID: 8300000, guid: a043caba3a440ea4c83d44c91ba2944d, type: 3}
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
