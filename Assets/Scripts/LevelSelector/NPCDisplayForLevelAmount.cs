@@ -17,6 +17,15 @@ public class NPCDisplayForLevelAmount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (DataManager.Instance == null)
+        {
+            Debug.LogWarning("No DataManager instance found in the scene. Ensure DataManager is correctly initialized.");
+        }
+        else
+        {
+            dm = DataManager.Instance; // Assign the DataManager instance to dm
+        }
+
         finishedLength = dm.highScoreGetLength();
         switch(finishedLength)
         {

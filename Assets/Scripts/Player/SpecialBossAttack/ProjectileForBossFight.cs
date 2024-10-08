@@ -13,6 +13,8 @@ public class ProjectileForBossFight : MonoBehaviour
     private Vector2 direction;
     private float timer;
 
+    bool isFacingRight = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,6 +27,16 @@ public class ProjectileForBossFight : MonoBehaviour
 
     void Update()
     {
+        if(boss == null)
+        {
+            Destroy(gameObject);
+        }
+
+        if (transform.position.x > boss.transform.position.x && isFacingRight || transform.position.x < boss.transform.position.x && !isFacingRight)
+        {
+            FlipSprite();
+        }
+
         // Update direction towards the boss
         bossPos = new Vector3(boss.transform.position.x - 3, boss.transform.position.y);
         Vector2 newDirection = (bossPos - transform.position).normalized;
@@ -54,4 +66,12 @@ public class ProjectileForBossFight : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void FlipSprite()
+    {
+        isFacingRight = !isFacingRight;
+        Vector2 ls = transform.localScale;
+        ls.x *= -1f;
+        transform.localScale = ls;
+    }
+
 }

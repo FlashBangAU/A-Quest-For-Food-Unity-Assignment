@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class phaseController : MonoBehaviour
 {
+    [SerializeField] public GameObject deadSprite;
+
+    [SerializeField] private GameObject completeLevel;
+
+    [SerializeField] public GameObject healthBarGO;
+    [SerializeField] public HealthBar healthBar;
+    [SerializeField] int maxHealth;
+
     [SerializeField] public int health;
     [SerializeField] public bool phase0;
     [SerializeField] public bool phase1;
@@ -14,7 +22,13 @@ public class phaseController : MonoBehaviour
 
     void Start()
     {
-        //phase3 = true; // Automatically start in Phase 3 for testing
+        if (healthBar != null)
+        {
+            healthBar.SetMaxHealth(maxHealth);
+            healthBar.UpdateHealth(health);
+        }
+
+        healthBarGO.SetActive(false);
     }
 
 
@@ -23,8 +37,9 @@ public class phaseController : MonoBehaviour
     {
         if (phase1)
         {
-
-        }else if (phase2)
+            healthBarGO.SetActive(true);
+        }
+        else if (phase2)
         {
 
         }else if (phase3)
@@ -32,7 +47,13 @@ public class phaseController : MonoBehaviour
 
         }else if (isDefeated)
         {
+            completeLevel.transform.position = new Vector2(44, 1.5f);
 
+            deadSprite.SetActive(true);
+            deadSprite.transform.position = gameObject.transform.position;
+
+            healthBarGO.SetActive(false);
+            Destroy(gameObject);
         }
     }
 
@@ -54,5 +75,7 @@ public class phaseController : MonoBehaviour
             phase1 = false;
             phase2 = true;
         }
+
+        healthBar.UpdateHealth(health);
     }
 }

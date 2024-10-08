@@ -18,6 +18,7 @@ public class AttackPlayerBoss : MonoBehaviour
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        playerGO = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void FixedUpdate()

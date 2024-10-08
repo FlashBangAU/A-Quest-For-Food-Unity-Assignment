@@ -21,6 +21,8 @@ public class Phase3Crow : MonoBehaviour
 
     public AttackPlayerBoss attackPlayerBoss;
 
+    public Animator animator;
+
     private AudioManager audioManager; // Reference for AudioManager
 
     // Used to connect the AudioManager reference to the existing AudioManager object
@@ -37,7 +39,7 @@ public class Phase3Crow : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         // Choose an initial perch position for the crow
-        //ChooseRandomPerchPosition();
+        ChooseRandomPerchPosition();
         //Debug.Log("Initial Perch Position: " + perchPosition); // Log the initial perch position for debugging
     }
 
@@ -69,6 +71,8 @@ public class Phase3Crow : MonoBehaviour
             {
                 // Increment the perch timer based on the time passed since the last frame
                 perchTimer += Time.deltaTime;
+
+                animator.Play("flyingAnimation");
 
                 // If the crow has perched long enough, start the swooping behavior
                 if (perchTimer >= perchTime)
@@ -108,6 +112,8 @@ public class Phase3Crow : MonoBehaviour
 
             // Yield to the next frame to allow smooth animation across multiple frames
             yield return null;
+
+            animator.Play("flyingAnimation");
         }
 
         // Log a message to the console indicating that the crow has reached its perch
@@ -212,6 +218,7 @@ public class Phase3Crow : MonoBehaviour
             transform.position = Vector3.Lerp(startPosition, targetPosition, t); // Move the bird toward the player's position
             yield return null; // Wait for the next frame
             attackPlayerBoss.PlayerGotHit();
+            animator.Play("swoopAnimation");
         }
 
         // Log when the bird reaches the player's position
@@ -240,6 +247,7 @@ public class Phase3Crow : MonoBehaviour
             float t = (Time.time - startTime) / journeyTime;
             transform.position = Vector3.Lerp(targetPosition, returnPosition, t); // Move towards the new perch
             yield return null; // Wait for the next frame
+            animator.Play("flyingAnimation");
         }
 
         // Log when the bird returns to perch
