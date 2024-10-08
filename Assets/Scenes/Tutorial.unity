@@ -17526,8 +17526,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[O] To Heal (Requires 5 Food)'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
+  m_sharedMaterial: {fileID: -6396468250682198132, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17660,8 +17660,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: This Is A Checkpoint You Will Respawn Here After Touching It
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
+  m_sharedMaterial: {fileID: -6396468250682198132, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19394,8 +19394,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Use Ladder To Climb With [W]
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
+  m_sharedMaterial: {fileID: -6396468250682198132, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19528,8 +19528,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hold [W] To Jump Higher
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
+  m_sharedMaterial: {fileID: -6396468250682198132, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20147,8 +20147,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: A - Move Left   W - Jump/Climb D - Move Right
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
+  m_sharedMaterial: {fileID: -6396468250682198132, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20355,8 +20355,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[P] To Attack With Toothpick'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
+  m_sharedMaterial: {fileID: -6396468250682198132, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

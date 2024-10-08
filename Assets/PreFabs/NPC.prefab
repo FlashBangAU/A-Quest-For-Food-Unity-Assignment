@@ -259,6 +259,9 @@ MonoBehaviour:
   npcNameUI: {fileID: 0}
   npcName: Eldergrass Sentinal Leaper
   upgrades: {fileID: 1845956818841502175}
+  locationNPCImage: {fileID: 0}
+  npcDialogueSprite: {fileID: 0}
+  completeLevel: {fileID: 0}
 --- !u!114 &1845956818841502175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,8 +345,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '!!!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
+  m_sharedMaterial: {fileID: -6396468250682198132, guid: d6ca64e9406a65f4b82ea4b6b71f9024, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
