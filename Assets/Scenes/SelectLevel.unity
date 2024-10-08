@@ -212,11 +212,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5224844596304362513, guid: 373c60ec5853995468d16ff5f814898f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.354347
+      value: -18.51
       objectReference: {fileID: 0}
     - target: {fileID: 5224844596304362513, guid: 373c60ec5853995468d16ff5f814898f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 34.18
+      value: 6.46
       objectReference: {fileID: 0}
     - target: {fileID: 5224844596304362513, guid: 373c60ec5853995468d16ff5f814898f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -360,6 +360,10 @@ PrefabInstance:
       value: NPC1
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Best Friend Bill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 952056248}
@@ -371,6 +375,39 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1942188295}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc1b1213c81902d40802c53b4a04e3da, type: 3}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: "You\u2019ve done it! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: The colony will survive thanks to your efforts.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: "This is more than enough to keep us going through the hardest times.
+        You\u2019re our hero!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.500004
@@ -410,6 +447,34 @@ PrefabInstance:
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1374135219, guid: b43b94b88bdb8ff4cbe8000b0277c5f4, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -504,6 +569,10 @@ PrefabInstance:
       value: NPC1
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Best Friend Bill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 952056248}
@@ -515,6 +584,38 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1942188295}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc1b1213c81902d40802c53b4a04e3da, type: 3}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.500004
@@ -554,6 +655,34 @@ PrefabInstance:
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1374135219, guid: b43b94b88bdb8ff4cbe8000b0277c5f4, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -630,6 +759,10 @@ PrefabInstance:
       value: NPC1
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Best Friend Bill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 952056248}
@@ -642,17 +775,40 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc1b1213c81902d40802c53b4a04e3da, type: 3}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: "You\u2019ve done it! "
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: The colony will survive thanks to your efforts.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]
-      value: "This is more than enough to keep us going through the hardest times.
-        You\u2019re our hero!"
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -694,6 +850,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1374135219, guid: b43b94b88bdb8ff4cbe8000b0277c5f4, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -728,6 +912,10 @@ PrefabInstance:
       value: NPC2
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Elder Mono
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 952056248}
@@ -740,20 +928,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9f06e91558639445a19c4eba1511b1a, type: 3}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: level2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: dialogue.Array.data[1]
       value: Great work! Did you notice how the pests are behaving more aggressively?
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: dialogue.Array.data[2]
+      propertyPath: dialogue.Array.data[1]
       value: The scarcity of food makes them bolder.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: The stem borers can burrow into plants and make it almost impossible
+        for them to grow again.
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[3]
@@ -761,12 +958,24 @@ PrefabInstance:
         for them to grow again.
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.45
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8299998
+      value: -1.9299997
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -799,6 +1008,26 @@ PrefabInstance:
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1390444139, guid: 098dbe7d30433e4409329fee9c85deca, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -823,6 +1052,10 @@ PrefabInstance:
       value: NPC2
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Elder Mono
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 952056248}
@@ -834,6 +1067,14 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1942188295}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9f06e91558639445a19c4eba1511b1a, type: 3}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
       value: You know, the stem borers that roam the plains are quite dangerous
@@ -847,12 +1088,24 @@ PrefabInstance:
       value: Keep your wits about you if you encounter them!
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.45
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.83
+      value: -1.93
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -885,6 +1138,26 @@ PrefabInstance:
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1390444139, guid: 098dbe7d30433e4409329fee9c85deca, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -926,11 +1199,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2902680391265804921, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.354347
+      value: -18.51
       objectReference: {fileID: 0}
     - target: {fileID: 2902680391265804921, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 34.18
+      value: 6.46
       objectReference: {fileID: 0}
     - target: {fileID: 2902680391265804921, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1325,6 +1598,10 @@ PrefabInstance:
       value: NPC1
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Best Friend Bill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 952056248}
@@ -1337,6 +1614,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc1b1213c81902d40802c53b4a04e3da, type: 3}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
       value: Camp is coming together quite well, and the food you brought back has
         really helped.
@@ -1348,6 +1637,18 @@ PrefabInstance:
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1388,6 +1689,34 @@ PrefabInstance:
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1374135219, guid: b43b94b88bdb8ff4cbe8000b0277c5f4, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1557,6 +1886,101 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &890775033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890775035}
+  - component: {fileID: 890775034}
+  m_Layer: 0
+  m_Name: Level select decor_2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &890775034
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890775033}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 605857241, guid: 6230f190c63e8bd4bba0f2ab0708acbf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.26, y: 0.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &890775035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890775033}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 57.48988, y: 3.85, z: 0}
+  m_LocalScale: {x: 8.91, y: 8.91, z: 8.91}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &923947188 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6318009955171089254, guid: 712478f8e9eaece46abae136bc24b7f9, type: 3}
+  m_PrefabInstance: {fileID: 722369603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &924122728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1568,6 +1992,10 @@ PrefabInstance:
     - target: {fileID: 642414000757754534, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_Name
       value: NPC2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Elder Mono
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
@@ -1582,8 +2010,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9f06e91558639445a19c4eba1511b1a, type: 3}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: level4
+      value: "You\u2019ve collected enough food to save us! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: "You\u2019ve also helped us better understand how to combat those pests. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: "Next time, we\u2019ll be ready for them."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7200001
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1591,7 +2047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8299998
+      value: -1.9299997
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1624,6 +2080,26 @@ PrefabInstance:
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1390444139, guid: 098dbe7d30433e4409329fee9c85deca, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1741,6 +2217,152 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
   m_PrefabInstance: {fileID: 1434882239}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1046038970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1046038972}
+  - component: {fileID: 1046038971}
+  m_Layer: 0
+  m_Name: Level select decor_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1046038971
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046038970}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 1079013278, guid: 6230f190c63e8bd4bba0f2ab0708acbf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.29, y: 0.23}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1046038972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046038970}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 61.699642, y: 3.91, z: 0}
+  m_LocalScale: {x: 8.21, y: 8.21, z: 8.21}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1103992170
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2667584893701266962, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_Name
+      value: CheckPoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743393843043926892, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.982689
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743393843043926892, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743393843043926892, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2457345
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743393843043926892, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743393843043926892, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743393843043926892, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743393843043926892, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743393843043926892, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743393843043926892, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743393843043926892, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566683941207324852, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4f4b5e23110906546a6e4d0c125c530b, type: 2}
+    m_RemovedComponents:
+    - {fileID: 5828346146293446072, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6820f1ee6a172fb429f7a4a74771ace5, type: 3}
 --- !u!1001 &1145778246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1767,11 +2389,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4186787642105478658, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.354347
+      value: -18.51
       objectReference: {fileID: 0}
     - target: {fileID: 4186787642105478658, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 34.05
+      value: 6.33
       objectReference: {fileID: 0}
     - target: {fileID: 4186787642105478658, guid: ab384a943fdd545439c76440de945f6d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2102,6 +2724,10 @@ PrefabInstance:
       value: NPC2
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Elder Mono
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 952056248}
@@ -2114,8 +2740,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9f06e91558639445a19c4eba1511b1a, type: 3}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: level4
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7200001
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2123,7 +2777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8299998
+      value: -1.9299997
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2156,6 +2810,26 @@ PrefabInstance:
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1390444139, guid: 098dbe7d30433e4409329fee9c85deca, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2208,6 +2882,10 @@ PrefabInstance:
       value: NPC1
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Best Friend Bill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 952056248}
@@ -2220,6 +2898,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc1b1213c81902d40802c53b4a04e3da, type: 3}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
       value: More food means more hope.
       objectReference: {fileID: 0}
@@ -2231,6 +2917,18 @@ PrefabInstance:
       propertyPath: dialogue.Array.data[2]
       value: " I can see the colony\u2019s future looking brighter with every step
         you take."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2271,6 +2969,34 @@ PrefabInstance:
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1374135219, guid: b43b94b88bdb8ff4cbe8000b0277c5f4, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2328,6 +3054,10 @@ PrefabInstance:
       value: NPC1
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Best Friend Bill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 952056248}
@@ -2340,17 +3070,42 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc1b1213c81902d40802c53b4a04e3da, type: 3}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: Tutorial
+      value: Hey, this is a nice place to set up camp.
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: Hey, this is a nice place to set up camp.
+      value: "You\u2019ve got a long journey ahead, but I know you\u2019ll pull through
+        for the colony!"
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]
       value: "You\u2019ve got a long journey ahead, but I know you\u2019ll pull through
         for the colony!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2391,6 +3146,34 @@ PrefabInstance:
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1374135219, guid: b43b94b88bdb8ff4cbe8000b0277c5f4, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23477,6 +24260,10 @@ PrefabInstance:
       value: NPC2
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Elder Mono
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 952056248}
@@ -23489,24 +24276,44 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9f06e91558639445a19c4eba1511b1a, type: 3}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: level3
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[1]
-      value: "You\u2019ve collected enough food to save us! "
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[2]
-      value: "You\u2019ve also helped us better understand how to combat those pests. "
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[3]
-      value: "Next time, we\u2019ll be ready for them."
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7200001
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23514,7 +24321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8299998
+      value: -1.9299997
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23547,6 +24354,26 @@ PrefabInstance:
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1390444139, guid: 098dbe7d30433e4409329fee9c85deca, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23848,6 +24675,10 @@ PrefabInstance:
       value: NPC2
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcName
+      value: Elder Mono
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: npcNameUI
       value: 
       objectReference: {fileID: 952056248}
@@ -23860,25 +24691,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1942188295}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: locationNPCImage
+      value: 
+      objectReference: {fileID: 923947188}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: npcDialogueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9f06e91558639445a19c4eba1511b1a, type: 3}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: Level 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: dialogue.Array.data[1]
       value: 'That was quite a haul! '
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
-      propertyPath: dialogue.Array.data[2]
+      propertyPath: dialogue.Array.data[1]
       value: 'But be careful out there, caterpillars are much more active during
         the famine. '
       objectReference: {fileID: 0}
     - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: Did you know that they can strip entire fields of leaves overnight?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130267430413169711, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: dialogue.Array.data[3]
       value: Did you know that they can strip entire fields of leaves overnight?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7200001
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23886,7 +24737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8299998
+      value: -1.9299997
       objectReference: {fileID: 0}
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23919,6 +24770,26 @@ PrefabInstance:
     - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080553957462155948, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1390444139, guid: 098dbe7d30433e4409329fee9c85deca, type: 3}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317155435416666719, guid: ed23acb963493f5499fc257c85ec1d5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45787,7 +46658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2117541893
 Transform:
   m_ObjectHideFlags: 0
@@ -45826,3 +46697,6 @@ SceneRoots:
   - {fileID: 889939256}
   - {fileID: 947009058}
   - {fileID: 1807334228}
+  - {fileID: 1103992170}
+  - {fileID: 1046038972}
+  - {fileID: 890775035}
