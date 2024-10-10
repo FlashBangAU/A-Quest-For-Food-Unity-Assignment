@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Unity.VisualScripting;
-using System;
 
 public class NPC : MonoBehaviour
 {
@@ -15,8 +13,6 @@ public class NPC : MonoBehaviour
 
     public float wordSpeed;
     public bool playerIsClose;
-    private bool isTyping = false;
-    private bool lastLine = false;
 
     public TextMeshProUGUI promptUI;
     public TextMeshProUGUI npcNameUI;
@@ -36,14 +32,16 @@ public class NPC : MonoBehaviour
         RemoveText();
         npcNameUI.text = npcName;
         dialogueText.text = "";
+        promptUI.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        try
+        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
-            if(lastLine)
+            npcNameUI.text = npcName;
+            if (!dialoguePanel.activeInHierarchy)
             {
                 index = 0;
                 RemoveText();
@@ -68,20 +66,16 @@ public class NPC : MonoBehaviour
                     NextLine();
                 }
                 dialoguePanel.SetActive(true);
-                if (npcDialogueSprite != null)
-                {
-                    locationNPCImage.sprite = npcDialogueSprite;
-                }
                 StartTyping();
             }
-            if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
+            else if (dialogueText.text == dialogue[index])
             {
-                isTyping = false;
-                RemoveText();
+                NextLine();
             }
-        } catch (MissingReferenceException e)
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
         {
-            Debug.LogException(e);
+            RemoveText();
         }
     }
 
@@ -93,6 +87,7 @@ public class NPC : MonoBehaviour
             typingCoroutine = null;
         }
         dialogueText.text = "";
+        index = 0;
         dialoguePanel.SetActive(false);
         if (completeLevel != null)
         {
@@ -118,7 +113,6 @@ public class NPC : MonoBehaviour
             yield return new WaitForSeconds(wordSpeed);
         }
         typingCoroutine = null;
-        isTyping = false;
     }
 
     public void NextLine()
@@ -134,7 +128,6 @@ public class NPC : MonoBehaviour
             {
                 upgrades.UpdateVariable();
             }
-            lastLine = true;
             RemoveText();
         }
     }
@@ -152,10 +145,8 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isTyping = false;
             playerIsClose = false;
             promptUI.text = "";
-            lastLine = false;
             RemoveText();
         }
     }

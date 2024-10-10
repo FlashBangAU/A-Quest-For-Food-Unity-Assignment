@@ -2237,7 +2237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7151943376611702483}
   - component: {fileID: 129794543092734985}
-  - component: {fileID: 6318009955171089254}
+  - component: {fileID: 7458733795860991891}
   m_Layer: 5
   m_Name: NPCImage
   m_TagString: Untagged
@@ -2272,7 +2272,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3489789349009782493}
   m_CullTransparentMesh: 1
---- !u!114 &6318009955171089254
+--- !u!114 &7458733795860991891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2439,7 +2439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.804618, y: -0.0491}
+  m_AnchoredPosition: {x: 1.6137, y: -0.0491}
   m_SizeDelta: {x: 734.3719, y: 111.1143}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6437167885403779755
@@ -2533,7 +2533,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -5.816559, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2733,7 +2733,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &354083245088622870
 MonoBehaviour:
@@ -3493,8 +3493,6 @@ RectTransform:
   - {fileID: 975770323388921221}
   - {fileID: 460756595403656240}
   - {fileID: 3143552217888924290}
-  - {fileID: 3541556181667247103}
-  - {fileID: 5973936706577270730}
   m_Father: {fileID: 6579817508429660334}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3517,7 +3515,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5116118816222236539}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -3976,7 +3974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.63, y: -1.819}
+  m_AnchoredPosition: {x: 7.4826994, y: -1.819}
   m_SizeDelta: {x: 5.7076, y: 1.1537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7483025650504721867
@@ -4742,7 +4740,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.77, y: 1.4215}
+  m_AnchoredPosition: {x: 1.5791004, y: 1.4215}
   m_SizeDelta: {x: 735.91, y: 32.8491}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1821300039611689241

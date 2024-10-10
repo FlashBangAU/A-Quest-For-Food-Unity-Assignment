@@ -112,7 +112,7 @@ public class CompleteLevel : MonoBehaviour
                 theTimeInSec = 0f;
 
             // Calculate score based on game state
-            score = (theTimeInSec * timerMultiplier) + (cs.coinCount * coinMultiplier) + (ph.enemiesDefeated * enemiesMultiplier);
+            score = CalculateScore();
 
             score *= 1000;
             showScore = (int)score;
@@ -123,6 +123,42 @@ public class CompleteLevel : MonoBehaviour
             CheckHighScore();
 
             DisplayScoreUI();
+        }
+    }
+
+    float CalculateScore()
+    {
+        if (theTimeInSec == 0f && cs.coinCount == 0f && ph.enemiesDefeated == 0f)
+        {
+            return 0f;
+        }
+        else if (cs.coinCount == 0f && ph.enemiesDefeated == 0f)
+        {
+            return theTimeInSec * timerMultiplier;
+        }
+        else if (theTimeInSec == 0f && cs.coinCount == 0f)
+        {
+            return ph.enemiesDefeated * enemiesMultiplier;
+        }
+        else if (theTimeInSec == 0f && ph.enemiesDefeated == 0f)
+        {
+            return cs.coinCount * coinMultiplier;
+        }
+        else if (ph.enemiesDefeated == 0f)
+        {
+            return (theTimeInSec * timerMultiplier) * (cs.coinCount * coinMultiplier);
+        }
+        else if (cs.coinCount == 0f)
+        {
+            return (theTimeInSec * timerMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
+        }
+        else if (theTimeInSec == 0f)
+        {
+            return (cs.coinCount * coinMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
+        }
+        else
+        {
+            return (theTimeInSec * timerMultiplier) * (cs.coinCount * coinMultiplier) * (ph.enemiesDefeated * enemiesMultiplier);
         }
     }
 
