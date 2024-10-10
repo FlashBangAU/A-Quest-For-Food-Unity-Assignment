@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -28,7 +29,11 @@ public class PlayerMovement : MonoBehaviour
     bool jumpedRight = false;
 
     bool onLadder = false;
-    bool hasBeenAirborne = false;
+    public bool hasBeenAirborne = false;
+
+    bool onDescent =false;
+
+    public bool isKnockedBack = false; // Flag for knockback state
 
     Rigidbody2D rb;
 
@@ -53,10 +58,14 @@ public class PlayerMovement : MonoBehaviour
         jumpWait = jumpWait * Time.deltaTime;
 
 
+
         // Logging horizontal input
         //Debug.Log("Horizontal Input: " + horizontalInput);
 
-        rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        if (!isKnockedBack)
+        {
+            rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        }
 
         if (onLadder == true)
         {
@@ -66,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         else if (!isJumping)// Horizontal movement when touching ground
         {
             horizontalInput = Input.GetAxis("Horizontal");
-            if (timeBtwSprint < 0)
+            if (timeBtwSprint <= 0)
             {
                 if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
                 {
@@ -110,6 +119,14 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
         }
 
+        if(rb.velocity.y >= 0)
+        {
+            onDescent = false;
+        }
+        else
+        {
+            onDescent = true;
+        }
         //Debug.Log("Velocity X: " + rb.velocity.x);
 
         FlipSprite();
@@ -144,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // Player Left Contact Jump
-            if (Input.GetKey(KeyCode.W) && jumpLeft.canJump == true && jumpedLeft == false)
+            if (Input.GetKey(KeyCode.W) && jumpLeft.canJump && !jumpedLeft && onDescent || Input.GetKeyDown(KeyCode.W) && jumpLeft.canJump && !jumpedLeft)
             {
                 if (Input.GetKey(KeyCode.A))
                 {
@@ -164,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // Player Right Contact Jump
-            if (Input.GetKey(KeyCode.W) && jumpRight.canJump == true && jumpedRight == false)
+            if (Input.GetKey(KeyCode.W) && jumpRight.canJump && !jumpedRight && onDescent || Input.GetKeyDown(KeyCode.W) && jumpRight.canJump && !jumpedRight)
             {
                 if (Input.GetKey(KeyCode.A))
                 {
@@ -230,6 +247,7 @@ public class PlayerMovement : MonoBehaviour
         //isJumping = false;
         if (collision.gameObject.CompareTag("Ground") && hasBeenAirborne)
         {
+            isKnockedBack = false;
             hasBeenAirborne = false;
             audioManager.PlaySFX(audioManager.playerLand);
             //Debug.Log("Collision with ground");
@@ -237,10 +255,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Prevents player from walking off platform and jumping
-    public void OnCollisionExit2D(Collision2D collision)
-    {
-        isJumping = true;
-    }
+    //public void OnCollisionExit2D(Collision2D collision)
+    //{
+        //isJumping = true;
+        //Debug.Log("now jumping");
+    //}
 
     public void OnTriggerEnter2D(Collider2D collision)
     {

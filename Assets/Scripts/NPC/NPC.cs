@@ -22,6 +22,11 @@ public class NPC : MonoBehaviour
 
     private Coroutine typingCoroutine;
 
+    public Image locationNPCImage;
+    public Sprite npcDialogueSprite;
+
+    public CompleteLevel completeLevel;
+
     void Start()
     {
         RemoveText();
@@ -38,6 +43,28 @@ public class NPC : MonoBehaviour
             npcNameUI.text = npcName;
             if (!dialoguePanel.activeInHierarchy)
             {
+                index = 0;
+                RemoveText();
+            }
+           else if (Input.GetKeyDown(KeyCode.E) && playerIsClose && isTyping == false)
+            {
+                if (completeLevel != null)
+                {
+                    completeLevel.talkingNPC = true;
+                }
+                lastLine = false;
+                npcNameUI.text = npcName;
+                if (!dialoguePanel.activeInHierarchy)
+                {
+                    dialoguePanel.SetActive(true);
+                    isTyping = true;
+                    StartTyping();
+                }
+                else if (dialogueText.text == dialogue[index])
+                {
+                    isTyping = true;
+                    NextLine();
+                }
                 dialoguePanel.SetActive(true);
                 StartTyping();
             }
@@ -62,6 +89,10 @@ public class NPC : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
+        if (completeLevel != null)
+        {
+            completeLevel.talkingNPC = false;
+        }
     }
 
     void StartTyping()

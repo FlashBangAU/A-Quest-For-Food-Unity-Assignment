@@ -10,6 +10,8 @@ public class DataManager : MonoBehaviour
     public int level;
     public float highScore;
     public float[] highScores;
+    public float musicVolume = 0.75f;
+    public float sfxVolume = 0.75f;
 
     private void Awake()
     {
@@ -28,6 +30,8 @@ public class DataManager : MonoBehaviour
     class SaveData
     {
         public float[] highScores;
+        public float musicVolume;
+        public float sfxVolume;
     }
 
     public void WriteData()
@@ -45,7 +49,9 @@ public class DataManager : MonoBehaviour
         // Prepare the data to be saved
         SaveData data = new SaveData
         {
-            highScores = (float[])highScores.Clone() // Clone to prevent external modification
+            highScores = (float[])highScores.Clone(), // Clone to prevent external modification
+            musicVolume = musicVolume,
+            sfxVolume = sfxVolume
         };
 
         // Serialize the data to JSON
@@ -79,6 +85,9 @@ public class DataManager : MonoBehaviour
             {
                 highScores = new float[0];
             }
+
+            musicVolume = data.musicVolume;
+            sfxVolume = data.sfxVolume;
         }
         else
         {
